@@ -94,7 +94,7 @@ def generate_docs_file(data, docs_file, base_name, json_file):
             solution_link = f"../Problems/{base_name}/{item['difficulty']}/{solution_file}"
         
 
-            f.write(f"{qid}. [{title}]({solution_link})\n")
+            f.write(f"- [{title}]({solution_link})\n")
         
         f.write("\n")
         

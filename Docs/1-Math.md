@@ -52,7 +52,7 @@
 - [Ugly Number](../Problems/1-Math/Easy/263_Ugly_Number.md)
 - [Perfect Number](../Problems/1-Math/Easy/507_Perfect_Number.md)
 - [Self Dividing Numbers](../Problems/1-Math/Easy/728_Self_Dividing_Numbers.md)
-- [Check Divisibility by Digit Sum and Product](../Problems/1-Math/Easy/3622_Check_Divisibility_by_Digit_Sum_and_Product.md))
+- [Check Divisibility by Digit Sum and Product](../Problems/1-Math/Easy/3622_Check_Divisibility_by_Digit_Sum_and_Product.md)
 
 #### Special Numbers:
 

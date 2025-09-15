@@ -20,8 +20,8 @@
 
 | Difficulty    | Total | Solved | Remaining | Progress                                                                           |
 | ------------- | ----- | ------ | --------- | ---------------------------------------------------------------------------------- |
-| 🟢 **Easy**   | `32`  | `19`   | `12`      | ![Progress Bar](https://progress-bar.xyz/60/?title=Progress&width=150&color=green) |
-| 🟡 **Medium** | `12`  | `6`    | `7`       | ![Progress Bar](https://progress-bar.xyz/50/?title=Progress&width=150&color=green) |
+| 🟢 **Easy**   | `32`  | `20`   | `12`      | ![Progress Bar](https://progress-bar.xyz/63/?title=Progress&width=150&color=green) |
+| 🟡 **Medium** | `12`  | `8`    | `5`       | ![Progress Bar](https://progress-bar.xyz/67/?title=Progress&width=150&color=green) |
 | 🔴 **Hard**   | `4`   | `2`    | `2`       | ![Progress Bar](https://progress-bar.xyz/50/?title=Progress&width=150&color=green) |
 
 ## 🏢 Top Companies by Question Frequency

@@ -69,8 +69,8 @@ There will be no remaining ingredients.
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -83,50 +83,87 @@ There will be no remaining ingredients.
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - The simplest idea is to try all possible combinations of jumbo and small burgers.
+>   - A jumbo uses 4 tomatoes and 1 cheese.
+>   - A small uses 2 tomatoes and 1 cheese.
+>   - We can brute force the number of jumbo burgers from 0 to cheeseSlices, then calculate the number of small burgers, and check if tomatoes match.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+for jumbo in range(0, cheeseSlices + 1):
+    small = cheeseSlices - jumbo
+    if 4*jumbo + 2*small == tomatoSlices:
+        return [jumbo, small]
+return []
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force solution
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {
+        // Try every possible number of jumbo burgers
+        for (int jumbo = 0; jumbo <= cheeseSlices; jumbo++) {
+            int small = cheeseSlices - jumbo;
+            // Check if the tomato condition matches
+            if (4 * jumbo + 2 * small == tomatoSlices) {
+                return {jumbo, small};
+            }
+        }
+        // No valid combination found
+        return {};
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Math Equation Solving)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Instead of brute force, we can use equations:
+> - Let x = jumbo, y = small
+> - We have:
+>   - x + y = cheeseSlices
+>   - 4x + 2y = tomatoSlices
+> - Solve system of equations:
+>   - x = (tomatoSlices - 2\*cheeseSlices) / 2
+>   - y = cheeseSlices - x
+> - Check if x and y are non-negative integers.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+x = (tomatoSlices - 2*cheeseSlices) / 2
+y = cheeseSlices - x
+if x >= 0 and y >= 0 and (tomatoSlices - 2*cheeseSlices) % 2 == 0:
+    return [x, y]
+else:
+    return []
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Optimized equation-based solution
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {
+        // Solve the equations:
+        // 4x + 2y = tomatoSlices
+        // x + y = cheeseSlices
+        if ((tomatoSlices - 2 * cheeseSlices) % 2 != 0) return {};
+
+        int jumbo = (tomatoSlices - 2 * cheeseSlices) / 2;
+        int small = cheeseSlices - jumbo;
+
+        if (jumbo < 0 || small < 0) return {};
+
+        return {jumbo, small};
     }
 };
 ```
@@ -135,12 +172,22 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - The math-based approach is already optimal, but we can make it cleaner and constant-time by:
+>   - Directly validating feasibility: 2*cheeseSlices <= tomatoSlices <= 4*cheeseSlices
+>   - Checking if (tomatoSlices % 2 == 0)
+>   - Then compute values.
+> - This ensures O(1) time and O(1) space.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+if tomatoSlices % 2 != 0 or
+   tomatoSlices < 2*cheeseSlices or
+   tomatoSlices > 4*cheeseSlices:
+    return []
+jumbo = (tomatoSlices - 2*cheeseSlices) / 2
+small = cheeseSlices - jumbo
+return [jumbo, small]
 ```
 
 #### 💻 Implementation
@@ -150,21 +197,26 @@ public:
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {
+        // Quick feasibility checks
+        if (tomatoSlices % 2 != 0 || tomatoSlices < 2 * cheeseSlices || tomatoSlices > 4 * cheeseSlices)
+            return {};
+
+        int jumbo = (tomatoSlices - 2 * cheeseSlices) / 2;
+        int small = cheeseSlices - jumbo;
+
+        return {jumbo, small};
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity                | Space Complexity | Pros                       | Cons                                                |
+| -------------- | ------------------------------ | ---------------- | -------------------------- | --------------------------------------------------- |
+| 🥉 Brute Force | O(n) (loop up to cheeseSlices) | O(1)             | Easy to understand, simple | Very slow for large values (cheeseSlices up to 1e7) |
+| 🥈 Optimized   | O(1)                           | O(1)             | Uses math, very efficient  | Slightly more math reasoning required               |
+| 🥇 Optimal ⭐  | O(1)                           | O(1)             | Clean, elegant, fast       | None                                                |
 
 ---
 

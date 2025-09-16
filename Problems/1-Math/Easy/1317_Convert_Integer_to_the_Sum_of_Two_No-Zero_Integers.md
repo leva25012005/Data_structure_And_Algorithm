@@ -65,8 +65,8 @@ Note that there are other valid answers as [8, 3] that can be accepted.
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -93,12 +93,20 @@ _No regular frequency companies_
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Iterate through all numbers a from 1 to n-1.
+> - Let b = n - a.
+> - Check if both a and b are No-Zero integers (i.e., they don’t contain digit 0).
+> - Return the first valid pair.
+> - This works because the constraint n ≤ 10^4 is small.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n):
+    for a from 1 to n-1:
+        b = n - a
+        if isNoZero(a) and isNoZero(b):
+            return [a, b]
 ```
 
 #### 💻 Implementation
@@ -108,35 +116,72 @@ _No regular frequency companies_
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    // Helper to check if a number is a No-Zero integer
+    bool isNoZero(int x) {
+        while (x > 0) {
+            if (x % 10 == 0) return false; // Contains 0
+            x /= 10;
+        }
+        return true;
+    }
+
+    vector<int> getNoZeroIntegers(int n) {
+        // Try all possible splits
+        for (int a = 1; a < n; a++) {
+            int b = n - a;
+            if (isNoZero(a) && isNoZero(b)) {
+                return {a, b}; // Return the first valid pair
+            }
+        }
+        return {}; // Should never reach here because a solution is guaranteed
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution - Greedy (Constructive)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Start with a = 1, b = n - 1.
+> - If either a or b contains 0, increment a and decrement b.
+> - Continue until both are valid.
+> - This avoids checking all pairs from scratch.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function greedy(n):
+    a = 1
+    b = n - 1
+    while not (isNoZero(a) and isNoZero(b)):
+        a += 1
+        b -= 1
+    return [a, b]
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Greedy constructive approach
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    bool isNoZero(int x) {
+        while (x > 0) {
+            if (x % 10 == 0) return false;
+            x /= 10;
+        }
+        return true;
+    }
+
+    vector<int> getNoZeroIntegers(int n) {
+        int a = 1, b = n - 1;
+        // Adjust until both numbers are valid
+        while (!isNoZero(a) || !isNoZero(b)) {
+            a++;
+            b--;
+        }
+        return {a, b};
     }
 };
 ```
@@ -145,36 +190,61 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - Instead of trial and error, we can construct directly.
+> - Start with a = n / 2, b = n - a.
+> - If either contains zero, adjust slightly until both are valid.
+> - Because n ≤ 10^4, the adjustment will be very fast.
+> - This minimizes unnecessary scanning.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(n):
+    a = n // 2
+    b = n - a
+    while not (isNoZero(a) and isNoZero(b)):
+        a += 1
+        b -= 1
+    return [a, b]
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Most optimal and elegant solution
+// Optimal and elegant solution
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    bool isNoZero(int x) {
+        while (x > 0) {
+            if (x % 10 == 0) return false;
+            x /= 10;
+        }
+        return true;
+    }
+
+    vector<int> getNoZeroIntegers(int n) {
+        // Start with a balanced split
+        int a = n / 2;
+        int b = n - a;
+
+        // Adjust until valid
+        while (!isNoZero(a) || !isNoZero(b)) {
+            a++;
+            b--;
+        }
+        return {a, b};
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                            | Cons                        |
+| -------------- | --------------- | ---------------- | ------------------------------- | --------------------------- |
+| 🥉 Brute Force | O(n \* d)       | O(1)             | Very easy to implement          | Inefficient for larger `n`  |
+| 🥈 Greedy      | O(k \* d)       | O(1)             | Faster, adjusts incrementally   | Still needs multiple checks |
+| 🥇 Optimal ⭐  | O(k \* d)       | O(1)             | Elegant, starts near the middle | Slightly trickier logic     |
 
 ---
 

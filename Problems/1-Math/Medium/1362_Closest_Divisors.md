@@ -61,8 +61,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -81,50 +81,109 @@
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - The most naive way is to check all possible divisors of num + 1 and num + 2 and find the pair with the smallest absolute difference.
+> - This works but is very slow because checking all divisors up to num + 2 (≈ 10⁹) would be infeasible.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function closestDivisors(num):
+    best_pair = []
+    best_diff = infinity
+
+    for candidate in [num + 1, num + 2]:
+        for d in range(1, candidate):   // check all divisors
+            if candidate % d == 0:
+                other = candidate / d
+                if abs(d - other) < best_diff:
+                    best_diff = abs(d - other)
+                    best_pair = [d, other]
+
+    return best_pair
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force approach (not efficient for large numbers)
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    vector<int> closestDivisors(int num) {
+        int bestDiff = INT_MAX;
+        vector<int> bestPair;
+
+        // Check num + 1 and num + 2
+        for (int candidate : {num + 1, num + 2}) {
+            for (int d = 1; d <= candidate; d++) { // brute check all divisors
+                if (candidate % d == 0) {
+                    int other = candidate / d;
+                    if (abs(d - other) < bestDiff) {
+                        bestDiff = abs(d - other);
+                        bestPair = {d, other};
+                    }
+                }
+            }
+        }
+        return bestPair;
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Divisor Search)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Instead of checking all divisors up to n, we only need to check up to sqrt(n), because if d is a divisor, n/d is its pair.
+> - This reduces the complexity from O(n) to O(√n).
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function closestDivisors(num):
+    best_pair = []
+    best_diff = infinity
+
+    for candidate in [num + 1, num + 2]:
+        for d in range(1, sqrt(candidate)):
+            if candidate % d == 0:
+                other = candidate / d
+                if abs(d - other) < best_diff:
+                    best_diff = abs(d - other)
+                    best_pair = [d, other]
+
+    return best_pair
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+/// Optimized approach with divisor check up to sqrt(n)
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    vector<int> closestDivisors(int num) {
+        int bestDiff = INT_MAX;
+        vector<int> bestPair;
+
+        // Lambda to process one candidate
+        auto checkDivisors = [&](int candidate) {
+            for (int d = 1; d * d <= candidate; d++) {
+                if (candidate % d == 0) {
+                    int other = candidate / d;
+                    if (abs(d - other) < bestDiff) {
+                        bestDiff = abs(d - other);
+                        bestPair = {d, other};
+                    }
+                }
+            }
+        };
+
+        // Check both num+1 and num+2
+        checkDivisors(num + 1);
+        checkDivisors(num + 2);
+
+        return bestPair;
     }
 };
 ```
@@ -133,36 +192,61 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - The most efficient method:
+>   - Only check divisors from sqrt(num + 2) down to 1.
+>   - As soon as we find a divisor pair, it’s guaranteed to be close since divisors around the square root are the closest possible.
+>   - Compare for both num+1 and num+2.
+> - This avoids unnecessary checks.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function closestDivisors(num):
+    for candidate in [num + 1, num + 2]:
+        start = floor(sqrt(candidate))
+        for d in range(start, 0, -1):
+            if candidate % d == 0:
+                return [d, candidate/d]   // first found is the closest
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Most optimal and elegant solution
+// Most optimal and elegant solution sing sqrt and early exit
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    vector<int> closestDivisors(int num) {
+        // Helper lambda: find closest divisor pair for a candidate
+        auto findPair = [](int candidate) -> vector<int> {
+            for (int d = sqrt(candidate); d >= 1; d--) {
+                if (candidate % d == 0) {
+                    return {d, candidate / d}; // closest pair found
+                }
+            }
+            return {};
+        };
+
+        // Find best from num+1 and num+2
+        vector<int> pair1 = findPair(num + 1);
+        vector<int> pair2 = findPair(num + 2);
+
+        // Choose the one with smaller difference
+        if (abs(pair1[0] - pair1[1]) < abs(pair2[0] - pair2[1])) {
+            return pair1;
+        }
+        return pair2;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity      | Space Complexity | Pros                                         | Cons                                   |
+| -------------- | -------------------- | ---------------- | -------------------------------------------- | -------------------------------------- |
+| 🥉 Brute Force | O(n)                 | O(1)             | Very simple                                  | Impossible for large n (up to 1e9)     |
+| 🥈 Optimized   | O(√n)                | O(1)             | Works for large n                            | Still checks more divisors than needed |
+| 🥇 Optimal ⭐  | O(√n) but early exit | O(1)             | Elegant, minimal checks, fastest in practice | Slightly more logic                    |
 
 ---
 

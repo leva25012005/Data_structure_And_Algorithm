@@ -84,28 +84,48 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Simulation by checking multiples)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Start from the given purchaseAmount.
+> - Find the closest multiple of 10 by checking all multiples of 10 (0, 10, 20, …).
+> - Choose the nearest one (rounding rule: if difference = 5, round upward).
+> - Subtract this rounded amount from 100.
+> - This works but is overkill since purchaseAmount ≤ 100.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(purchaseAmount):
+    roundedAmount = 0
+    for m in [0, 10, 20, ..., 100]:
+        if abs(m - purchaseAmount) is smallest:
+            choose m (if tie, pick larger m)
+    return 100 - roundedAmount
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force approach by checking multiples of 10
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    int accountBalanceAfterPurchase(int purchaseAmount) {
+        int roundedAmount = 0;
+        int bestDiff = INT_MAX;
+
+        // Try all multiples of 10 from 0 to 100
+        for (int m = 0; m <= 100; m += 10) {
+            int diff = abs(m - purchaseAmount);
+            // If closer OR same distance but larger (round up on tie)
+            if (diff < bestDiff || (diff == bestDiff && m > roundedAmount)) {
+                roundedAmount = m;
+                bestDiff = diff;
+            }
+        }
+        return 100 - roundedAmount;
     }
 };
 ```
@@ -114,24 +134,45 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Every number purchaseAmount can be split into:
+>   - tens = purchaseAmount / 10
+>   - remainder = purchaseAmount % 10
+>   - If remainder < 5, round down → roundedAmount = tens \_ 10.
+> - Else, round up → roundedAmount = (tens + 1) \_ 10.
+> - Subtract from 100.
+> - This avoids looping through multiples of 10.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimized(purchaseAmount):
+    tens = purchaseAmount // 10
+    remainder = purchaseAmount % 10
+    if remainder < 5:
+        roundedAmount = tens * 10
+    else:
+        roundedAmount = (tens + 1) * 10
+    return 100 - roundedAmount
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Optimized approach using division and modulus
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    int accountBalanceAfterPurchase(int purchaseAmount) {
+        int tens = purchaseAmount / 10;
+        int remainder = purchaseAmount % 10;
+
+        int roundedAmount;
+        if (remainder < 5)
+            roundedAmount = tens * 10;      // Round down
+        else
+            roundedAmount = (tens + 1) * 10; // Round up
+
+        return 100 - roundedAmount;
     }
 };
 ```
@@ -140,36 +181,41 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - Rounding to the nearest multiple of 10 can be done by:
+>   - roundedAmount = ((purchaseAmount + 5) / 10) \* 10
+> - Explanation: Adding 5 before integer division ensures correct rounding (ties go up).
+> - Subtract directly from 100.
+> - This is the cleanest and most elegant.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(purchaseAmount):
+    roundedAmount = ((purchaseAmount + 5) // 10) * 10
+    return 100 - roundedAmount
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Most optimal and elegant solution
+// Most optimal solution with math trick
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    int accountBalanceAfterPurchase(int purchaseAmount) {
+        int roundedAmount = ((purchaseAmount + 5) / 10) * 10; // Round to nearest multiple of 10
+        return 100 - roundedAmount;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                                  | Cons                             |
+| -------------- | --------------- | ---------------- | ------------------------------------- | -------------------------------- |
+| 🥉 Brute Force | O(11) ≈ O(1)    | O(1)             | Very explicit, simulates rounding     | Inefficient, too many checks     |
+| 🥈 Optimized   | O(1)            | O(1)             | Simple math with division + remainder | Slightly more verbose            |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | One-liner, elegant, cleanest solution | Needs to know the rounding trick |
 
 ---
 

@@ -64,8 +64,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -80,92 +80,45 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥇 Approach 1: Optimal Solution ⭐ (Formula)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - The problem gives the formulas directly:
+>   - Kelvin = Celsius + 273.15
+>   - Fahrenheit = Celsius \* 1.80 + 32.00
+>   - Simply apply these formulas and return results in an array.
+> - Straightforward but repeats computation directly inside the function.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function convertTemperature(celsius):
+    kelvin = celsius + 273.15
+    fahrenheit = celsius * 1.80 + 32.00
+    return [kelvin, fahrenheit]
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Most optimal and elegant solution with directly apply formulas
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
-    }
-};
-```
-
-### 🥈 Approach 2: Optimized Solution
-
-#### 📝 Intuition
-
-> Mô tả cách tối ưu hóa từ approach đầu tiên
-
-#### 🔍 Algorithm
-
-```pseudo
-// Write your pseudocode here
-```
-
-#### 💻 Implementation
-
-```cpp
-// Optimized approach with better complexity
-
-class Solution {
-public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
-    }
-};
-```
-
-### 🥇 Approach 3: Optimal Solution ⭐
-
-#### 📝 Intuition
-
-> Mô tả giải pháp tốt nhất, elegant nhất
-
-#### 🔍 Algorithm
-
-```pseudo
-// Write your pseudocode here
-```
-
-#### 💻 Implementation
-
-```cpp
-// Most optimal and elegant solution
-
-class Solution {
-public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    vector<double> convertTemperature(double celsius) {
+        double kelvin = celsius + 273.15;
+        double fahrenheit = celsius * 1.80 + 32.00;
+        return {kelvin, fahrenheit};
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach      | Time Complexity | Space Complexity | Pros                         | Cons |
+| ------------- | --------------- | ---------------- | ---------------------------- | ---- |
+| 🥇 Optimal ⭐ | O(1)            | O(1)             | Very simple, direct formulas | None |
 
 ---
 

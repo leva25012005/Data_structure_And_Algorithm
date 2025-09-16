@@ -61,8 +61,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -71,68 +71,57 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Simulation)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Start with x = num.
+> - At each operation, we can increase x by 1 while decreasing num by 1, or decrease x by 1 while increasing num by 1.
+> - To maximize x, always pick the operation that increases x.
+> - Simulate up to t steps.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(num, t):
+    x = num
+    repeat t times:
+        x = x + 1
+        num = num + 1
+    return x
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+/// Brute force with simulation
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    int solutionBruteForce(int num, int t) {
+        int x = num;
+        // Simulate t operations
+        for (int i = 0; i < t; i++) {
+            x += 1;   // increase x
+            num += 1; // increase num
+        }
+        return x;
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥇 Approach 2: Optimal Solution ⭐ (One-Liner)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - The problem reduces directly to the formula: x = num + 2 × t.
+> - No loops, no extra variables, constant time.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
-```
-
-#### 💻 Implementation
-
-```cpp
-// Optimized approach with better complexity
-
-class Solution {
-public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
-    }
-};
-```
-
-### 🥇 Approach 3: Optimal Solution ⭐
-
-#### 📝 Intuition
-
-> Mô tả giải pháp tốt nhất, elegant nhất
-
-#### 🔍 Algorithm
-
-```pseudo
-// Write your pseudocode here
+function optimal(num, t):
+    return num + 2 * t
 ```
 
 #### 💻 Implementation
@@ -142,21 +131,18 @@ public:
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    int solutionOptimal(int num, int t) {
+        return num + 2 * t;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                          | Cons                          |
+| -------------- | --------------- | ---------------- | ----------------------------- | ----------------------------- |
+| 🥉 Brute Force | O(t)            | O(1)             | Intuitive, simulates directly | Too slow if t were very large |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Cleanest, one-liner solution  | None                          |
 
 ---
 

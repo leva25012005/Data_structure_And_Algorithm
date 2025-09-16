@@ -53,8 +53,8 @@ Given two integers <code>num1</code> and <code>num2</code>, return <em>the <stro
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -81,92 +81,78 @@ _No regular frequency companies_
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Direct Addition)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Just return num1 + num2.
+> - This is the most straightforward approach since the problem directly asks for the sum
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(num1, num2):
+    return num1 + num2
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+/// Brute force approach with direct addition
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    int solutionBruteForce(int num1, int num2) {
+        return num1 + num2; // Simply add and return
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥇 Approach 2: Optimal Solution ⭐ (Bitwise Addition)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - se bit manipulation to perform addition without using the + operator:
+>   - Use XOR (^) to add numbers without carry.
+>   - Use AND (&) and left shift to calculate the carry.
+>   - Repeat until carry becomes 0.
+> - This is how addition is done at the hardware level.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bitwiseAddition(num1, num2):
+    while num2 != 0:
+        carry = (num1 & num2) << 1
+        num1 = num1 ^ num2
+        num2 = carry
+    return num1
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Optimal approach using bitwise operations (no + operator)
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
-    }
-};
-```
-
-### 🥇 Approach 3: Optimal Solution ⭐
-
-#### 📝 Intuition
-
-> Mô tả giải pháp tốt nhất, elegant nhất
-
-#### 🔍 Algorithm
-
-```pseudo
-// Write your pseudocode here
-```
-
-#### 💻 Implementation
-
-```cpp
-// Most optimal and elegant solution
-
-class Solution {
-public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    int solutionBitwise(int num1, int num2) {
+        while (num2 != 0) {
+            int carry = (num1 & num2) << 1; // Calculate carry
+            num1 = num1 ^ num2;             // Sum without carry
+            num2 = carry;                   // Assign carry to num2
+        }
+        return num1;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach              | Time Complexity | Space Complexity | Pros                                  | Cons                        |     |     |
+| --------------------- | --------------- | ---------------- | ------------------------------------- | --------------------------- | --- | --- |
+| 🥉 Direct Addition    | O(1)            | O(1)             | Clean, simplest, one line             | Too trivial, no learning    |     |     |
+| 🥇 Bitwise Optimal ⭐ | O(log(max))     | O(1)             | Shows how addition works at low level | More complex than necessary |     |     |
 
 ---
 

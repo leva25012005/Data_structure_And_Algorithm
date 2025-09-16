@@ -73,8 +73,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-0-2025`  | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-0-2025`  | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -97,42 +97,68 @@ _No regular frequency companies_
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Enumeration)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Try every possible pair (x, y) with 1 ≤ x ≤ n and 1 ≤ y ≤ m.
+> - Simulate the game turn by turn until no flowers are left.
+> - Check if Alice wins.
+> - This works but is too slow because n, m ≤ 10^5, meaning up to 10^10 pairs.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n, m):
+    count = 0
+    for x in 1..n:
+        for y in 1..m:
+            if simulateGame(x, y) == AliceWins:
+                count++
+    return count
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Optimized approach using math
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    int solutionOptimized(int n, int m) {
+        long long oddX = (n + 1) / 2;  // number of odd numbers in [1..n]
+        long long evenX = n / 2;
+        long long oddY = (m + 1) / 2;  // number of odd numbers in [1..m]
+        long long evenY = m / 2;
+
+        // Odd sum = (oddX * evenY) + (evenX * oddY)
+        return (int)(oddX * evenY + evenX * oddY);
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Mathematical Observation)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Alice wins iff the total number of flowers (x + y) is odd.
+>   - If (x + y) is odd → Alice makes the last move → she wins.
+>   - If (x + y) is even → Bob makes the last move → Bob wins.
+> - So we just need to count how many pairs (x, y) satisfy (x + y) % 2 == 1.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimized(n, m):
+    countOddX = number of odd x in [1..n]
+    countEvenX = n - countOddX
+    countOddY = number of odd y in [1..m]
+    countEvenY = m - countOddY
+
+    // Odd sum happens if:
+    // 1. x is odd, y is even
+    // 2. x is even, y is odd
+    return countOddX * countEvenY + countEvenX * countOddY
 ```
 
 #### 💻 Implementation
@@ -142,9 +168,14 @@ public:
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    int solutionOptimized(int n, int m) {
+        long long oddX = (n + 1) / 2;  // number of odd numbers in [1..n]
+        long long evenX = n / 2;
+        long long oddY = (m + 1) / 2;  // number of odd numbers in [1..m]
+        long long evenY = m / 2;
+
+        // Odd sum = (oddX * evenY) + (evenX * oddY)
+        return (int)(oddX * evenY + evenX * oddY);
     }
 };
 ```
@@ -153,36 +184,45 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - Instead of computing separately, we can directly use formula:
+>   $$
+>   \text{Answer} = \left(\frac{n+1}{2}\right)\cdot\left(\frac{m}{2}\right)
+>   $$
+>
+> * \left(\frac{n}{2}\right)\cdot\left(\frac{m+1}{2}\right)
+>   $$
+>
+> - This is $O(1)$ time, $O(1)$ space.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(n, m):
+    return ((n+1)//2) * (m//2) + (n//2) * ((m+1)//2)
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Most optimal and elegant solution
+// Most optimal and elegant solution with direct formula
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    int solutionOptimal(int n, int m) {
+        long long ans = ((n + 1) / 2) * 1LL * (m / 2)   // oddX * evenY
+                      + (n / 2) * 1LL * ((m + 1) / 2); // evenX * oddY
+        return (int)ans;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                                 | Cons                             |
+| -------------- | --------------- | ---------------- | ------------------------------------ | -------------------------------- |
+| 🥉 Brute Force | O(n·m)          | O(1)             | Very intuitive, simulates the game   | Impossible for n,m up to 1e5     |
+| 🥈 Optimized   | O(1)            | O(1)             | Uses parity counting                 | Requires basic math observation  |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Clean one-line formula, very elegant | Harder to derive at first glance |
 
 ---
 

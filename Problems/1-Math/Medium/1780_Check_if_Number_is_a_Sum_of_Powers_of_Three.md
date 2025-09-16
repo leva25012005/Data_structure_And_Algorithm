@@ -62,8 +62,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `16-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `16-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -78,42 +78,73 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Subset Enumeration)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Generate all possible subsets of powers of 3 that are ≤ n.
+> - Check if any subset sums to exactly n.
+> - This is brute force and not efficient for larger n, but works conceptually
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n):
+    powers = generate all powers of 3 ≤ n
+    for each subset of powers:
+        if sum(subset) == n:
+            return true
+    return false
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force approach (Exponential time, not feasible for large n)
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    bool checkPowersOfThree(int n) {
+        vector<int> powers;
+        // Generate all powers of 3 ≤ n
+        for (long long p = 1; p <= n; p *= 3) {
+            powers.push_back(p);
+        }
+
+        int m = powers.size();
+        // Try all subsets (2^m possibilities)
+        for (int mask = 0; mask < (1 << m); mask++) {
+            long long sum = 0;
+            for (int i = 0; i < m; i++) {
+                if (mask & (1 << i)) sum += powers[i];
+            }
+            if (sum == n) return true;
+        }
+        return false;
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution - Greedy (Subtract Largest Power)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Similar to "coin change" greedy strategy.
+> - Start from the largest power of 3 ≤ n.
+> - Subtract it from n if possible, then continue with smaller powers.
+> - If we can reduce n to 0, return true.
+> - Works because we must use each power of 3 at most once.
+
+🔍 Algorithm
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function greedy(n):
+    while n > 0:
+        find largest power of 3 ≤ n
+        subtract it from n
+    return true if n == 0 else false
 ```
 
 #### 💻 Implementation
@@ -123,23 +154,40 @@ public:
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    bool checkPowersOfThree(int n) {
+        // Generate all powers of 3 up to n
+        vector<int> powers;
+        for (long long p = 1; p <= n; p *= 3) {
+            powers.push_back(p);
+        }
+
+        // Start from largest power and subtract
+        for (int i = powers.size() - 1; i >= 0; i--) {
+            if (n >= powers[i]) {
+                n -= powers[i];
+            }
+        }
+        return n == 0;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Base-3 Representation)
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - Every integer can be expressed in base 3.
+> - If a number can be represented as a sum of distinct powers of 3, then its base-3 representation contains only digits 0 or 1 (never 2).
+> - So we just need to check the ternary representation of n.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(n):
+    while n > 0:
+        if n % 3 == 2: return false
+        n = n / 3
+    return true
 ```
 
 #### 💻 Implementation
@@ -149,9 +197,13 @@ public:
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    bool checkPowersOfThree(int n) {
+        // Check ternary representation
+        while (n > 0) {
+            if (n % 3 == 2) return false; // If digit "2" appears -> not possible
+            n /= 3;
+        }
+        return true;
     }
 };
 ```

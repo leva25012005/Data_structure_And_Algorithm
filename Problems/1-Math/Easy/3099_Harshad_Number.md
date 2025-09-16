@@ -21,6 +21,38 @@
 
 <!-- description:start -->
 
+<p>An integer divisible by the <strong>sum</strong> of its digits is said to be a <strong>Harshad</strong> number. You are given an integer <code>x</code>. Return <em>the sum of the digits</em> of <code>x</code> if <code>x</code> is a <strong>Harshad</strong> number, otherwise, return <code>-1</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> x = 18
+<strong>Output:</strong> 9
+<strong>Explanation:</strong> The sum of digits of <code>x</code> is <code>9</code>. <code>18</code> is divisible by <code>9</code>. So <code>18</code> is a Harshad number and the answer is <code>9</code>.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> x = 23
+<strong>Output:</strong> -1
+<strong>Explanation:</strong> The sum of digits of <code>x</code> is <code>5</code>. <code>23</code> is not divisible by <code>5</code>. So <code>23</code> is not a Harshad number and the answer is <code>-1</code>.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+    <li><code>1 &lt;= x &lt;= 100</code></li>
+</ul>
+
+<!-- description:end -->
+
+## Description
+
+<!-- description:start -->
+
 <p>An integer divisible by the <strong>sum</strong> of its digits is said to be a <strong>Harshad</strong> number. You are given an integer <code>x</code>. Return <em>the sum of the digits</em> of <code>x</code> if <code>x</code> is a <strong>Harshad</strong> number; otherwise, return <code>-1</code>.</p>
 
 <p>&nbsp;</p>

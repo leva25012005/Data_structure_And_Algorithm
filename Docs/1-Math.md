@@ -4,7 +4,7 @@
 
 ![Problems](https://img.shields.io/badge/Total%20Problems-48-blueviolet?style=for-the-badge&logo=leetcode)
 ![Progress](https://img.shields.io/badge/Completed-0%2F48-critical?style=for-the-badge&logo=github)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-15--09--2025-success?style=for-the-badge&logo=git)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-17--09--2025-success?style=for-the-badge&logo=git)
 
 </div>
 
@@ -18,11 +18,11 @@
 
 ## 📈 Progress Statistics
 
-| Difficulty    | Total | Solved | Remaining | Progress                                                                           |
-| ------------- | ----- | ------ | --------- | ---------------------------------------------------------------------------------- |
-| 🟢 **Easy**   | `32`  | `20`   | `12`      | ![Progress Bar](https://progress-bar.xyz/63/?title=Progress&width=150&color=green) |
-| 🟡 **Medium** | `12`  | `8`    | `5`       | ![Progress Bar](https://progress-bar.xyz/67/?title=Progress&width=150&color=green) |
-| 🔴 **Hard**   | `4`   | `2`    | `2`       | ![Progress Bar](https://progress-bar.xyz/50/?title=Progress&width=150&color=green) |
+| Difficulty    | Total | Solved | Remaining | Progress                                                                            |
+| ------------- | ----- | ------ | --------- | ----------------------------------------------------------------------------------- |
+| 🟢 **Easy**   | `32`  | `32`   | `0`       | ![Progress Bar](https://progress-bar.xyz/100/?title=Progress&width=150&color=green) |
+| 🟡 **Medium** | `12`  | `12`   | `0`       | ![Progress Bar](https://progress-bar.xyz/100/?title=Progress&width=150&color=green) |
+| 🔴 **Hard**   | `4`   | `4`    | `0`       | ![Progress Bar](https://progress-bar.xyz/100/?title=Progress&width=150&color=green) |
 
 ## 🏢 Top Companies by Question Frequency
 

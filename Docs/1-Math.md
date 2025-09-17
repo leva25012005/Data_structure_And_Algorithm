@@ -3,7 +3,7 @@
 # 📊 1-Math - LeetCode Progress Tracker
 
 ![Problems](https://img.shields.io/badge/Total%20Problems-48-blueviolet?style=for-the-badge&logo=leetcode)
-![Progress](https://img.shields.io/badge/Completed-0%2F48-critical?style=for-the-badge&logo=github)
+![Progress](https://img.shields.io/badge/Completed-48%2F48-critical?style=for-the-badge&logo=github)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-17--09--2025-success?style=for-the-badge&logo=git)
 
 </div>

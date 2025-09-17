@@ -60,8 +60,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `17-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `17-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -76,54 +76,104 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Not feasible for large constraints)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Try to simulate moves step by step using BFS (or DFS).
+> - At each second, move to all 8 possible neighbors.
+> - Check if (fx, fy) is reached exactly at second t.
+> - This is correct but impossible for large values (10^9) because the grid is infinite.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(sx, sy, fx, fy, t):
+    queue = [(sx, sy, 0)]   // position + time
+    visited = set()
+    while queue not empty:
+        (x, y, time) = queue.pop()
+        if (x, y) == (fx, fy) and time == t:
+            return true
+        if time < t:
+            for each of 8 directions:
+                push (x+dx, y+dy, time+1) if not visited
+    return false
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force BFS (works only for very small t)
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    bool canReachTarget(int sx, int sy, int fx, int fy, int t) {
+        // Impossible for large t, only for demonstration
+        vector<pair<int,int>> dirs = {
+            {1,0},{-1,0},{0,1},{0,-1},
+            {1,1},{1,-1},{-1,1},{-1,-1}
+        };
+        queue<tuple<int,int,int>> q;
+        q.push({sx, sy, 0});
+        set<pair<int,int>> visited;
+        visited.insert({sx, sy});
+
+        while (!q.empty()) {
+            auto [x, y, time] = q.front(); q.pop();
+            if (x == fx && y == fy && time == t) return true;
+            if (time < t) {
+                for (auto [dx, dy] : dirs) {
+                    int nx = x + dx, ny = y + dy;
+                    if (!visited.count({nx, ny})) {
+                        visited.insert({nx, ny});
+                        q.push({nx, ny, time + 1});
+                    }
+                }
+            }
+        }
+        return false;
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Math-based with BFS Insight)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - From BFS intuition, minimum steps to reach (fx, fy) is
+>
+> $$
+> \text{minSteps} = \max\left( \lvert f_x - s_x \rvert,\; \lvert f_y - s_y \rvert \right)
+> $$
+>
+> - minSteps=max(∣fx−sx∣,∣fy−sy∣)
+> - If t == minSteps → exactly possible.
+> - If t > minSteps → we can “waste” moves by going back and forth (extra steps are always possible).
+> - So condition: t >= minSteps.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimized(sx, sy, fx, fy, t):
+    dx = abs(fx - sx)
+    dy = abs(fy - sy)
+    minSteps = max(dx, dy)
+    return t >= minSteps
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Optimized math-based solution
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    bool canReachTarget(int sx, int sy, int fx, int fy, int t) {
+        long long dx = abs(fx - sx);
+        long long dy = abs(fy - sy);
+        long long minSteps = max(dx, dy);
+        return t >= minSteps;  // True if we have enough time
     }
 };
 ```
@@ -132,12 +182,18 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> Same as approach 2, but written in the most elegant form.
+> The check reduces to just one line:
+>
+> $$
+> \text{return } \; t \geq \max \left( \lvert f_x - s_x \rvert,\; \lvert f_y - s_y \rvert \right)
+> $$
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(sx, sy, fx, fy, t):
+    return t >= max(abs(fx - sx), abs(fy - sy))
 ```
 
 #### 💻 Implementation
@@ -147,21 +203,19 @@ public:
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    bool canReachTarget(int sx, int sy, int fx, int fy, int t) {
+        return t >= max(abs(fx - sx), abs(fy - sy));
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                          | Cons                             |
+| -------------- | --------------- | ---------------- | ----------------------------- | -------------------------------- |
+| 🥉 Brute Force | O(8^t)          | O(t)             | Intuitive, follows definition | Impossible for large inputs      |
+| 🥈 Optimized   | O(1)            | O(1)             | Uses math, efficient          | Slightly less intuitive at first |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Clean, elegant, one-liner     | None                             |
 
 ---
 
@@ -172,3 +226,4 @@ public:
 _Happy Coding! 🚀_
 
 </div>
+$$

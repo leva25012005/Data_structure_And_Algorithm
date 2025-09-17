@@ -10,6 +10,7 @@ def clean_filename(title):
 def get_difficulty_badge(difficulty):
     """Tạo badge màu sắc cho độ khó"""
     colors = {
+        'Basic': '⚪',
         'Easy': '🟢',
         'Medium': '🟡', 
         'Hard': '🔴'

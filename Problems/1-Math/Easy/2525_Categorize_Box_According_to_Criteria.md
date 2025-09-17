@@ -49,8 +49,7 @@
 <pre>
 <strong>Input:</strong> length = 1000, width = 35, height = 700, mass = 300
 <strong>Output:</strong> &quot;Heavy&quot;
-<strong>Explanation:</strong> 
-None of the dimensions of the box is greater or equal to 10<sup>4</sup>. 
+<strong>Explanation:</strong> 17o09 2025he dimensions of the box is greater or equal to 10<sup>4</sup>. 
 Its volume = 24500000 &lt;= 10<sup>9</sup>. So it cannot be categorized as &quot;Bulky&quot;.
 However mass &gt;= 100, so the box is &quot;Heavy&quot;.
 Since the box is not &quot;Bulky&quot; but &quot;Heavy&quot;, we return &quot;Heavy&quot;.</pre>
@@ -80,8 +79,8 @@ Since its neither of the two above categories, we return &quot;Neither&quot;.</p
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `17-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `17-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -112,28 +111,60 @@ _No regular frequency companies_
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Direct Condition Checking)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - A box is Bulky if:
+>   - Any dimension ≥ 10^4, OR
+>   - Volume ≥ 10^9.
+> - A box is Heavy if:
+>   - Mass ≥ 100.
+> - Based on these two flags (bulky, heavy), we return the category string.
+> - This is the simplest brute-force way: check conditions one by one.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function categorizeBox(length, width, height, mass):
+    bulky = false
+    if length >= 1e4 or width >= 1e4 or height >= 1e4:
+        bulky = true
+    if length * width * height >= 1e9:
+        bulky = true
+
+    heavy = (mass >= 100)
+
+    if bulky and heavy: return "Both"
+    if bulky: return "Bulky"
+    if heavy: return "Heavy"
+    return "Neither"
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force condition checking
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    string categorizeBox(int length, int width, int height, int mass) {
+        bool bulky = false;
+        long long volume = 1LL * length * width * height;
+
+        // Bulky if any dimension >= 1e4 OR volume >= 1e9
+        if (length >= 1e4 || width >= 1e4 || height >= 1e4 || volume >= 1e9) {
+            bulky = true;
+        }
+
+        // Heavy if mass >= 100
+        bool heavy = (mass >= 100);
+
+        // Return category based on flags
+        if (bulky && heavy) return "Both";
+        if (bulky) return "Bulky";
+        if (heavy) return "Heavy";
+        return "Neither";
     }
 };
 ```
@@ -142,12 +173,19 @@ public:
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Refactor the code into helper functions isBulky and isHeavy for readability.
+> - Same logic, but cleaner structure.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function isBulky(length, width, height):
+    if any dimension >= 1e4: return true
+    if length * width * height >= 1e9: return true
+    return false
+
+function isHeavy(mass):
+    return mass >= 100
 ```
 
 #### 💻 Implementation
@@ -157,23 +195,45 @@ public:
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    bool isBulky(int length, int width, int height) {
+        long long volume = 1LL * length * width * height;
+        return (length >= 1e4 || width >= 1e4 || height >= 1e4 || volume >= 1e9);
+    }
+
+    bool isHeavy(int mass) {
+        return mass >= 100;
+    }
+
+    string categorizeBox(int length, int width, int height, int mass) {
+        bool bulky = isBulky(length, width, height);
+        bool heavy = isHeavy(mass);
+
+        if (bulky && heavy) return "Both";
+        if (bulky) return "Bulky";
+        if (heavy) return "Heavy";
+        return "Neither";
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Compact Logic)
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - Since conditions are small and straightforward, we can inline everything with compact expressions.
+> - No loops, just one-liners for bulky/heavy detection.
+> - This makes the solution very short and optimal in terms of readability + performance.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(length, width, height, mass):
+    bulky = (any dimension >= 1e4) OR (volume >= 1e9)
+    heavy = (mass >= 100)
+    if bulky and heavy: return "Both"
+    if bulky: return "Bulky"
+    if heavy: return "Heavy"
+    return "Neither"
 ```
 
 #### 💻 Implementation
@@ -183,21 +243,26 @@ public:
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    string categorizeBox(int length, int width, int height, int mass) {
+        bool bulky = (length >= 1e4 || width >= 1e4 || height >= 1e4 ||
+                      1LL * length * width * height >= 1e9);
+        bool heavy = (mass >= 100);
+
+        if (bulky && heavy) return "Both";
+        if (bulky) return "Bulky";
+        if (heavy) return "Heavy";
+        return "Neither";
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                          | Cons             |
+| -------------- | --------------- | ---------------- | ----------------------------- | ---------------- |
+| 🥉 Brute Force | O(1)            | O(1)             | Very explicit, step-by-step   | Slightly verbose |
+| 🥈 Optimized   | O(1)            | O(1)             | Cleaner with helper functions | More lines       |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Most compact and elegant      | Less verbose     |
 
 ---
 

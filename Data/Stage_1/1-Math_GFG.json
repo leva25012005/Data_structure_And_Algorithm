@@ -1,0 +1,1271 @@
+[
+  {
+    "id": 703967,
+    "problem_name": "Series AP",
+    "slug": "series-ap5310",
+    "difficulty": "Basic",
+    "accuracy": "59.24%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "series",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given the first 2 terms <strong>a1</strong> and <strong>a2 </strong>of an Arithmetic Series. Find the <strong>n<sup>th</sup> </strong>term of the series.&nbsp;</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a1 = 2, a2 = 3, n = 4\n<strong>Output: </strong>5\n<strong>Explanation: </strong>The series is: 2,3,4,5,6.... Thus, the 4th term is 5.</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a1 = 1, a2 = 3, n = 10\n<strong>Output: </strong>19\n<strong>Explanation: </strong>The series is: 1,3,5,7,9,11,13,15,17,19,21.. Thus, the 10th term is 19.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />-10<sup>4 </sup>&lt;= a1 , a2 &lt;= 10<sup>4</sup><br />1 &lt;= n &lt;= 10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/how-to-find-the-nth-term-of-an-arithmetic-sequence/",
+      "https://www.geeksforgeeks.org/nth-term-of-ap-from-first-two-terms/",
+      "https://www.geeksforgeeks.org/program-n-th-term-arithmetic-progression-series/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704133,
+    "problem_name": "The dice problem",
+    "slug": "the-dice-problem2316",
+    "difficulty": "Basic",
+    "accuracy": "73.72%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">You are given a <strong>cubic dice</strong> with <strong>6</strong> faces. All the individual faces have a number printed on them. The numbers are in the range of <strong>1 to 6</strong>, like any ordinary dice. You will be provided with a face of this cube, your task is to guess the number on the opposite face of the cube.</span></p>\n<p><strong><span style=\"font-size: 18px;\">Examples:</span></strong></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 6</span>\n<span style=\"font-size: 18px;\"><strong>Output: </strong>1</span>\n<span style=\"font-size: 18px;\"><strong>Explanation: </strong>For dice facing number 6 opposite face will have the number 1.</span></pre>\n<pre><strong><span style=\"font-size: 18px;\">Input: </span></strong><span style=\"font-size: 18px;\">n = 2</span>\n<strong><span style=\"font-size: 18px;\">Output: </span></strong><span style=\"font-size: 18px;\">5</span>\n<strong><span style=\"font-size: 18px;\">Explanation: </span></strong><span style=\"font-size: 18px;\">For dice facing number 5 opposite face will have the number 2.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= n &lt;= 6</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/the-dice-problem/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703961,
+    "problem_name": "Closest Number",
+    "slug": "closest-number5728",
+    "difficulty": "Basic",
+    "accuracy": "15.77%",
+    "tags": {
+      "company_tags": [
+        "Microsoft"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given two integers <strong>n</strong> and <strong>m </strong></span><span style=\"font-size: 18.6667px;\">(m != 0)</span><span style=\"font-size: 14pt;\">. The problem is to find the number closest to </span><strong style=\"font-size: 14pt;\">n</strong><span style=\"font-size: 14pt;\"> and divisible by </span><strong style=\"font-size: 14pt;\">m</strong><span style=\"font-size: 14pt;\">. If there is more than one such number, then output the one having the </span><strong style=\"font-size: 14pt;\">maximum absolute value</strong><span style=\"font-size: 14pt;\">.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n<strong> </strong>=<strong> </strong>13, m<strong> </strong>=<strong> </strong>4\n<strong>Output: </strong>12\n<strong>Explanation: </strong>12 is the Closest Number to 13 which is divisible by 4.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n<strong> </strong>= -15, m<strong> </strong>= 6\n<strong>Output: -</strong>18\n<strong>Explanation: </strong>Both -12 and -18 are closest to -15 and divisible by 6, but -18 has the maximum absolute value. So, output is -18.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 14pt;\">-10<sup>5</sup> &le; n, m &le; 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-number-closest-n-divisible-m/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704620,
+    "problem_name": "Swap two numbers",
+    "slug": "swap-two-numbers3844",
+    "difficulty": "Basic",
+    "accuracy": "70.02%",
+    "tags": {
+      "company_tags": [
+        "Samsung"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 20px;\">You are given two numbers a and b. Your task is to swap the given two numbers.</span></p>\n<p><span style=\"font-size: 20px;\"><strong>Note:</strong>&nbsp;</span><span style=\"font-size: 20px;\">Try to do it without a temporary variable.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a = 13, b = 9\n<strong>Output:</strong> 9 13\n<strong>Explanation</strong>: After swapping it becomes 9 and 13.\n</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>: a = 15, b = 8\n<strong>Output:</strong> 8 15\n<strong>Explanation</strong>: after swapping it becomes 8 and 15.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; a, b &le; 10<sup>6</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/c-program-swap-two-numbers/",
+      "https://www.geeksforgeeks.org/cpp-program-to-swap-two-numbers/",
+      "https://www.geeksforgeeks.org/java-program-to-swap-two-numbers/",
+      "https://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/",
+      "https://www.geeksforgeeks.org/swap-two-numbers/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 887939,
+    "problem_name": "Sum of Squares of First n Natural Numbers",
+    "slug": "sum-of-squares-of-first-n-natural-numbers",
+    "difficulty": "Easy",
+    "accuracy": "81.7%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": []
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given an integer <strong>n.</strong> The task is to calculate the sum of the squares of the first &nbsp;<strong>n</strong> natural numbers.</span></p>\n<p><strong><span style=\"font-size: 14pt;\">Examples:</span></strong></p>\n<pre><strong><span style=\"font-size: 14pt;\">Input:&nbsp;</span></strong><span style=\"font-size: 14pt;\">n = 2<br /><strong>Output:&nbsp;</strong>5<br /><strong>Explanation:</strong> 1<sup>2</sup> + 2<sup>2</sup> = 5</span></pre>\n<pre><strong><span style=\"font-size: 14pt;\">Input:&nbsp;</span></strong><span style=\"font-size: 14pt;\">n = 3<br /><strong>Output: </strong>14<br /><strong>Explanation:</strong> 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup> = 5</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />0 &lt;= n &lt;= 10<sup>3</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/Sum of squares of first n natural numbers/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 702732,
+    "problem_name": "Sum of Natural Numbers",
+    "slug": "sum-of-series2811",
+    "difficulty": "Basic",
+    "accuracy": "23.81%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\"><span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">Given an integer </span><span style=\"box-sizing: border-box; font-weight: bolder; line-height: 1.7em; color: #1e2229; background-color: #ffffff; font-family: var(--gfg-font-secondary) !important;\">n</span><span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">, your task is to compute the <strong>sum</strong> of all natural numbers from 1 to n (inclusive). If n is 0, the sum should be 0.</span></span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 3\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> For n = 3, the sum will be 6. 1 + 2 + 3 = 6.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 5\n<strong>Output:</strong> 15\n<strong>Explanation:</strong> For n = 5, the sum will be 15. 1 + 2 + 3 + 4 + 5 = 15.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-find-sum-first-n-natural-numbers/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704112,
+    "problem_name": "Multiplication Table",
+    "slug": "print-table0303",
+    "difficulty": "Basic",
+    "accuracy": "44.81%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Create the multiplication table&nbsp;</span><span style=\"font-size: 18px;\">from 1 to 10 </span><span style=\"font-size: 18px;\">for a given number </span><strong style=\"font-size: 18px;\">n </strong><span style=\"font-size: 18px;\">and return the table as an array.</span></p>\n<p><strong><span style=\"font-size: 18px;\">Examples:</span></strong></p>\n<pre><strong><span style=\"font-size: 18px;\">Input: </span></strong><span style=\"font-size: 18px;\">n = 9<br /></span><strong><span style=\"font-size: 18px;\">Output: </span></strong><span style=\"font-size: 18px;\">9 18 27 36 45 54 63 72 81 90</span></pre>\n<pre><strong><span style=\"font-size: 18px;\">Input: </span></strong><span style=\"font-size: 18px;\">n = 2</span>\n<strong><span style=\"font-size: 18px;\">Output:</span> </strong><span style=\"font-size: 18px;\">2 4 6 8 10 12 14 16 18 20</span><span style=\"font-size: 18px;\"><br /></span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:&nbsp;</strong><br />1 &lt;= N &lt;= 10<sup>6</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/cpp-program-to-print-multiplication-table-of-a-number/",
+      "https://www.geeksforgeeks.org/program-to-print-multiplication-table-of-a-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703724,
+    "problem_name": "Odd or Even",
+    "slug": "odd-or-even3618",
+    "difficulty": "Basic",
+    "accuracy": "60.6%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Bit Magic",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a positive integer <strong>n</strong>, determine whether it is odd or even. Return </span><span style=\"font-size: 18px;\"><strong>true </strong>if the number is even and <strong>false </strong>if the number is odd.</span></p>\n<p><strong><span style=\"font-size: 18px;\">Examples:</span></strong></p>\n<pre style=\"text-wrap: wrap; color: #222222; background-color: #ffffff;\"><strong><span style=\"font-size: 18px;\">Input:</span></strong> <span style=\"font-size: 18px;\">n = 15</span>\n<strong><span style=\"font-size: 18px;\">Output: </span></strong><span style=\"font-size: 18px;\">false</span>\n<strong><span style=\"font-size: 18px;\">Explanation: </span></strong><span style=\"font-size: 18px;\">The number is not divisible by 2, Odd number.</span></pre>\n<pre style=\"text-wrap: wrap; color: #222222; background-color: #ffffff;\"><strong style=\"font-family: Arial, Helvetica, sans-serif; font-size: small;\"><span style=\"font-size: 18px;\">Input:</span></strong><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: small;\"> </span><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 18px;\">n = 44<br /></span><strong style=\"font-family: Arial, Helvetica, sans-serif; font-size: small;\"><span style=\"font-size: 18px;\">Output: </span></strong><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 18px;\">true<br /></span><strong style=\"font-family: Arial, Helvetica, sans-serif; font-size: small;\"><span style=\"font-size: 18px;\">Explanation: </span></strong><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 18px;\">The number is divisible by 2, Even number.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-whether-given-number-even-odd/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705080,
+    "problem_name": "Squares in a Matrix",
+    "slug": "squares-in-a-matrix5716",
+    "difficulty": "Basic",
+    "accuracy": "34.59%",
+    "tags": {
+      "company_tags": [
+        "Junglee Games"
+      ],
+      "topic_tags": [
+        "Matrix",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a <strong>mxn</strong> matrix, count the number of squares in the matrix. </span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong style=\"font-size: 18px;\">Input:</strong> </span><span style=\"font-size: 18px;\">m<strong> = </strong>2, n<strong> = </strong>2</span>\n<span style=\"font-size: 18px;\"><strong><span style=\"font-size: 18px;\">Output:</span> </strong></span><span style=\"font-size: 18px;\">5</span>\n<span style=\"font-size: 18px;\"><strong>Explanation: </strong></span><span style=\"font-size: 18px;\">There are a total of 5 squares in a 2*2 matrix. Four 1*1 squares and one 2*2 square.</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong><span style=\"font-size: 18px;\">Input:</span> </strong></span><span style=\"font-size: 18px;\">m<strong> = </strong>4, n<strong> = </strong>3</span>\n<span style=\"font-size: 18px;\"><strong>Output: </strong></span><span style=\"font-size: 18px;\">20</span>\n<span style=\"font-size: 18px;\"><strong>Explanation: </strong></span><span style=\"font-size: 18px;\">There are a total of 20 squares in a 4*3 matrix. </span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 18px;\">1 &lt;= m,n &lt;= 10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/count-number-of-squares-in-a-rectangle/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703905,
+    "problem_name": "Sum Of Digits",
+    "slug": "sum-of-digits1742",
+    "difficulty": "Easy",
+    "accuracy": "67.08%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "number-theory"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a positive number <strong>n</strong>. Find the <strong>sum</strong> of all the digits of n.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 687<strong>\nOutput: </strong>21<strong>\nExplanation: </strong>Sum of 687's digits: 6 + 8 + 7 = 21</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 12<strong>\nOutput </strong>3<strong>\nExplanation: </strong>Sum of 12's digits: 1 + 2 = 3\n</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= n &lt;= 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-for-sum-of-the-digits-of-a-given-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703932,
+    "problem_name": "Reverse digits",
+    "slug": "reverse-digit0316",
+    "difficulty": "Basic",
+    "accuracy": "46.92%",
+    "tags": {
+      "company_tags": [
+        "MAQ Software"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">You are given an integer <strong>n. </strong>Your task is to reverse the digits, ensuring that the reversed number has no leading zeroes.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: n = </strong>122\n<strong>Output: </strong>221\n<strong>Explanation: </strong>By reversing the digits of number, number will change into 221.</span>\n</pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input : n = </strong>200\n<strong>Output: </strong>2\n<strong>Explanation: </strong>By reversing the digits of number,</span> <span style=\"font-size: 18px;\">number will change into 2.</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input : n</strong> = 12345 \n<strong>Output: </strong>54321\n<strong>Explanation: </strong>By reversing the digits of number,</span> <span style=\"font-size: 18px;\"><span style=\"font-size: 18px;\">number will change into 54321</span>.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= n &lt;= 10<sup>6</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/reverse-number-program-in-cpp/",
+      "https://www.geeksforgeeks.org/write-a-program-to-reverse-digits-of-a-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703954,
+    "problem_name": "Prime Number",
+    "slug": "prime-number2314",
+    "difficulty": "Easy",
+    "accuracy": "22.2%",
+    "tags": {
+      "company_tags": [
+        "VMWare",
+        "Amazon",
+        "SAP Labs"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Prime Number",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-family: 'andale mono', monospace;\"><span style=\"font-size: 14pt;\">Given a number <strong>n</strong>, determine whether it is a <strong>prime number</strong> or not.<br /></span><span style=\"font-size: 14pt;\"><strong>Note:</strong> A prime number is a number greater than 1 that has no positive divisors other than 1 and itself.</span></span></p>\n<p><span style=\"font-size: 14pt; font-family: 'andale mono', monospace;\"><strong>Examples :<br /></strong></span></p>\n<pre><span style=\"font-size: 14pt; font-family: 'andale mono', monospace;\"><strong>Input: </strong>n = 7\n<strong>Output: </strong>true\n<strong>Explanation: </strong>7 has exactly two divisors: 1 and 7, making it a prime number.</span></pre>\n<pre><span style=\"font-size: 14pt; font-family: 'andale mono', monospace;\"><strong>Input: </strong>n = 25\n<strong>Output: </strong>false\n<strong>Explanation: </strong>25 has more than two divisors: 1, 5, and 25, so it is not a prime number.</span></pre>\n<pre><span style=\"font-size: 14pt; font-family: 'andale mono', monospace;\"><strong>Input: </strong>n = 1\n<strong>Output: </strong>false\n<strong>Explanation: </strong>1 has only one divisor (1 itself), which is not sufficient for it to be considered prime.</span></pre>\n<p><span style=\"font-size: 14pt; font-family: 'andale mono', monospace;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-for-prime-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703757,
+    "problem_name": "Check for Power",
+    "slug": "check-if-a-number-is-power-of-another-number5442",
+    "difficulty": "Basic",
+    "accuracy": "34.59%",
+    "tags": {
+      "company_tags": [
+        "Zoho",
+        "SAP Labs"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given two positive integers <strong>x</strong> and<strong> y</strong>, determine if y is a power of<strong> </strong>x. If y is a power of x, return <strong>True</strong>. Otherwise, return <strong>False</strong>.</span></p>\n<p><strong><span style=\"font-size: 18px;\">Examples:</span></strong></p>\n<pre><span style=\"font-size: 18px;\"><strong><span style=\"font-size: 18px;\">Input:</span> <span style=\"font-size: 14pt;\">x</span></strong></span><span style=\"font-size: 18px;\"> = 2, y = 8</span>\n<strong><span style=\"font-size: 18px;\">Output:</span> </strong><span style=\"font-size: 14pt;\">True</span> <br /><strong><span style=\"font-size: 18px;\">Explanation:</span> </strong><span style=\"font-size: 18px;\">2<sup>3</sup> is equal to 8.</span></pre>\n<pre><strong><span style=\"font-size: 18px;\">Input:</span><span style=\"font-size: 18px;\"> <span style=\"font-size: 14pt;\">x</span></span></strong><span style=\"font-size: 18px;\"> = 1, y = 8</span>\n<strong><span style=\"font-size: 18px;\">Output:</span> </strong><span style=\"font-size: 18px;\">False</span>\n<strong><span style=\"font-size: 18px;\">Explanation:</span> </strong><span style=\"font-size: 18px;\">Any power of 1 is not </span><span style=\"font-size: 18px;\">equal to 8.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:&nbsp;</strong><br />1 &lt;= x &lt;= 10<sup>3</sup><br />1 &lt;= y &lt;= 10<sup>8</sup></span></p>\n<p>&nbsp;</p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-if-a-number-is-power-of-another-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703978,
+    "problem_name": "Distance between 2 points",
+    "slug": "distance-between-2-points3200",
+    "difficulty": "Basic",
+    "accuracy": "49.98%",
+    "tags": {
+      "company_tags": [
+        "Zoho"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Geometric",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size:18px\">Given coordinates of <strong>2</strong> points on a cartesian plane, find&nbsp;the distance between them rounded up to nearest integer. </span></p>\n\n<p><span style=\"font-size:18px\"><strong>Example 1:</strong></span></p>\n\n<pre>\n<span style=\"font-size:18px\"><strong>Input: </strong>0 0 2 -2\n<strong>Output: </strong>3\n<strong>Explanation: </strong>Distance between (0, 0) \nand (2, -2) is 3.</span>\n</pre>\n\n<p><span style=\"font-size:18px\"><strong>Example 2:</strong></span></p>\n\n<pre>\n<span style=\"font-size:18px\"><strong>Input: </strong>-20 23 -15 68\n<strong>Output: </strong>45\n<strong>Explanation: </strong>Distance between (-20, 23) \nand (-15, 68) is 45.</span>\n</pre>\n\n<p><span style=\"font-size:18px\"><strong>Your Task:</strong><br />\nYou don&#39;t need to read or print anything. Your task is to complete the function&nbsp;<strong>distance()&nbsp;</strong>which takes x1, y1, x2 and y2 as input parameter and returns the distance between the given two points.</span></p>\n\n<p><span style=\"font-size:18px\"><strong>Expected Time Complexity:&nbsp;</strong>O(1)<br />\n<strong>Expected Space Complexity:</strong>&nbsp;O(1)</span></p>\n\n<p><span style=\"font-size:18px\"><strong>Constraints:</strong></span><br />\n<span style=\"font-size:18px\">-1000 &lt;= x1, y1, x2, y2 &lt;= 1000</span></p>\n",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-calculate-distance-two-points/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 888023,
+    "problem_name": "Valid Triangle",
+    "slug": "valid-triangle--121441",
+    "difficulty": "Easy",
+    "accuracy": "45.57%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": []
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given the three sides of a triangle <strong>a</strong>, <strong>b,</strong> and <strong>c</strong>. Check whether the triangle is valid or not.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> a = 8, b = 15, c = 17<br /></span><span style=\"font-size: 14pt;\"><strong>Output:</strong> Valid</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong>&nbsp;a = 3, b = 6, c = 9<br /></span><span style=\"font-size: 14pt;\"><strong>Output:</strong> Invalid</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &lt;= a,b,c &lt;= 10<sup>6</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-whether-triangle-valid-not-sides-given/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705474,
+    "problem_name": "Overlapping rectangles",
+    "slug": "overlapping-rectangles1924",
+    "difficulty": "Easy",
+    "accuracy": "26.6%",
+    "tags": {
+      "company_tags": [
+        "Amazon",
+        "Microsoft",
+        "Snapdeal",
+        "Goldman Sachs",
+        "OATS Systems",
+        "Expedia"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Geometric",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given two rectangles, find if the given two rectangles overlap or not. A rectangle is denoted by providing the x and y coordinates of two points: the left top corner and the right bottom corner of the rectangle. Two rectangles sharing a side are considered overlapping. (<strong>L1 </strong>and <strong>R1</strong> are the extreme points of the first rectangle and <strong>L2 </strong>and <strong>R2 </strong>are the extreme points of the second rectangle).</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Note:&nbsp;</strong>It may be assumed that the rectangles are parallel to the coordinate axis.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>L1=(0,10), R1=(10,0), L2=(5,5), R2=(15,0)\n<strong>Output: </strong>1\n<strong>Explanation: </strong>The rectangles overlap.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Example 2:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>L1=(0,2), R1=(1,1), L2=(-2,0), R2=(0,-3)\n<strong>Output: </strong>0\n<strong>Explanation: </strong>The rectangles do not overlap.</span></pre>\n<p><br /><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />-10<sup>9</sup>&lt;=x-coordinate,y-coordinate&lt;=10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-two-rectangles-overlap/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703913,
+    "problem_name": "Factorial",
+    "slug": "factorial5739",
+    "difficulty": "Basic",
+    "accuracy": "40.58%",
+    "tags": {
+      "company_tags": [
+        "Morgan Stanley",
+        "Samsung",
+        "FactSet",
+        "MAQ Software",
+        "Wipro"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a positive integer, <strong>n</strong>. Find the factorial of <strong>n</strong>.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 5\n<strong>Output: </strong>120\n<strong>Explanation: </strong>1 x 2 x 3 x 4 x 5 = 120</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 4\n<strong>Output: </strong>24\n<strong>Explanation: </strong>1 x 2 x 3 x 4 = 24</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />0 &le; n &le; 12</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-for-factorial-of-a-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704497,
+    "problem_name": "Pair cube count",
+    "slug": "pair-cube-count4132",
+    "difficulty": "Easy",
+    "accuracy": "30.87%",
+    "tags": {
+      "company_tags": [
+        "Adobe"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a positive integer <strong>n</strong>, count all pairs of <strong>&lsquo;a&rsquo;</strong>(&gt;=1) and <strong>&lsquo;b&rsquo;</strong>(&gt;=0) that satisfy the condition <strong>a<sup>3</sup> + b<sup>3 </sup>= n</strong>.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example :</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong style=\"font-size: 18px;\">Input:</strong> </span><strong><span style=\"font-size: 18px;\">n = </span></strong><span style=\"font-size: 18px;\">9 </span>\n<span style=\"font-size: 18px;\"><strong><span style=\"font-size: 18px;\">Output:</span> </strong></span><span style=\"font-size: 18px;\">2</span>\n<span style=\"font-size: 18px;\"><strong><span style=\"font-size: 18px;\">Explanation:</span> </strong></span><span style=\"font-size: 18px;\">There are two solutions: (a=1, b=2) and (a=2, b=1).</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong style=\"font-size: 18px;\">Input:</strong> </span><strong><span style=\"font-size: 18px;\">n = </span></strong><span style=\"font-size: 18px;\">27</span>\n<span style=\"font-size: 18px;\"><strong><span style=\"font-size: 18px;\">Output:</span> </strong></span><span style=\"font-size: 18px;\">1</span>\n<span style=\"font-size: 18px;\"><strong>Explanation: </strong></span><span style=\"font-size: 18px;\">Thereis only one solution: (a=3, b=0). </span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 18px;\">1 &lt;= n &lt;= 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/count-pairs-a-b-whose-sum-of-cubes-is-n-a3-b3-n/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703672,
+    "problem_name": "GCD of two numbers",
+    "slug": "gcd-of-two-numbers3459",
+    "difficulty": "Basic",
+    "accuracy": "51.03%",
+    "tags": {
+      "company_tags": [
+        "Accenture",
+        "TCS"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given two positive integers <strong>a</strong> and <strong>b</strong>, find <strong><a href=\"https://www.geeksforgeeks.org/greatest-common-divisor-gcd/\">GCD</a> </strong>of a and b.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Note:</strong> Don't use the inbuilt gcd function</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong> a = 20, b = 28\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> GCD of 20 and 28 is 4</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong> a = 60, b = 36\n<strong>Output:</strong> 12\n<strong>Explanation:</strong> GCD of 60 and 36 is 12</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; a, b &le; 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-to-find-gcd-or-hcf-of-two-numbers/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 897662,
+    "problem_name": "LCM of two numbers",
+    "slug": "lcm-of-two-numbers",
+    "difficulty": "Easy",
+    "accuracy": "71.3%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical"
+      ]
+    },
+    "problem_question": "<p data-start=\"161\" data-end=\"300\"><span style=\"font-size: 14pt;\">You are given two positive integers <strong>a </strong>and <strong>b</strong>&nbsp;Your task is to compute and return the Least Common Multiple (LCM) of the two numbers.<br /></span><span style=\"font-size: 14pt;\">The <strong data-start=\"306\" data-end=\"313\">LCM</strong> of two integers is the smallest positive integer that is divisible by both <strong>a</strong> and <strong>b.<br /></strong></span></p>\n<p data-start=\"161\" data-end=\"300\"><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre data-start=\"161\" data-end=\"300\"><span style=\"font-size: 14pt;\"><strong>Input: </strong>a = 12, b = 18<strong><br />Output: </strong>36<strong><br />Explanation: </strong>LCM of 12 and 18 is 36</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>a = 5, b = 11<strong><br />Output: </strong>55<strong><br />Explanation:</strong> LCM of 5 and 11 is 55</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:<br /></strong><span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">1 &le; a, b &le; 10<sup>4</sup></span></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-to-find-lcm-of-two-numbers/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704477,
+    "problem_name": "Perfect Numbers",
+    "slug": "perfect-numbers3207",
+    "difficulty": "Easy",
+    "accuracy": "17.21%",
+    "tags": {
+      "company_tags": [
+        "Wipro"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a number <strong>n,</strong> check if the number is <strong>perfect</strong> or not. A number is said to be perfect if <strong>sum</strong> of all its factors excluding the number itself is equal to the <strong>number</strong>.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n<strong> </strong>=<strong> </strong>6\n<strong>Output: </strong>true \n<strong>Explanation: </strong>Factors of 6 are 1, 2, 3 and 6. Excluding 6 their sum is 6 which is equal to n itself. So, it's a Perfect Number.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n<strong> </strong>=<strong> </strong>10\n<strong>Output: </strong>false<br /><strong>Explanation: </strong>Factors of 10 are 1, 2, 5 and 10. Excluding 10 their sum is 8 which is not equal to n itself. So, it's not a Perfect Number.<br /></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n<strong> </strong>=<strong> </strong>15\n<strong>Output: </strong>false<br /><strong>Explanation: </strong>Factors of 15 are 1, 3, 5, 15. Excluding 15 their sum is 9 which is not equal to n itself. So, it's not a Perfect Number.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 14pt;\">1 &le; n &le; 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/perfect-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 700259,
+    "problem_name": "Add two fractions",
+    "slug": "add-two-fractions",
+    "difficulty": "Basic",
+    "accuracy": "33.11%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size:18px\">You are given four numbers <strong>num1, den1, num2, and den2</strong>. You need to find<strong> (num1/den1)+(num2/den2) </strong>and output the result in the form of <strong>(numx/denx)</strong>. </span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Input Format:</strong><br />\r\nThe first line of input contains an integer <strong>T</strong> denoting the number of test cases . Then T test cases follow . Each test case contains four integers <strong>num1,&nbsp;den1, num2, den2 </strong>respectively .</span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Output Format:</strong><br />\r\nFor each test case, in a new line,&nbsp; output will be the fraction in the form<strong> a/b</strong> where the fraction denotes the sum of the two given fractions in reduced form.</span></p>\r\n\r\n<p><strong><span style=\"font-size:18px\">Your Task:</span></strong><br />\r\n<span style=\"font-size:18px\">Since this is a function problem, you don&#39;t need to worry about the testcases. Your task is to complete the function <strong>addFraction&nbsp;</strong>&nbsp;which adds the two fractions and prints the resulting fraction. The function&nbsp;takes four arguments <strong>num1, den1, num2, den2 </strong>where&nbsp;<strong>num1, num2 </strong>denotes&nbsp;the <strong>numerators&nbsp;</strong>of two fractions and <strong>den1, den2 </strong>denotes&nbsp;their <strong>denominators</strong>.</span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Constraints:</strong><br />\r\n1 &lt;= T &lt;= 100<br />\r\n1 &lt;= den1,den2,num1,num2 &lt;= 1000</span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Example:<br />\r\nInput</strong><br />\r\n1<br />\r\n1 500 2 500</span><br />\r\n<span style=\"font-size:18px\"><strong>Output</strong><br />\r\n3/500</span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Explanation:</strong><br />\r\nIn&nbsp;above test case&nbsp;1/500+2/500=3/500</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Note:</strong>The <strong>Input/Ouput</strong> format and <strong>Example</strong> given are used for system&#39;s internal purpose, and should be used by a user for <strong>Expected Output</strong> only. As it is a function problem, hence a user should not read any input from stdin/console. The task is to complete the function specified, and not to write the full code.</span></p>\r\n",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-to-add-two-fractions/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704549,
+    "problem_name": "Day of the week",
+    "slug": "day-of-the-week1637",
+    "difficulty": "Easy",
+    "accuracy": "41.67%",
+    "tags": {
+      "company_tags": [
+        "Morgan Stanley",
+        "Microsoft",
+        "Samsung"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Write a program that calculates the day of the week for any particular date in the past or future.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong></span>\n<span style=\"font-size: 18px;\"><strong>d = </strong>28, <strong>m = </strong>12, <strong>y = </strong>1995</span>\n<span style=\"font-size: 18px;\"><strong>Output:</strong></span>\n<span style=\"font-size: 18px;\">Thursday</span>\n<span style=\"font-size: 18px;\"><strong>Explanation:</strong></span>\n<span style=\"font-size: 18px;\">28 December 1995 was a Thursday.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Example 2:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong></span>\n<span style=\"font-size: 18px;\"><strong>d = </strong>30, <strong>m = </strong>8, <strong>y = </strong>2010</span>\n<span style=\"font-size: 18px;\"><strong>Output:</strong></span>\n<span style=\"font-size: 18px;\">Monday</span>\n<span style=\"font-size: 18px;\"><strong>Explanation:</strong></span>\n<span style=\"font-size: 18px;\">30 August 2010 was a Monday.</span>\n</pre>\n<p><span style=\"font-size: 18px;\"><strong>Your Task:</strong><br />You don't need to read input or print anything. Your task is to complete the function <strong>getDayOfWeek()</strong> which takes 3 Integers d, m and y denoting day, month and year as input and return a String denoting the answer.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Expected Time Complexity:</strong> O(1)<br /><strong>Expected Auxiliary Space:</strong> O(1)</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 18px;\">1 &lt;= d &lt;= 31<br />1 &lt;= m &lt;= 12<br />1 &lt;= y &lt;= 2100</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-day-of-the-week-for-a-given-date/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703841,
+    "problem_name": "Nth Fibonacci Number",
+    "slug": "nth-fibonacci-number1335",
+    "difficulty": "Easy",
+    "accuracy": "22.3%",
+    "tags": {
+      "company_tags": [
+        "Amazon",
+        "Microsoft",
+        "OYO Rooms",
+        "Snapdeal",
+        "MakeMyTrip",
+        "Goldman Sachs",
+        "MAQ Software",
+        "Adobe"
+      ],
+      "topic_tags": [
+        "Dynamic Programming",
+        "Mathematical",
+        "Fibonacci",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a non-negative integer <strong>n</strong>, your task is to find the <strong>nth</strong> <strong>Fibonacci</strong> <strong>number</strong>.</span></p>\n<p><span style=\"font-size: 14pt;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; color: #273239; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\">The&nbsp;</span><a style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: none; display: inline; word-break: break-word; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\" href=\"https://www.geeksforgeeks.org/fibonacci-series/\" target=\"_blank\" rel=\"noopener\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">Fibonacci sequence</span></a><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; color: #273239; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\">&nbsp;is a sequence where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1. The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21</span></span></p>\n<p><span style=\"font-size: 14pt;\">The Fibonacci sequence is defined as follows:</span></p>\n<ul>\n<li><span style=\"font-size: 14pt;\">F(0) = 0</span></li>\n<li><span style=\"font-size: 14pt;\">F(1) = 1</span></li>\n<li><span style=\"font-size: 14pt;\">F(n) = F(n - 1) + F(n - 2) for n &gt; 1</span></li>\n</ul>\n<p><span style=\"font-size: 14pt;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 5\n<strong>Output: </strong>5\n<strong>Explanation</strong>: The 5th Fibonacci number is 5.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input</strong>: n = 0\n<strong>Output:</strong> 0&nbsp;\n<strong>Explanation</strong>: The 0th Fibonacci number is 0.\n</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 1\n<strong>Output: </strong>1\n<strong>Explanation</strong>: The 1st Fibonacci number is 1.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />0 &le; n &le; 30</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/cpp-program-for-fibonacci-numbers/",
+      "https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 701111,
+    "problem_name": "Decimal to binary",
+    "slug": "decimal-to-binary-1587115620",
+    "difficulty": "Easy",
+    "accuracy": "55.75%",
+    "tags": {
+      "company_tags": [
+        "Adobe"
+      ],
+      "topic_tags": [
+        "Practice-Problems",
+        "Bit Magic",
+        "Data Structures"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a decimal number <strong>n</strong>, return its binary equivalent.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong style=\"font-size: 14pt;\">Input:</strong><span style=\"font-size: 14pt;\"> n = 12\n</span><strong style=\"font-size: 14pt;\">Output:</strong><span style=\"font-size: 14pt;\"> 1100<br /></span><span style=\"font-size: 18.6667px;\"><strong>Explanation:</strong> The binary representation of 12 is \"1100\", since 12 = 1&times;2<sup>3</sup> + 1&times;2<sup>2</sup> + 0&times;2<sup>1</sup> + 0&times;2<sup>0</sup></span></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 33\n<strong>Output: </strong>100001<br /><strong>Explanation:</strong> The binary representation of 33 is \"100001\", since 33 = 1&times;2<sup>5</sup> + 0&times;2<sup>4</sup> + 0&times;2<sup>3</sup> + 0&times;2<sup>2</sup> + 0&times;2<sup>1</sup> + 1&times;2<sup>0</sup>\n</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:<br /></strong>1&nbsp;</span><span style=\"font-size: 18.6667px;\">&le;</span><span style=\"font-size: 14pt;\"> n </span><span style=\"font-size: 18.6667px;\">&le;</span><span style=\"font-size: 14pt;\"> 2</span><sup>31 </sup><span style=\"font-size: 14pt;\">- 1</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-decimal-binary-conversion/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703884,
+    "problem_name": "Find n-th term of series 1, 3, 6, 10, 15, 21",
+    "slug": "find-n-th-term-of-series-1-3-6-10-15-215506",
+    "difficulty": "Basic",
+    "accuracy": "60.58%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a number n, find the n<sup>th</sup> term in the series 1, 3, 6, 10, 15, 21&hellip;</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 4 \n<strong>Output: </strong>10\n<strong>Explanation: </strong>The 4<sup>th</sup> term of the Series is 10.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n<strong> = </strong>3 \n<strong>Output: </strong>6\n<strong>Explanation: </strong>The 3<sup>rd</sup> term of the Series is 6.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 14pt;\">1 &lt;= n &lt;= 10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-nth-term-series-136101521/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703783,
+    "problem_name": "Armstrong Numbers",
+    "slug": "armstrong-numbers2727",
+    "difficulty": "Easy",
+    "accuracy": "49.88%",
+    "tags": {
+      "company_tags": [
+        "VMWare",
+        "Oracle"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">You are given a<strong> 3-digit</strong> number <strong>n</strong>, Find whether it is an <strong><span style=\"color: #000000;\">Armstrong </span></strong>number or not.</span></p>\n<p><span style=\"font-size: 18px;\">An&nbsp;<em>Armstrong number</em> of three digits is a number such that the sum of the cubes of its digits is equal to the <em>number </em>itself.&nbsp;</span><span style=\"font-size: 18px;\">371 is an&nbsp;</span><span style=\"font-size: 18px;\">Armstrong number</span><span style=\"font-size: 18px;\">&nbsp;since 3</span><sup>3</sup><span style=\"font-size: 18px;\">&nbsp;+ 7</span><sup>3&nbsp;</sup><span style=\"font-size: 18px;\">+ 1</span><sup>3</sup><span style=\"font-size: 18px;\"> = 371.&nbsp;</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>: n = 153\n<strong>Output:</strong> true\n<strong>Explanation</strong>: 153 is an&nbsp;Armstrong number<strong> </strong>since 1<sup>3</sup> + 5<sup>3 </sup>+ 3<sup>3</sup> = 153. </span>\n</pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 372\n<strong>Output: </strong>false\n<strong>Explanation</strong>: 372 is not an Armstrong number<strong> </strong>since 3<sup>3</sup> + 7<sup>3 </sup>+ 2<sup>3</sup> = 378. <br /></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 100\n<strong>Output: </strong>false\n<strong>Explanation</strong>: 100 is not an Armstrong number<strong> </strong>since 1<sup>3</sup> + 0<sup>3 </sup>+ 0<sup>3</sup> = 1. </span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />100 &le; n &lt;1000&nbsp;</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/cpp-program-to-check-armstrong-numbers/",
+      "https://www.geeksforgeeks.org/program-for-armstrong-numbers/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703915,
+    "problem_name": "Palindrome",
+    "slug": "palindrome0746",
+    "difficulty": "Easy",
+    "accuracy": "56.28%",
+    "tags": {
+      "company_tags": [
+        "Zoho",
+        "Samsung",
+        "Oracle",
+        "Adobe"
+      ],
+      "topic_tags": [
+        "palindrome"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">You are given an integer <code>n</code>. Your task is to determine whether it is a palindrome. </span></p>\n<blockquote>\n<p><span style=\"font-size: 14pt;\">A number is considered a palindrome if it reads the same backward as forward, like the string examples \"MADAM\" or \"MOM\".</span></p>\n</blockquote>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong style=\"font-size: 14pt;\">Input: </strong><span style=\"font-size: 14pt;\">n = 555\n</span><strong style=\"font-size: 14pt;\">Output: </strong><span style=\"font-size: 14pt;\">true<br /></span><span style=\"font-size: 18.6667px;\"><strong>Explanation:</strong> The number 555 reads the same backward as forward, so it is a palindrome.</span></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong style=\"font-size: 14pt;\">Input: </strong><span style=\"font-size: 14pt;\">n = 123\n</span><strong style=\"font-size: 14pt;\">Output: </strong><span style=\"font-size: 14pt;\">false<br /></span><span style=\"font-size: 18.6667px;\"><strong>Explanation:</strong> The number 123 reads differently backward (321), so it is not a palindrome.</span></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 1221\n<strong>Output: </strong>true</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-if-a-number-is-palindrome/",
+      "https://www.geeksforgeeks.org/cpp-program-to-check-whether-a-number-is-palindrome-or-not/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704424,
+    "problem_name": "Repeated sum of digits",
+    "slug": "repeated-sum-of-digits3955",
+    "difficulty": "Basic",
+    "accuracy": "53.83%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "number-theory",
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size:18px\">Given an integer N, recursively sum digits of N until we get a single digit.&nbsp; The process can be described below</span></p>\n\n<pre>\n<span style=\"font-size:18px\">If N &lt; 10    \n    digSum(N) = N\nElse         \n    digSum(N) = Sum(digSum(N))\n</span>\n</pre>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:18px\">Example 1:</span></strong></p>\n\n<pre>\n<strong><span style=\"font-size:18px\">Input:</span></strong>\n<span style=\"font-size:18px\">N = 1234</span>\n<strong><span style=\"font-size:18px\">Output:</span></strong>\n<span style=\"font-size:18px\">1</span>\n<strong><span style=\"font-size:18px\">Explanation:</span></strong>\n<span style=\"font-size:18px\">The sum of 1+2+3+4 = 10, \ndigSum(x) == 10 Hence \nans will be 1+0 = 1</span></pre>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:18px\">Example 2:</span></strong></p>\n\n<pre>\n<strong><span style=\"font-size:18px\">Input:</span></strong>\n<span style=\"font-size:18px\">N = 9999</span>\n<strong><span style=\"font-size:18px\">Output:</span></strong>\n<span style=\"font-size:18px\">9</span>\n<strong><span style=\"font-size:18px\">Explanation:</span></strong>\n<span style=\"font-size:18px\">Check it yourself.</span></pre>\n\n<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:18px\">Your Task:</span></strong></p>\n\n<p><span style=\"font-size:18px\">You don&#39;t need to read input or print anything. Your task is to complete the function repeatedSumOfDigits() which takes an integer N and returns the repeated sum of digits of N.</span></p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:18px\"><strong>Expected Time Complexity:</strong> O(1)<br />\n<strong>Expected Auxiliary Space:</strong> O(1)</span></p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p><span style=\"font-size:18px\"><strong>Constraints: </strong></span></p>\n\n<p><span style=\"font-size:18px\">1 &le; N &le; 1000000</span></p>\n",
+    "article_list": [
+      "https://www.geeksforgeeks.org/digital-rootrepeated-digital-sum-given-integer/",
+      "https://www.geeksforgeeks.org/finding-sum-of-digits-of-a-number-until-sum-becomes-single-digit/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705530,
+    "problem_name": "Count Digits",
+    "slug": "count-digits-1606889545",
+    "difficulty": "Easy",
+    "accuracy": "50.84%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "CPP",
+        "Java"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a natural number <strong>n</strong>. You have to find the number of digits in it and <strong>return </strong>it.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 12\n<strong>Output: </strong>2<strong>\nExplanation: </strong>12 has 2 digits</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>: n = 456<br /></span><span style=\"font-size: 18px;\"><strong>Output</strong>: 3<br /></span><span style=\"font-size: 18px;\"><strong>Explanation: </strong>456 has 3 digits<br /></span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>5 </sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-count-digits-integer-3-different-methods/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704434,
+    "problem_name": "Nearest Perfect Square",
+    "slug": "are-you-perfect4926",
+    "difficulty": "Easy",
+    "accuracy": "42.84%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Numbers",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given an integer <strong>n</strong>, determine the <strong>nearest perfect square </strong>and compute the <strong>absolute difference </strong>between n and that perfect square.\"</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples: </strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 25<br /><strong>Output: </strong>[25, 0]\n<strong>Explanation: </strong>Since 25 is a perfect square, it is the closest perfect square to itself and absolute difference is 25 - 25 = 0</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 86<br /><strong>Output: </strong>[81, 5]\n<strong>Explanation:</strong>The closest perfect square to 86 is 81.Thus, the absolute difference between them is 86 - 81 = 5.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1<span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">&le;&nbsp; </span><span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">n </span><span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">&le; </span>10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-if-given-number-is-perfect-square-in-cpp/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 706369,
+    "problem_name": "Maximum number of 2X2 squares",
+    "slug": "maximum-number-of-22-squares",
+    "difficulty": "Easy",
+    "accuracy": "66.64%",
+    "tags": {
+      "company_tags": [
+        "Microsoft"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size:18px\">Given the base (in units) of a right-angled isoceles traingle, find the maximum number of 2X2 squares that can fit in the triangle with given base.</span></p>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Example 1:</strong></span></p>\r\n\r\n<pre>\r\n<span style=\"font-size:18px\"><strong>Input:</strong> 8</span>\r\n<span style=\"font-size:18px\"><strong>Output:</strong> 6</span>\r\n<strong><span style=\"font-size:18px\">Explanation:</span></strong>\r\n<span style=\"font-size:18px\">Please refer below diagram for explanation.\r\n<img alt=\"squares-in-triangle\" src=\"https://media.geeksforgeeks.org/wp-content/uploads/squares-in-triangle1.png\" style=\"height:337px; width:390px\" /></span>\r\n\r\n</pre>\r\n\r\n<p><span style=\"font-size:18px\"><strong>Example 2:</strong></span></p>\r\n\r\n<pre>\r\n<span style=\"font-size:18px\"><strong>Input : </strong>7\r\n<strong>Output : </strong>3\r\n<strong>Explanation : </strong>In the base we can keep 2 squares\r\nand above the two squares we can only keep 1 square.  \r\nSo the total number of squares are equal to 3.</span>\r\n</pre>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><strong><span style=\"font-size:18px\">Your task :</span></strong></div>\r\n\r\n<div><span style=\"font-size:18px\">You don&#39;t need to read input or print anything. Your task is to complete the function <strong>numberOfSquares()</strong> which takes the base of the triangle as input and returns the maximum number of squares that can be fit into the triangle with given base.</span></div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><span style=\"font-size:18px\"><strong>Expected Time Complexity: </strong>O(1)</span></div>\r\n\r\n<div><span style=\"font-size:18px\"><strong>Expected Auxiliary Space:</strong> O(1)</span></div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div><strong><span style=\"font-size:18px\">Constraints :</span></strong></div>\r\n\r\n<div><span style=\"font-size:18px\">1 &lt;= N &lt;= 10^9</span></div>\r\n",
+    "article_list": [
+      "https://www.geeksforgeeks.org/maximum-number-2x2-squares-can-fit-inside-right-isosceles-triangle/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704775,
+    "problem_name": "Squares in  N*N Chessboard",
+    "slug": "squares-in-nn-chessboard1801",
+    "difficulty": "Easy",
+    "accuracy": "66.14%",
+    "tags": {
+      "company_tags": [
+        "Goldman Sachs",
+        "MAQ Software"
+      ],
+      "topic_tags": [
+        "number-theory",
+        "Mathematical",
+        "permutation",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Find the total number of Squares in a <strong>N*N</strong> chessboard.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong></span>\n<span style=\"font-size: 18px;\"><strong>N = </strong>1</span>\n<span style=\"font-size: 18px;\"><strong>Output:</strong></span>\n<span style=\"font-size: 18px;\">1</span>\n<span style=\"font-size: 18px;\"><strong>Explanation:</strong></span>\n<span style=\"font-size: 18px;\">A 1*1 chessboard has only 1 square.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Example 2:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong></span>\n<span style=\"font-size: 18px;\"><strong>N = </strong>2</span>\n<span style=\"font-size: 18px;\"><strong>Output:</strong></span>\n<span style=\"font-size: 18px;\">5</span>\n<span style=\"font-size: 18px;\"><strong>Explanation:</strong></span>\n<span style=\"font-size: 18px;\">A 2*2 chessboard has 5 squares.\n4 1*1 squares and a 2*2 square.</span>\n</pre>\n<p>&nbsp;</p>\n<p><span style=\"font-size: 18px;\"><strong>Your Task:</strong><br />You don't need to read input or print anything. Your task is to complete the function <strong>squaresInChessBoard()</strong> which takes an Integer N as input and returns the number of squares in a N*N chessboard.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-size: 18px;\"><strong>Expected Time Complexity:</strong> O(1)<br /><strong>Expected Auxiliary Space:</strong> O(1)</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 18px;\">1 &lt;= N &lt;= 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-to-find-number-of-squares-on-a-chessboard/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 700226,
+    "problem_name": "Square Root",
+    "slug": "square-root",
+    "difficulty": "Easy",
+    "accuracy": "54.03%",
+    "tags": {
+      "company_tags": [
+        "VMWare",
+        "Flipkart",
+        "Accolite",
+        "Amazon",
+        "Microsoft"
+      ],
+      "topic_tags": [
+        "Searching",
+        "Mathematical",
+        "Binary Search",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a positive integer <strong>n,</strong> find the<strong> square root </strong>of n. If <strong>n</strong> is not a perfect square, then return the <strong>floor value</strong>.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Floor value </strong>of any number is the greatest Integer which is less than or equal to that number.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span><span style=\"font-size: 14pt;\"> </span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 4\n<strong>Output: </strong>2<strong>\nExplanation: </strong>Since, 4 is a perfect square, so its square root is 2.<br /></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 11\n<strong>Output: </strong>3<strong>\nExplanation: </strong>Since, 11 is not a perfect square, floor of square root of 11 is 3.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 1\n<strong>Output: </strong>1<br /><strong>Explanation: </strong>1 is a perfect sqaure, so its square root is 1.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 14pt;\">1 &le; n &le; 3*10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/square-root-of-an-integer/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703970,
+    "problem_name": "3 Divisors",
+    "slug": "3-divisors3942",
+    "difficulty": "Medium",
+    "accuracy": "11.17%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">You are given a list of <strong>q</strong> queries, and for each query, an integer <strong>n</strong> is provided. The task is to find how many numbers less than or equal to <strong>n</strong> have exactly <strong>3 divisors</strong>.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>q = 1<br /></span>          <span style=\"font-size: 14pt;\">query[0] = 6\n<strong>Output: </strong>1\n<strong>Explanation: </strong>There is only one number 4 which has exactly three divisors 1, 2 and 4 and less than equal to 6.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>q = 2\n       query[0] = 6\n       query[1] = 10\n<strong>Output: </strong>1\n        2\n<strong>Explanation: </strong>For query 1 it is covered in the example 1. query 2:There are two numbers 4 and 9 having exactly 3 divisors and less than <br />equal to 10.</span></pre>\n<p><strong>Constraints :&nbsp;</strong><br />1 &lt;=<span style=\"font-size: 14pt;\"> q &lt;= 10<sup>3</sup></span><br /><span style=\"font-size: 14pt;\">1 &lt;= query[i] &lt;= 10<sup>12</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-all-factors-of-a-natural-number-in-sorted-order/",
+      "https://www.geeksforgeeks.org/numbers-exactly-3-divisors/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 702929,
+    "problem_name": "Check if divisible by 4",
+    "slug": "check-if-divisible-by-43813",
+    "difficulty": "Basic",
+    "accuracy": "46.91%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Strings",
+        "Mathematical",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a number <strong>N</strong>. Check whether it is divisble by 4.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong>\nN = 1124\n<strong>Output:</strong> 1\n<strong>Explanation</strong>: The number is divisible by 4\nas 1124 % 4 = 0.\n\n</span></pre>\n<p><span style=\"font-size: 18px;\">&acirc;&euro;&lsaquo;<strong>Example 2:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>: \nN = 7\n<strong>Output:</strong> 0\n<strong>Explanation</strong>: The number is not divisibly by\n4 as 7 % 4 = 3.\n</span></pre>\n<p><br /><span style=\"font-size: 18px;\"><strong>Your Task:</strong><br />You don't need to read input or print anything. Your task is to complete the function&nbsp;<strong>divisibleBy4()&nbsp;</strong>which takes the number in the form of a string N as input and returns 1 if the number is divisible by 4. Else, it returns 0.</span></p>\n<p><br /><span style=\"font-size: 18px;\"><strong>Expected Time Complexity:&nbsp;</strong>O(1).<br /><strong>Expected Auxiliary Space:&nbsp;</strong>O(1).</span></p>\n<p><br /><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= N &lt;= 10<sup>1000</sup>+5</span></p>\n<p>&nbsp;</p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-large-number-divisible-4-not/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 897411,
+    "problem_name": "Divisible by 13",
+    "slug": "divisible-by-13",
+    "difficulty": "Medium",
+    "accuracy": "50.24%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a number represented as a string <strong>s</strong>&nbsp;(which may be very large), check whether it is divisible by 13 or not.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input : </strong>s = \"2911285\"<br /></span><span style=\"font-size: 14pt;\"><strong>Output :</strong> true<br /><strong>Explanation: </strong>2911285 / 13 = 223945, which is a whole number with no remainder.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input :</strong> s = \"27\"<br /></span><span style=\"font-size: 14pt;\"><strong>Output :</strong> false<br /><strong>Explanation: </strong>27 / 13 &asymp; 2.0769..., which is not a whole number (there is a remainder).</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:<br /></strong><span style=\"color: #1e2229; font-family: Nunito; background-color: #ffffff;\">1 &le;&nbsp; s.size()&nbsp; &le; 10<sup>5</sup></span></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/check-large-number-divisible-13-not/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704564,
+    "problem_name": "Print the Kth Digit",
+    "slug": "print-the-kth-digit3520",
+    "difficulty": "Basic",
+    "accuracy": "38.65%",
+    "tags": {
+      "company_tags": [
+        "Flipkart"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given two numbers <strong>a</strong> and <strong>b</strong>, find <strong>k<sup>th</sup></strong> digit from right of <strong>a<sup>b</sup>.</strong></span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a = 3, b = 3, k = 1\n<strong>Output: </strong>7\n<strong>Explanation: </strong>3<sup>3 </sup>= 27 and 1st digit from right is 7</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a = 5, b = 2, k = 2\n<strong>Output: </strong>2<br /><strong>Explanation: </strong>5<sup>2 </sup>= 25 and second digit from right is 2.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= a,b &lt;= 15<br />1 &lt;= k &lt;= digits in a<sup>b</sup></span><br />&nbsp;</p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/k-th-digit-raised-power-b/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705108,
+    "problem_name": "Fraction to Repeating Decimal",
+    "slug": "a-simple-fraction0921",
+    "difficulty": "Medium",
+    "accuracy": "23.12%",
+    "tags": {
+      "company_tags": [
+        "Amazon",
+        "Microsoft"
+      ],
+      "topic_tags": [
+        "Hash",
+        "Mathematical",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given two integers <strong>a </strong>and <strong>b</strong>, the task is to convert the fraction<strong> a/b</strong> into decimal format. If the fractional part is repeating, enclose the repeating part in parentheses.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a = 1, b = 2\n<strong>Output: \"</strong>0.5\"\n<strong>Explanation: </strong>1/3 = 0.5 with no repeating part.</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>a = 50, b = 22\n<strong>Output: </strong>\"2.(27)\"\n<strong>Explanation: </strong>50/22 = 2.27272727.. Since fractional part (27) is repeating, it is enclosed in paranthesis.</span>\n</pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; a, b &le; 2000</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-recurring-sequence-fraction/",
+      "https://www.geeksforgeeks.org/represent-the-fraction-of-two-numbers-in-the-string-format/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705035,
+    "problem_name": "nPr",
+    "slug": "npr4253",
+    "difficulty": "Basic",
+    "accuracy": "35.25%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "permutation",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Write a program to calculate <sup>n</sup>P<sub>r </sub>.&nbsp;<strong><sup>n</sup>P</strong><sub><strong>r</strong> </sub>&nbsp;represents n&nbsp;permutation&nbsp;r and value of&nbsp;<sup>n</sup>P<sub>r </sub><sup>&nbsp;</sup>is (n!) / (n-r)!.</span></p>\n<p><strong><span style=\"font-size: 18px;\">Examples:</span></strong></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong> n = 5, r = 2\n<strong>Output:</strong> 2\n<strong>Explaination:</strong> 5!/(5-2)! = 5!/3! = 120/6 = 20.</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong> n = 6, r = 3\n<strong>Output:</strong> 6\n<strong>Explaination:</strong> 6!/(6-3)! = 6!/3! = 720/6 = 120.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n, r &le; 20</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-to-calculate-the-value-of-npr/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704542,
+    "problem_name": "nCr",
+    "slug": "ncr1019",
+    "difficulty": "Medium",
+    "accuracy": "14.82%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Dynamic Programming",
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p dir=\"ltr\" style=\"box-sizing: border-box; margin: 0px 0px 10px; padding: 0px; border: 0px; font-size: 18px; vertical-align: baseline; color: #273239; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">Given two integer values </span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">n </strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">and </span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">r</strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">, the task is to find the value of&nbsp;Binomial Coefficient</span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">&nbsp;</strong><strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">n</sup></span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">r</sub></span></strong></p>\n<ul style=\"box-sizing: border-box; margin: 0px 0px 24px; padding: 0px; border: 0px; font-size: 18px; vertical-align: baseline; list-style-position: outside; list-style-image: initial; display: flex; flex-direction: column; color: #273239; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\">\n<li style=\"box-sizing: border-box; margin: 0px 0px 0px 24px; padding: 0px; border: 0px; vertical-align: baseline; text-align: left; line-height: 1.58; color: var(--color-black);\" value=\"1\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">A&nbsp;</span><a style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: none; display: inline;\" href=\"https://www.geeksforgeeks.org/coefficient-in-binomial-expansion/\" target=\"_blank\" rel=\"noopener\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">binomial coefficient</span></a> <strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">n</sup></span></strong></strong><strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span></span></span></span></strong><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">r</sub></span></strong>&nbsp;</strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">can be defined as the coefficient of</span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"> x<sup>r</sup> </strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">in the expansion of&nbsp;</span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">(1 + x)<sup>n</sup> </strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">that gives the number of ways </span><span style=\"color: #273239; font-family: Nunito, sans-serif;\"><span style=\"font-size: 18px; letter-spacing: 0.162px;\">to choose </span></span><span style=\"color: #273239; font-family: Nunito, sans-serif;\"><span style=\"font-size: 18px; letter-spacing: 0.162px;\">r objects from a set of </span></span><span style=\"color: #273239; font-family: Nunito, sans-serif;\"><span style=\"font-size: 18px; letter-spacing: 0.162px;\">n objects without considering the order.</span></span></li>\n<li style=\"box-sizing: border-box; margin: 0px 0px 0px 24px; padding: 0px; border: 0px; vertical-align: baseline; text-align: left; line-height: 1.58; color: var(--color-black);\" value=\"1\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">The</span></span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"> </span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">binomial coefficient</span><span style=\"font-weight: 400; letter-spacing: 0.162px;\">&nbsp;</span></span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">n</sup></span></strong></strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span></span></span></span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">r&nbsp;</sub></span></strong></strong></strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">is calculated as : C(n,r) = n! / r! * (n-r) !</span></span></span></span></li>\n</ul>\n<p><span style=\"font-size: 14pt;\"><strong style=\"font-size: 14pt;\">Note:</strong><span style=\"font-size: 14pt;\"> If r is greater than n, return </span><strong style=\"font-size: 14pt;\">0</strong><span style=\"font-size: 14pt;\">.</span><br /><span style=\"font-size: 18.6667px;\">It is guaranteed that the value of <sup>n</sup><strong>C</strong><sub>r</sub>&nbsp;will fit within a 32-bit integer.</span></span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 5, r = 2\n<strong>Output:</strong> 10\n<strong>Explaination:</strong> The value of <sup>5</sup>C<sub>2</sub> is calculated as 5!/(5&minus;2)!*2! = 5!/3!*2! = 10.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 2, r = 4\n<strong>Output:</strong> 0\n<strong>Explaination:</strong> Since r is greater than n, thus </span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">2</sup></span></strong></strong></strong><span style=\"color: #273239; font-family: Nunito, sans-serif; font-size: 18px; letter-spacing: 0.162px; background-color: #ffffff; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span></span></span></span></span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">4</sub> </span></strong></strong></strong><span style=\"color: #273239; font-family: Nunito, sans-serif; font-size: 18px; letter-spacing: 0.162px; background-color: #ffffff; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">= 0</span></span></span></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 5, r = 0<br /><strong>Output:</strong> 1\n<strong>Explaination:</strong> The value of <sup>5</sup>C<sub>0</sub> is calculated as 5!/(5&minus;0)!*0! = 5!/5!*0! = 1.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &le; n &le; 100<br />0 &le; r &le; 100</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-calculate-value-ncr/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 702695,
+    "problem_name": "Pascal Triangle",
+    "slug": "pascal-triangle0652",
+    "difficulty": "Medium",
+    "accuracy": "23.68%",
+    "tags": {
+      "company_tags": [
+        "Amazon",
+        "Microsoft",
+        "Adobe"
+      ],
+      "topic_tags": [
+        "Arrays",
+        "Recursion",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a positive integer <strong>n</strong>, return the <strong>n<sup>th</sup> row&nbsp;of <a href=\"https://en.wikipedia.org/wiki/Pascal%27s_triangle\" target=\"_blank\" rel=\"noopener\"><em><span style=\"text-decoration: underline;\">pascal's triangle</span></em></a></strong>.<br />Pascal's triangle is a triangular array of the binomial coefficients formed by summing up the elements of previous row.<br /></span></p>\n<p><span style=\"font-size: 14pt;\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif\" alt=\"File:PascalTriangleAnimated2.gif\" /></span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 4\n<strong>Output:</strong> [1, 3, 3, 1]\n<strong>Explanation:</strong> 4<sup>th</sup> row of pascal's triangle is [1, 3, 3, 1].</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 5\n<strong>Output:</strong> [1, 4, 6, 4, 1]\n<strong>Explanation:</strong> 5<sup>th</sup> row of pascal's triangle is [1, 4, 6, 4, 1].<br /></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 1\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> 1<sup>st</sup> row of pascal's triangle is [1].</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &le; n &le; 30</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-the-nth-row-in-pascals-triangle/",
+      "https://www.geeksforgeeks.org/java-program-to-print-star-pascals-triangle/",
+      "https://www.geeksforgeeks.org/pascal-triangle/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 712172,
+    "problem_name": "All divisors of a Number",
+    "slug": "all-divisors-of-a-number",
+    "difficulty": "Easy",
+    "accuracy": "46.73%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Factorization",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given an integer <strong>n,</strong>&nbsp;print all the divisors of N in the&nbsp;<strong>ascending </strong>order.</span><br />&nbsp;<br /><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input : </strong>n<strong> = </strong>20\n<strong>Output: </strong>1 2 4 5 10 20\n<strong>Explanation: </strong>20 is completely divisible by 1, 2, 4, 5, 10 and 20.\n</span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n<strong> = </strong>21191</span><span style=\"font-size: 18px;\">\n<strong>Output: </strong>1 21191\n<strong>Explanation</strong>: As 21191 is a prime number, it has only 2 factors(1 and the number itself).</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-all-factors-of-a-natural-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705041,
+    "problem_name": "Prime Factors",
+    "slug": "prime-factors5052",
+    "difficulty": "Easy",
+    "accuracy": "30.47%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Mathematical",
+        "Prime Number",
+        "sieve",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a number <strong>n</strong>.&nbsp;</span><span style=\"font-size: 18px;\">Find its <strong>unique</strong> prime factors in <strong>increasing order</strong>.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 100\n<strong>Output: </strong>[2, 5]\n<strong>Explanation: </strong>Unique prime factors of 100 are 2 and 5.</span>\n</pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 60\n<strong>Output: </strong>[2, 3, 5]\n<strong>Explanation: </strong>Prime factors of 60 are 2, 2, 3, 5. Unique prime factors are 2, 3 and 5.</span>\n</pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>6</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/prime-factor/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703958,
+    "problem_name": "Largest prime factor",
+    "slug": "largest-prime-factor2601",
+    "difficulty": "Medium",
+    "accuracy": "27.25%",
+    "tags": {
+      "company_tags": [
+        "Yahoo"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Prime Number",
+        "sieve",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given a number <strong><code>n</code></strong>, your task is to find the largest prime factor of <code>n</code>.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 5\n<strong>Output: </strong>5\n<strong>Explanation: </strong>The prime factorization of 5 is just 5. Therefore, the largest prime factor is 5.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 24\n<strong>Output: </strong>3\n<strong>Explanation: </strong>The prime factorization of 24 is <span class=\"katex\"><span class=\"katex-mathml\">2<sup>3</sup>&times;3</span></span>. Among the prime factors (2, 3), the largest is 3.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 13195\n<strong>Output: </strong>29\n<strong>Explanation: </strong>The prime factorization of 13195 is <span class=\"katex\"><span class=\"katex-mathml\">5&times;7&times;13&times;29</span></span>. The largest prime factor is 29.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 14pt;\">2 &lt;= n &lt;= 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/find-largest-prime-factor-number/",
+      "https://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703909,
+    "problem_name": "Modular Exponentiation",
+    "slug": "modular-exponentiation-for-large-numbers5537",
+    "difficulty": "Medium",
+    "accuracy": "52.56%",
+    "tags": {
+      "company_tags": [
+        "Google"
+      ],
+      "topic_tags": [
+        "Divide and Conquer",
+        "Binary Search",
+        "Algorithms",
+        "number-theory",
+        "Mathematical",
+        "Modular Arithmetic"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given three integers&nbsp;<strong>x</strong>,&nbsp;<strong>n</strong>, and&nbsp;<strong>M</strong>, compute (x^n) % M,&nbsp;i.e., the remainder when&nbsp;<strong>x</strong>&nbsp;raised to the power&nbsp;<strong>n</strong>&nbsp;is divided by&nbsp;<strong>M</strong>.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>x = 3, n = 2, M = 4</span>\n<span style=\"font-size: 18px;\"><strong>Output: </strong>1\n<strong>Explanation: </strong></span><span style=\"font-size: 18px;\">3<sup>2</sup> % 4 = 9 % 4 = 1.</span>\n</pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>x = 2, n = 6, M = 10\n<strong>Output: </strong>4</span>\n<span style=\"font-size: 18px;\"><strong>Explanation: </strong></span><span style=\"font-size: 18px;\">2<sup>6</sup> % 10 = 64 % 10 = 4<strong>.</strong></span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; x, n, M &le; 10<sup>9</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 701751,
+    "problem_name": "Nth Catalan Number",
+    "slug": "nth-catalan-number0817",
+    "difficulty": "Medium",
+    "accuracy": "31.06%",
+    "tags": {
+      "company_tags": [
+        "Amazon"
+      ],
+      "topic_tags": [
+        "Dynamic Programming",
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a number <strong>n</strong>. The task is to find the <strong>n<sup>th</sup> catalan number</strong>.<br />The first few Catalan numbers for <strong>n = 0, 1, 2, 3, </strong>&hellip; are <strong>1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, &hellip;<br /></strong></span><span style=\"font-size: 14pt;\"><strong>Catalan Number&nbsp;</strong>for <strong>n</strong> is equal to the number of expressions containing <strong>n</strong> pairs of parenthesis that are correctly matched, i.e., for each of the n(' there exist n ')' on there right and vice versa.</span><span style=\"font-size: 14pt;\"><br /></span><span style=\"font-size: 18px;\"><strong>Note:</strong> Positions start from 0 as shown above.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong style=\"font-size: 18px;\">Input: </strong><span style=\"font-size: 18px;\">n = 3\n</span><strong style=\"font-size: 18px;\">Output: </strong><span style=\"font-size: 18px;\">5</span><strong style=\"font-size: 18px;\"><br />Explanation: </strong>Possible expressions are, <span style=\"font-size: 18px;\">((())), (()()), ()(()), (())(), ()()()</span><strong style=\"font-size: 18px;\"><br /></strong></span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 4\n<strong>Output: </strong>14<br /><strong>Explantions: </strong>There are total 14 valid combinations which can be formed using 4 </span><span style=\"font-size: 14pt;\">parenthesis.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= n &lt;= 19</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-nth-catalan-number/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704542,
+    "problem_name": "nCr",
+    "slug": "ncr1019",
+    "difficulty": "Medium",
+    "accuracy": "14.82%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Dynamic Programming",
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p dir=\"ltr\" style=\"box-sizing: border-box; margin: 0px 0px 10px; padding: 0px; border: 0px; font-size: 18px; vertical-align: baseline; color: #273239; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">Given two integer values </span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">n </strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">and </span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">r</strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">, the task is to find the value of&nbsp;Binomial Coefficient</span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">&nbsp;</strong><strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">n</sup></span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">r</sub></span></strong></p>\n<ul style=\"box-sizing: border-box; margin: 0px 0px 24px; padding: 0px; border: 0px; font-size: 18px; vertical-align: baseline; list-style-position: outside; list-style-image: initial; display: flex; flex-direction: column; color: #273239; font-family: Nunito, sans-serif; letter-spacing: 0.162px; background-color: #ffffff;\">\n<li style=\"box-sizing: border-box; margin: 0px 0px 0px 24px; padding: 0px; border: 0px; vertical-align: baseline; text-align: left; line-height: 1.58; color: var(--color-black);\" value=\"1\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">A&nbsp;</span><a style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; outline: none; display: inline;\" href=\"https://www.geeksforgeeks.org/coefficient-in-binomial-expansion/\" target=\"_blank\" rel=\"noopener\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">binomial coefficient</span></a> <strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">n</sup></span></strong></strong><strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span></span></span></span></strong><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">r</sub></span></strong>&nbsp;</strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">can be defined as the coefficient of</span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"> x<sup>r</sup> </strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">in the expansion of&nbsp;</span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">(1 + x)<sup>n</sup> </strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">that gives the number of ways </span><span style=\"color: #273239; font-family: Nunito, sans-serif;\"><span style=\"font-size: 18px; letter-spacing: 0.162px;\">to choose </span></span><span style=\"color: #273239; font-family: Nunito, sans-serif;\"><span style=\"font-size: 18px; letter-spacing: 0.162px;\">r objects from a set of </span></span><span style=\"color: #273239; font-family: Nunito, sans-serif;\"><span style=\"font-size: 18px; letter-spacing: 0.162px;\">n objects without considering the order.</span></span></li>\n<li style=\"box-sizing: border-box; margin: 0px 0px 0px 24px; padding: 0px; border: 0px; vertical-align: baseline; text-align: left; line-height: 1.58; color: var(--color-black);\" value=\"1\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">The</span></span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"> </span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">binomial coefficient</span><span style=\"font-weight: 400; letter-spacing: 0.162px;\">&nbsp;</span></span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">n</sup></span></strong></strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span></span></span></span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">r&nbsp;</sub></span></strong></strong></strong><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">is calculated as : C(n,r) = n! / r! * (n-r) !</span></span></span></span></li>\n</ul>\n<p><span style=\"font-size: 14pt;\"><strong style=\"font-size: 14pt;\">Note:</strong><span style=\"font-size: 14pt;\"> If r is greater than n, return </span><strong style=\"font-size: 14pt;\">0</strong><span style=\"font-size: 14pt;\">.</span><br /><span style=\"font-size: 18.6667px;\">It is guaranteed that the value of <sup>n</sup><strong>C</strong><sub>r</sub>&nbsp;will fit within a 32-bit integer.</span></span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 5, r = 2\n<strong>Output:</strong> 10\n<strong>Explaination:</strong> The value of <sup>5</sup>C<sub>2</sub> is calculated as 5!/(5&minus;2)!*2! = 5!/3!*2! = 10.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 2, r = 4\n<strong>Output:</strong> 0\n<strong>Explaination:</strong> Since r is greater than n, thus </span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sup style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">2</sup></span></strong></strong></strong><span style=\"color: #273239; font-family: Nunito, sans-serif; font-size: 18px; letter-spacing: 0.162px; background-color: #ffffff; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 18.6667px; letter-spacing: normal;\">C</span></span></span></span></span><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><strong style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><sub style=\"color: #000000; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 400; letter-spacing: normal;\">4</sub> </span></strong></strong></strong><span style=\"color: #273239; font-family: Nunito, sans-serif; font-size: 18px; letter-spacing: 0.162px; background-color: #ffffff; box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\"><span style=\"letter-spacing: 0.162px;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; vertical-align: baseline;\">= 0</span></span></span></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> n = 5, r = 0<br /><strong>Output:</strong> 1\n<strong>Explaination:</strong> The value of <sup>5</sup>C<sub>0</sub> is calculated as 5!/(5&minus;0)!*0! = 5!/5!*0! = 1.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &le; n &le; 100<br />0 &le; r &le; 100</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/program-calculate-value-ncr/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704428,
+    "problem_name": "Power Set",
+    "slug": "power-set4302",
+    "difficulty": "Medium",
+    "accuracy": "43.3%",
+    "tags": {
+      "company_tags": [
+        "Snapdeal"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Bit Magic",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a string <strong>s </strong>of length<strong> n</strong>, find all the <strong>possible non-empty <a href=\"https://www.geeksforgeeks.org/data-structures/string-subsequence-substring/\">subsequences</a> </strong>of the string <strong>s</strong> in <strong>lexicographically-sorted </strong>order.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input : <br /></strong>s = \"abc\"\n<strong>Output: <br /></strong>a ab abc ac b bc c\n<strong>Explanation : <br /></strong>There are a total 7 number of subsequences possible for the given string, and they are mentioned above in lexicographically sorted order.</span>\n</pre>\n<p><span style=\"font-size: 18px;\"><strong>Example 2:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: <br /></strong>s = \"aa\"\n<strong>Output: <br /></strong>a a aa\n<strong>Explanation : <br /></strong></span><span style=\"font-size: 18px;\">There are a total 3 number of subsequences possible for the given string, and they are mentioned above in lexicographically sorted order.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Your Task:</strong><br />You don't need to read input or print anything.&nbsp;</span><span style=\"font-size: 18px;\">Your t</span><span style=\"font-size: 18px;\">ask is to complete the function&nbsp;<strong>AllPossibleStrings()&nbsp;</strong>which takes a string <strong>s</strong> as the input parameter and <strong>returns a list </strong>of all possible <strong>subsequences (non-empty)</strong> that can be formed from <strong>s</strong> in <strong>lexicographically sorted </strong>order.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Expected Time Complexity:&nbsp;</strong>O( n*2<sup>n&nbsp; </sup>)<br /><strong>Expected Space Complexity:&nbsp;</strong>O( n * 2<sup>n </sup>)</span></p>\n<p><strong><span style=\"font-size: 18px;\">Constraints:&nbsp;</span></strong><br /><span style=\"font-size: 18px;\">1 &lt;= n &lt;= 16<br /><strong>s</strong> constitutes of lower case english alphabets</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/power-set/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705146,
+    "problem_name": "Next Permutation",
+    "slug": "next-permutation5226",
+    "difficulty": "Medium",
+    "accuracy": "40.66%",
+    "tags": {
+      "company_tags": [
+        "Infosys",
+        "Flipkart",
+        "Amazon",
+        "Microsoft",
+        "FactSet",
+        "Hike",
+        "MakeMyTrip",
+        "Google",
+        "Qualcomm",
+        "Salesforce"
+      ],
+      "topic_tags": [
+        "Arrays",
+        "permutation",
+        "constructive algo",
+        "Data Structures"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given an array of integers <strong>arr[]</strong> representing a permutation, implement the&nbsp;<strong>next permutation</strong>&nbsp;that rearranges the numbers into the <strong>lexicographically next greater permutation</strong>. If no such permutation exists, rearrange the numbers into the <strong>lowest</strong> possible order (i.e., sorted in ascending order).&nbsp;</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Note:</strong>&nbsp; A permutation of an array of integers refers to a specific arrangement of its elements in a sequence or linear order.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> arr[] = [2, 4, 1, 7, 5, 0]\n<strong>Output:</strong> [2, 4, 5, 0, 1, 7]\n<strong>Explanation:</strong> The next permutation of the given array is [2, 4, 5, 0, 1, 7].</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> arr[] = [3, 2, 1]\n<strong>Output:</strong> [1, 2, 3]\n<strong>Explanation:</strong> As arr[] is the last permutation, the next permutation is the lowest one.<br /></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input:</strong> arr[] = [3, 4, 2, 5, 1]\n<strong>Output:</strong> [3, 4, 5, 1, 2]\n<strong>Explanation:</strong> The next permutation of the given array is [3, 4, 5, 1, 2].</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong><br />1 &le; arr.size() &le; 10<sup>5<br /></sup>0 &le; arr[i] &le; 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/next-permutation/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 705234,
+    "problem_name": "Power of k in factorial of n",
+    "slug": "power-of-k-in-n-where-k-may-be-non-prime4206",
+    "difficulty": "Medium",
+    "accuracy": "51.2%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "number-theory",
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 14pt;\">Given two positive integers <strong><code data-start=\"127\" data-end=\"130\">n</code></strong> and <strong><code data-start=\"135\" data-end=\"138\">k</code></strong>, determine the highest value of <strong><code data-start=\"168\" data-end=\"171\" data-is-only-node=\"\">x</code></strong> such that <strong>k<sup>x</sup></strong> <strong>divides <code data-start=\"196\" data-end=\"199\">n! (n factorial)</code>&nbsp;completely</strong> (i.e., <code data-start=\"218\" data-end=\"234\">n! % (k<sup>x</sup>)&nbsp;== 0</code>).</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>: n = 7, k = 2\n<strong>Output:</strong>&nbsp;4\n<strong>Explanation</strong>: </span><span style=\"font-size: 14pt;\">7! = 5040, and 2<sup style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">4 </sup><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">= 16 is the highest power of 2 that divides 5040.</span></span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 10, k = 9\n<strong>Output:&nbsp;</strong>2\n<strong>Explanation</strong>: </span><span style=\"font-size: 14pt;\">10! = 3628800, and 9&sup2; = 81 is the highest power of 9 that divides 3628800.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n &le; 10<sup>5</sup><br />2 &le; k &le; 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/largest-power-k-n-factorial-k-may-not-prime/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 701269,
+    "problem_name": "Determinant of a Matrix",
+    "slug": "determinant-of-a-matrix-1587115620",
+    "difficulty": "Medium",
+    "accuracy": "56.66%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Matrix",
+        "Data Structures"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Given a square matrix of size <strong>n*n</strong>. The task is to find the <a href=\"https://en.wikipedia.org/wiki/Determinant\"><strong>determinant</strong></a> of this matrix.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>:\nn = 4\nmatrix[][] = {{1, 0, 2, -1},\n&nbsp;             {3, 0, 0, 5},\n&nbsp;             {2, 1, 4, -3},\n&nbsp;             {1, 0, 5, 0}}\n<strong>Output</strong>: 30\n<strong>Explanation</strong>:\nDeterminant of the given matrix is 30.</span>\n</pre>\n<p><span style=\"font-size: 18px;\"><strong>Example 2:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input</strong>:\nn = 3\nmatrix[][] = {{1, 2, 3},\n&nbsp;             {4, 5, 6},\n&nbsp;             {7, 10, 9}}\n<strong>Output</strong>: 12\n<strong>Explanation</strong>:\nDeterminant of the given matrix is 12.</span>\n</pre>\n<p><span style=\"font-size: 18px;\"><strong>Your Task:</strong><br />You don't need to read input or print anything. Complete the function <strong>determinantOfMatrix()&nbsp;</strong>that takes<strong> </strong>matrix<strong> </strong>and its size <strong>n</strong> as input parameters<strong> </strong>and returns the determinant of the matrix.<br /></span></p>\n<p><span style=\"font-size: 18px;\"><strong>Expected Time Complexity:</strong> O(N<sup>4</sup>)<br /><strong>Expected Auxiliary Space:</strong> O(N<sup>2</sup>)</span><br /><br /><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &lt;= N &lt;= 10<br />-10&nbsp;&lt;= mat[i][j] &lt;= 10</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/cpp-program-for-determinant-of-a-matrix/",
+      "https://www.geeksforgeeks.org/determinant-of-a-matrix/",
+      "https://www.geeksforgeeks.org/java-program-to-find-the-determinant-of-a-matrix/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 700361,
+    "problem_name": "Josephus problem",
+    "slug": "josephus-problem",
+    "difficulty": "Easy",
+    "accuracy": "57.26%",
+    "tags": {
+      "company_tags": [
+        "Amazon",
+        "Microsoft",
+        "Walmart"
+      ],
+      "topic_tags": [
+        "Recursion",
+        "Data Structures",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p data-pm-slice=\"1 1 []\"><span style=\"font-size: 14pt;\">You are playing a game with <strong>n</strong> people standing in a circle, numbered from <strong>1 </strong>to<strong> n</strong>. Starting from person 1, every <strong>k<sup>th</sup></strong> person is eliminated in a circular fashion. The process continues until only one person remains.</span><br /><span style=\"font-size: 14pt;\">Given integers n and k, return the position (1-based index) of the person who will survive.</span></p>\n<p><span style=\"font-size: 14pt;\"><strong>Examples :</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 3, k = 2\n<strong>Output: </strong>3<strong>\nExplanation: </strong>There are 3 persons so skipping 1 person i.e 1st person 2nd person will be killed. Thus the safe position is 3.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 5, k = 3\n<strong>Output: </strong>4<strong>\nExplanation: </strong>There are 5 persons so skipping 2 person i.e 3rd person will be killed. Thus the safe position is 4.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 14pt;\">1 &le; n, k &le; 20</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/josephus-problem/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704399,
+    "problem_name": "Euler Totient Function",
+    "slug": "euler-totient-function4604",
+    "difficulty": "Easy",
+    "accuracy": "32.11%",
+    "tags": {
+      "company_tags": [
+        "Cisco"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 18px;\">Find the&nbsp;<strong>Euler Totient Function (ETF)</strong> &Phi;(n) for an input<strong> n</strong>. <strong>ETF</strong> is the count of numbers in {1, 2, 3, &hellip;, n} that are relatively prime to <strong>n</strong>, i.e., the numbers whose <strong>GCD</strong> (Greatest Common Divisor) with <strong>n</strong> is 1.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong></span><span style=\"font-size: 18px;\">n = 11\n<strong>Output: </strong>10\n<strong>Explanation: </strong>From 1 to 11, 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10 are relatively prime to 11.</span>\n</pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 16\n<strong>Output: </strong>8\n<strong>Explanation: </strong>From 1 to 16, 1, 3, 5, 7, 9, 11, 13 and 15</span> <span style=\"font-size: 18px;\">are relatively prime to 16.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; n &le;10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/eulers-totient-function/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 701190,
+    "problem_name": "Tower Of Hanoi",
+    "slug": "tower-of-hanoi-1587115621",
+    "difficulty": "Medium",
+    "accuracy": "35.23%",
+    "tags": {
+      "company_tags": [
+        "Flipkart",
+        "Microsoft"
+      ],
+      "topic_tags": [
+        "Recursion",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p data-start=\"83\" data-end=\"352\"><span style=\"font-size: 14pt;\">You are given <strong>n</strong> disks placed on a starting rod (from), with the smallest disk on top and the largest at the bottom. There are three rods: the <strong>starting</strong> rod(from), the <strong>target</strong> rod (to), and an <strong>auxiliary </strong>rod (aux).<br /></span><span style=\"font-size: 14pt;\">You have to calculate the total number<strong data-start=\"384\" data-end=\"409\"> </strong>of<strong data-start=\"384\" data-end=\"409\"> moves</strong> required to transfer all <strong>n</strong> disks from the starting rod to the target rod, following these rules:<br />&nbsp; &nbsp; &nbsp; <strong>1.</strong> Only one disk can be moved at a time.</span><br /><span style=\"font-size: 14pt;\">&nbsp; &nbsp; &nbsp;<strong> 2. </strong>A disk can only be placed on top of a larger disk or on an empty rod.<br /></span><span style=\"font-size: 14pt;\">Return the number of moves needed to complete the task.</span></p>\n<p><span style=\"font-size: 18px;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 2\n<strong>Output: </strong>3<strong>\nExplanation: </strong>For n =2 , steps will be as follows in the example and total 3 steps will be taken.<br /></span><span style=\"font-size: 18px;\">move disk 1 from rod 1 to rod 2<br /></span><span style=\"font-size: 18px;\">move disk 2 from rod 1 to rod 3<br />move disk 1 from rod 2 to rod 3<br /></span></pre>\n<pre><span style=\"font-size: 18px;\"><strong>Input: </strong>n = 3\n<strong>Output: </strong>7<strong>\nExplanation: </strong>For N=3 , steps will be as follows in the example and total 7 steps will be taken.<br />move disk 1 from rod 1 to rod 3<br />move disk 2 from rod 1 to rod 2<br />move disk 1 from rod 3 to rod 2<br />move disk 3 from rod 1 to rod 3<br />move disk 1 from rod 2 to rod 1<br />move disk 2 from rod 2 to rod 3<br />move disk 1 from rod 1 to rod 3<br /></span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input: </strong>n = 0\n<strong>Output: </strong>0<strong>\nExplanation: </strong>Total 0 steps will be taken.</span></pre>\n<p><strong><span style=\"font-size: 18px;\">Constraints:</span></strong><br /><span style=\"font-size: 18px;\">&nbsp; 0 &le; n &le; 20</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 703981,
+    "problem_name": "Angle between hour and minute hand",
+    "slug": "angle-between-hour-and-minute-hand0545",
+    "difficulty": "Medium",
+    "accuracy": "15.91%",
+    "tags": {
+      "company_tags": [
+        "Paytm",
+        "Amazon",
+        "Salesforce",
+        "Infinera"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p id=\"posted-message-container\" class=\"zcmsgcnt lazy-load lazy-load-lastmsg textL\" dir=\"auto\" style=\"box-sizing: border-box; margin: 0px 26px 0px 0px; padding: 0.1px 0px 0px; outline: 0px; border: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: inherit; text-shadow: none; overflow-wrap: break-word; text-wrap-mode: wrap; color: #222222; font-size: 15.008px; letter-spacing: 0.01px;\"><span style=\"font-size: 14pt;\">Given a string <strong>s</strong> representing time in 24-hour format <strong>\"HH:MM\"</strong>, compute the <strong data-start=\"141\" data-end=\"170\">smallest </strong>angle in<strong data-start=\"141\" data-end=\"170\"> degrees</strong> between the hour and minute hands of an analog clock.</span></p>\n<p class=\"zcmsgcnt lazy-load lazy-load-lastmsg textL\" dir=\"auto\" style=\"box-sizing: border-box; margin: 0px 26px 0px 0px; padding: 0.1px 0px 0px; outline: 0px; border: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: inherit; text-shadow: none; overflow-wrap: break-word; text-wrap-mode: wrap; color: #222222; font-size: 15.008px; letter-spacing: 0.01px;\">&nbsp;</p>\n<p class=\"zcmsgcnt lazy-load lazy-load-lastmsg textL\" dir=\"auto\" style=\"box-sizing: border-box; margin: 0px 26px 0px 0px; padding: 0.1px 0px 0px; outline: 0px; border: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; font-family: inherit; text-shadow: none; overflow-wrap: break-word; text-wrap-mode: wrap; color: #222222; font-size: 15.008px; letter-spacing: 0.01px;\"><span style=\"font-size: 14pt;\"><strong>Examples:</strong></span></p>\n<pre><span style=\"font-size: 14pt;\"><strong>Input</strong><strong>: </strong>s = \"06:00\"\n<strong>Output: </strong>180.000\n<strong>Explanation: </strong>When the time is 06:00, the angle between the hour and minute hands of the clock is 180.000 degrees.</span></pre>\n<pre><span style=\"font-size: 14pt;\"><strong>Input</strong><strong>:</strong> s = \"03:15\"\n<strong>Output: </strong>7.500\n<strong>Explanation: </strong>When the time is 03:15, the angle between the hour and minute hands of the clock is 7.500 degrees.</span></pre>\n<p><span style=\"font-size: 14pt;\"><strong>Constraints:<br /></strong>s.size() = 5</span><br /><span style=\"font-size: 14pt;\">00 &le;&nbsp; HH&nbsp; &le; 23</span><br /><span style=\"font-size: 14pt;\">00 &le;&nbsp; MM&nbsp; &le; 59</span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/calculate-angle-hour-hand-minute-hand/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 702913,
+    "problem_name": "Super Primes",
+    "slug": "super-primes2443",
+    "difficulty": "Medium",
+    "accuracy": "24.9%",
+    "tags": {
+      "company_tags": [],
+      "topic_tags": [
+        "Searching",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p><span style=\"font-size: 20px;\">A prime number is Super Prime if it is a sum of two primes. Find all the Super Primes upto <strong>N</strong></span></p>\n<p><span style=\"font-size: 18px;\"><strong>Example 1:</strong></span></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong>\nN = 5\n<strong>Output:</strong> 1\n<strong>Explanation: </strong>5 = 2 + 3, 5 is the\nonly super prime</span>\n\n</pre>\n<p><strong><span style=\"font-size: 18px;\">Example 2:</span></strong></p>\n<pre><span style=\"font-size: 18px;\"><strong>Input:</strong>\nN = 10 \n<strong>Output:</strong> 2\n<strong>Explanation: </strong>5 and 7 are super primes</span>\n</pre>\n<p><br /><span style=\"font-size: 18px;\"><strong>Your Task:&nbsp;&nbsp;</strong><br />You don't need to read input or print anything. Your task is to complete the function <strong>superPrimes()</strong>&nbsp;which takes the <strong>N </strong>as input and returns the count of super primes.</span><br /><br /><span style=\"font-size: 18px;\"><strong>Expected Time Complexity:</strong> O(Nlog(logN))<br /><strong>Expected Auxiliary Space:</strong> O(N)</span><br /><br /><span style=\"font-size: 18px;\"><strong>Constraints:</strong><br />1 &le; <strong>N</strong> &le; 10<sup>5</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/super-prime/"
+    ],
+    "aceptance": null
+  },
+  {
+    "id": 704146,
+    "problem_name": "Sieve of Eratosthenes",
+    "slug": "sieve-of-eratosthenes5242",
+    "difficulty": "Medium",
+    "accuracy": "47.43%",
+    "tags": {
+      "company_tags": [
+        "VMWare",
+        "MAQ Software",
+        "SAP Labs"
+      ],
+      "topic_tags": [
+        "Mathematical",
+        "sieve",
+        "Algorithms"
+      ]
+    },
+    "problem_question": "<p data-start=\"24\" data-end=\"165\"><span style=\"font-size: 14pt;\">Given a positive integer <strong>n</strong>, calculate and return all prime numbers less than or equal to <strong>n</strong> using the <strong data-start=\"129\" data-end=\"154\">Sieve of Eratosthenes</strong> algorithm.<br /></span><span style=\"font-size: 14pt;\">A <strong data-start=\"169\" data-end=\"185\">prime number</strong> is a natural number greater than 1 that has no positive divisors other than 1 and itself.</span></p>\n<p><strong><span style=\"font-size: 18px;\">Examples:</span></strong></p>\n<pre><strong><span style=\"font-size: 18px;\">Input: </span></strong><span style=\"font-size: 18px;\">n = 10</span>\n<strong><span style=\"font-size: 18px;\">Output: </span></strong><span style=\"font-size: 18px;\">[2, 3, 5, 7]</span>\n<strong><span style=\"font-size: 18px;\">Explanation: </span></strong><span style=\"font-size: 18px;\">Prime numbers less than equal to 10 are 2, 3, 5 and 7.</span></pre>\n<pre><strong><span style=\"font-size: 18px;\">Input: </span></strong><span style=\"font-size: 18px;\">n = 35</span>\n<span style=\"font-size: 18px;\"><strong>Output: </strong>[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]</span>\n<span style=\"font-size: 18px;\"><strong>Explanation: </strong>Prime numbers less than equal to 35 are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 and 31.</span></pre>\n<p><span style=\"font-size: 18px;\"><strong>Constraints:</strong></span><br /><span style=\"font-size: 18px;\">1 &le; n &le; 10<sup>4</sup></span></p>",
+    "article_list": [
+      "https://www.geeksforgeeks.org/sieve-of-eratosthenes/"
+    ],
+    "aceptance": null
+  }
+]

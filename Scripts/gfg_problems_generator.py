@@ -190,7 +190,7 @@ def generate_gfg_problems_files(data, base_folder, base_name):
         filepath = os.path.join(diff_folder, filename)
         
         # Tạo URL cho GeeksforGeeks problem
-        gfg_url = f"https://www.geeksforgeeks.org/problems/{slug}/"
+        gfg_url = f"https://www.geeksforgeeks.org/problems/{slug}/1"
         
         # Lấy problem question từ JSON data
         problem_question = item.get("problem_question", "")
@@ -203,7 +203,7 @@ def generate_gfg_problems_files(data, base_folder, base_name):
             # Header với styling đẹp
             f.write(f"<div align=\"center\">\n\n")
             f.write(f"# 🧠 [{problem_name}]({gfg_url})\n\n")
-            f.write(f"[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)]({gfg_url}/1)\n\n")
+            f.write(f"[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)]({gfg_url})\n\n")
             f.write(f"</div>\n\n")
             f.write("---\n\n")
             
@@ -214,7 +214,7 @@ def generate_gfg_problems_files(data, base_folder, base_name):
             f.write(f"| **Problem ID** | `{problem_id}` |\n")
             f.write(f"| **Difficulty** | {get_difficulty_badge(difficulty)} |\n")
             f.write(f"| **Accuracy** | `{accuracy}` |\n")
-            f.write(f"| **Problem Link** | [Open in GeeksforGeeks]({gfg_url}/1) |\n")
+            f.write(f"| **Problem Link** | [Open in GeeksforGeeks]({gfg_url}) |\n")
             
             # Tags
             tags = item.get("tags", {})

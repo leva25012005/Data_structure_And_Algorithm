@@ -19,7 +19,7 @@
 
 ## Description
 
-<!-- description:start -->
+<!-- Decription:start -->
 
 <p>You are given a positive integer <code>n</code> representing an <code>n x n</code> cargo deck on a ship. Each cell on the deck can hold one container with a weight of <strong>exactly</strong> <code>w</code>.</p>
 
@@ -59,8 +59,8 @@
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `09-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `09-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -69,68 +69,98 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Simulation)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - We have an n x n cargo deck → total capacity for n² containers.
+> - Each container weighs w.
+> - Start loading containers one by one until the total weight would exceed maxWeight.
+> - Return how many containers got loaded.
+> - This is straightforward but inefficient for large n because it simulates each container.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n, w, maxWeight):
+    total = 0
+    count = 0
+    while count < n*n and total + w <= maxWeight:
+        total += w
+        count += 1
+    return count
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force simulation approach
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    int maxContainers(int n, int w, long long maxWeight) {
+        int totalCells = n * n;
+        long long total = 0;
+        int count = 0;
+
+        // Load containers one by one
+        while (count < totalCells && total + w <= maxWeight) {
+            total += w;
+            count++;
+        }
+        return count;
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution - Mathematical Calculation (Floor Division)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Instead of simulating, compute directly:
+>   - Maximum possible containers = n².
+>   - Maximum weight capacity allows at most maxWeight // w containers.
+> - Answer = min(n², maxWeight // w).
+> - This avoids looping and is much faster.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimized(n, w, maxWeight):
+    maxCells = n * n
+    maxByWeight = maxWeight // w
+    return min(maxCells, maxByWeight)
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Optimized formula-based approach
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    int maxContainers(int n, int w, long long maxWeight) {
+        long long maxCells = 1LL * n * n;        // total deck cells
+        long long maxByWeight = maxWeight / w;   // how many containers by weight limit
+        return (int)min(maxCells, maxByWeight);  // minimum of the two
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Clean Formula)
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - Approach 2 already gives the correct O(1) solution.
+> - We can present it more elegantly:
+>   - Answer = min(n², maxWeight / w).
+> - This is the final, optimal solution with constant time and space complexity.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(n, w, maxWeight):
+    return min(n * n, maxWeight // w)
 ```
 
 #### 💻 Implementation
@@ -140,21 +170,19 @@ public:
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    int maxContainers(int n, int w, long long maxWeight) {
+        return (int)min(1LL * n * n, maxWeight / w);
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                            | Cons                              |
+| -------------- | --------------- | ---------------- | ------------------------------- | --------------------------------- |
+| 🥉 Brute Force | O(n²)           | O(1)             | Very simple, intuitive          | Too slow if n = 1000 (up to 1e6)  |
+| 🥈 Optimized   | O(1)            | O(1)             | Direct formula, very fast       | Slightly more code than necessary |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Cleanest, most elegant solution | None                              |
 
 ---
 

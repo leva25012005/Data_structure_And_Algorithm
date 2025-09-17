@@ -88,8 +88,8 @@ Since both Person 1 and Person 2 reach Person 3 at the same time, the output is 
 
 | Status           | Date         | Notes                                    |
 | ---------------- | ------------ | ---------------------------------------- |
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved**    | `DD-MM-YYYY` | Successfully implemented solution        |
+| 🎯 **Attempted** | `17-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `17-09-2025` | Successfully implemented solution        |
 | 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
 | 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
 | 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
@@ -98,92 +98,130 @@ Since both Person 1 and Person 2 reach Person 3 at the same time, the output is 
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Simulation)
 
 #### 📝 Intuition
 
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+> - Simulate the movement step by step.
+> - At each step, move Person 1 and Person 2 one unit closer to Person 3.
+> - Stop when one (or both) reach Person 3.
+> - This works since max distance ≤ 100 (small).
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function bruteForce(x, y, z):
+    while true:
+        if x == z and y == z: return 0
+        if x == z: return 1
+        if y == z: return 2
+        move x one step toward z
+        move y one step toward z
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force approach
+// Brute force simulation approach
 
 class Solution {
 public:
-    int solutionBruteForce(vector<int>& nums) {
-        // Implementation here
-        return 0;
+    int raceResultBruteForce(int x, int y, int z) {
+        while (true) {
+            // If both arrive at the same time
+            if (x == z && y == z) return 0;
+            // If Person 1 arrives first
+            if (x == z) return 1;
+            // If Person 2 arrives first
+            if (y == z) return 2;
+
+            // Move one step toward z
+            x += (x < z ? 1 : -1);
+            y += (y < z ? 1 : -1);
+        }
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Distance Calculation)
 
 #### 📝 Intuition
 
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+> - Instead of simulating, compute the distance:
+>   - dist1 = abs(x - z)
+>   - dist2 = abs(y - z)
+> - Compare the two distances:
+>   - If dist1 < dist2 → Person 1 arrives first.
+>   - If dist2 < dist1 → Person 2 arrives first.
+>   - If equal → Both arrive at the same time.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimized(x, y, z):
+    dist1 = abs(x - z)
+    dist2 = abs(y - z)
+    if dist1 < dist2: return 1
+    if dist2 < dist1: return 2
+    return 0
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Optimized approach with better complexity
+// Optimized approach using direct distance comparison
 
 class Solution {
 public:
-    int solutionOptimized(vector<int>& nums) {
-        // Optimized implementation here
-        return 0;
+    int raceResultOptimized(int x, int y, int z) {
+        int dist1 = abs(x - z);
+        int dist2 = abs(y - z);
+
+        if (dist1 < dist2) return 1;
+        else if (dist2 < dist1) return 2;
+        else return 0;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Constant-time, clean)
 
 #### 📝 Intuition
 
-> Mô tả giải pháp tốt nhất, elegant nhất
+> - The optimized solution is already O(1).
+> - The most elegant form is to directly use a ternary operator for comparison.
+> - No loops, minimal code, fully constant-time.
 
 #### 🔍 Algorithm
 
 ```pseudo
-// Write your pseudocode here
+function optimal(x, y, z):
+    return 1 if abs(x - z) < abs(y - z)
+    return 2 if abs(y - z) < abs(x - z)
+    return 0
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Most optimal and elegant solution
+/// Most optimal and elegant solution (constant-time)
 
 class Solution {
 public:
-    int solutionOptimal(vector<int>& nums) {
-        // Optimal implementation here
-        return 0;
+    int raceResultOptimal(int x, int y, int z) {
+        int dist1 = abs(x - z), dist2 = abs(y - z);
+        return (dist1 < dist2) ? 1 : (dist2 < dist1) ? 2 : 0;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity | Space Complexity | Pros                            | Cons                  |     |     |     |     |
+| -------------- | --------------- | ---------------- | ------------------------------- | --------------------- | --- | --- | --- | --- |
+| 🥉 Brute Force | O(d)            | O(1)             | None                            | y-z                   |
+| 🥈 Optimized   | O(1)            | O(1)             | Simple math-based solution      | Slightly more verbose |     |     |     |     |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Cleanest, minimal code, elegant | None                  |     |     |     |     |
 
 ---
 

@@ -210,12 +210,11 @@ public:
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros | Cons |
-| -------------- | --------------- | ---------------- | ---- | ---- |
-| 🥉 Brute Force | O(?)            | O(?)             | ...  | ...  |
-| 🥈 Optimized   | O(?)            | O(?)             | ...  | ...  |
-| 🥇 Optimal ⭐  | O(?)            | O(?)             | ...  | ...  |
-| ...            | ....            | ...              | ...  | ...  |
+| Approach       | Time Complexity     | Space Complexity | Pros                                    | Cons                                 |
+| -------------- | ------------------- | ---------------- | --------------------------------------- | ------------------------------------ |
+| 🥉 Brute Force | O(2^log₃n \* log₃n) | O(log₃n)         | Very intuitive, tries all possibilities | Exponential → infeasible for n large |
+| 🥈 Greedy      | O(log₃n)            | O(log₃n)         | Simple, works well                      | Less elegant than base-3 check       |
+| 🥇 Optimal ⭐  | O(log₃n)            | O(1)             | Fastest, elegant base-3 trick           | Requires insight into base-3         |
 
 ---
 

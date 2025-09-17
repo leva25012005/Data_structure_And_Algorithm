@@ -97,8 +97,8 @@ def generate_gfg_docs_file(data, docs_file, base_name, json_file):
         
         # Problems tracking table
         f.write("## 📋 Problems List\n\n")
-        f.write("| # | Problem | Difficulty | Accuracy | Topics | Status |\n")
-        f.write("|---|---------|------------|----------|--------|--------|\n")
+        #f.write("| # | Problem | Difficulty | Accuracy | Topics | Status |\n")
+        #f.write("|---|---------|------------|----------|--------|--------|\n")
         
         for i, item in enumerate(data, 1):
             problem_id = item["id"]
@@ -122,8 +122,9 @@ def generate_gfg_docs_file(data, docs_file, base_name, json_file):
             if len(topic_tags) > 3:
                 topics_str += "..."
             
-            f.write(f"| {i} | [{problem_name}]({solution_link}) | {difficulty_badge} | `{accuracy}` | {topics_str} | ⏳ |\n")
-        
+            #f.write(f"| {i} | [{problem_name}]({solution_link}) | {difficulty_badge} | `{accuracy}` | {topics_str} | ⏳ |\n")
+            f.write(f" - [{problem_name}]({solution_link})\n")
+
         f.write("\n")
         
         # Legend

@@ -124,38 +124,7 @@ public:
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution (Avoid Extra Variables)
-
-#### 📝 Intuition
-
-> - We can compute the distance directly inside the sqrt function without storing intermediate dx and dy.
-> - Same formula, slightly more concise.
-
-#### 🔍 Algorithm
-
-```pseudo
-function distance(x1, y1, x2, y2):
-    return ceil(sqrt((x2 - x1)^2 + (y2 - y1)^2))
-```
-
-#### 💻 Implementation
-
-**C++:**
-
-```cpp
-#include <cmath>
-
-class Solution {
-public:
-    int distance(int x1, int y1, int x2, int y2) {
-        // Directly compute distance without extra variables
-        return (int)ceil(sqrt((x2 - x1) * (x2 - x1) +
-                              (y2 - y1) * (y2 - y1)));
-    }
-};
-```
-
-### 🥇 Approach 3: Optimal Solution ⭐ (One-liner using pow)
+### 🥇 Approach 2: Optimal Solution ⭐ (One-liner using pow)
 
 #### 📝 Intuition
 
@@ -188,7 +157,6 @@ public:
 | Approach       | Time Complexity | Space Complexity | Pros                          | Cons                     |
 | -------------- | --------------- | ---------------- | ----------------------------- | ------------------------ |
 | 🥉 Brute Force | O(1)            | O(1)             | Very clear and easy to follow | Uses extra variables     |
-| 🥈 Optimized   | O(1)            | O(1)             | Concise, no extra variables   | Slightly less readable   |
 | 🥇 Optimal ⭐  | O(1)            | O(1)             | Elegant, one-liner            | Relies on `pow` function |
 
 ---

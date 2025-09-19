@@ -10,13 +10,13 @@
 
 ## 📋 Problem Overview
 
-| Property         | Value                                                                                                                                                                                                                                                  |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Problem ID**   | `704424`                                                                                                                                                                                                                                               |
-| **Difficulty**   | ⚪ **Basic**                                                                                                                                                                                                                                           |
-| **Accuracy**     | `53.83%`                                                                                                                                                                                                                                               |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1)                                                                                                                                                           |
-| **Topic Tags**   | ![number-theory](https://img.shields.io/badge/-number-theory-blue?style=flat-square) ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `704424`                                                                                                                                                                                                                                                |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                                                                                                            |
+| **Accuracy**     | `53.83%`                                                                                                                                                                                                                                                |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1)                                                                                                                                                            |
+| **Topic Tags**   | ![Number Theory](https://img.shields.io/badge/-Number--Theory-blue?style=flat-square) ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
 
 ## Description
 

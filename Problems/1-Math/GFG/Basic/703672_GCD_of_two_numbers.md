@@ -142,6 +142,13 @@ function gcdSubtraction(a, b):
 class Solution {
 public:
     int gcdSubtraction(int a, int b) {
+        if (a == 0)
+		    return b;
+		if (b == 0)
+		    return a;
+		if (a == b)
+		    return a;
+
         while (a != b) {
             if (a > b) a = a - b;
             else b = b - a;
@@ -180,6 +187,13 @@ function gcdOptimal(a, b):
 class Solution {
 public:
     int gcdOptimal(int a, int b) {
+        if (a == 0)
+		    return b;
+		if (b == 0)
+		    return a;
+		if (a == b)
+		    return a;
+
         while (b != 0) {
             int temp = b;
             b = a % b; // Remainder becomes new b
@@ -190,13 +204,65 @@ public:
 };
 ```
 
+### 🥇 Approach 4: Optimal Solution ⭐ ( ptimized Euclidean Algorithm by Checking Remainder)
+
+#### 📝 Intuition
+
+> - Instead of the Euclidean algorithm by subtraction, a better approach can be used
+> - We don't perform subtraction here. we continuously divide the bigger number by the smaller number.
+> - More can be learned about this efficient solution by using the modulo operator in Euclidean algorithm-
+
+#### 🔍 Algorithm
+
+```pseudo
+function gcdOptimal(a, b):
+    return b == 0 ? a : gcd(b, a % b);
+```
+
+#### 💻 Implementation
+
+```cpp
+// Most optimal solution: Euclidean algorithm (modulo)
+
+class Solution {
+public:
+    int gcdOptimal(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
+};
+```
+
+### 🥇 Approach 5: Optimal Solution ⭐ ( Using Built-in Function)
+
+#### 📝 Intuition
+
+> - Languages like C++ have inbuilt functions to calculate GCD of two numbers.
+
+#### 🔍 Algorithm
+
+#### 💻 Implementation
+
+```cpp
+// Most optimal solution: Euclidean algorithm (modulo)
+#include <algorithm>
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b)
+{
+    return __gcd(a, b);
+}
+```
+
 ## 📊 Comparison of Approaches
 
 | Approach       | Time Complexity    | Space Complexity | Pros                              | Cons                          |
 | -------------- | ------------------ | ---------------- | --------------------------------- | ----------------------------- |
 | 🥉 Brute Force | O(min(a, b))       | O(1)             | Very simple, easy to understand   | Too slow for large numbers    |
 | 🥈 Subtraction | O(max(a, b)) worst | O(1)             | Better than brute force           | Still inefficient for big gap |
-| 🥇 Optimal ⭐  | O(log(min(a, b)))  | O(1)             | Fastest, elegant, works up to 1e9 | None                          |
+| 🥇 Optimal 1⭐ | O(log(min(a, b)))  | O(1)             | Fastest, elegant, works up to 1e9 | None                          |
+| 🥇 Optimal 2⭐ | O(log(min(a,b)))   | O(log(min(a,b))) | Fastest, elegant                  | None                          |
+| 🥇 Optimal 3⭐ | O(log(min(a,b)))   | O(1)             | Fastest, Easy                     | None                          |
 
 ---
 
@@ -207,3 +273,4 @@ public:
 _Happy Coding! 🚀_
 
 </div>
+```

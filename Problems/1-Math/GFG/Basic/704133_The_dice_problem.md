@@ -22,52 +22,35 @@
 
 <!-- description:start -->
 
-<p>Given an integer <code>N</code>, recursively sum the digits of <code>N</code> until the result is a single digit.</p>
+<p>You are given a <strong>cubic dice</strong> with <strong>6</strong> faces. All the individual faces have a number printed on them. The numbers are in the range of <strong>1 to 6</strong>, like any ordinary dice. You will be provided with a face of this cube, your task is to guess the number on the opposite face of the cube.</p>
 
+<!-- description:end -->
+
+## Examples
+
+<p><strong>Example 1:</strong></p>
 <pre>
-If N < 10
-    digSum(N) = N
-Else
-    digSum(N) = digSum(Sum of digits of N)
-</pre>
-
-<p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
-
-<pre>
-<strong>Input:</strong> N = 1234
+<strong>Input:</strong> n = 6
 <strong>Output:</strong> 1
-<strong>Explanation:</strong> The sum of digits is 1 + 2 + 3 + 4 = 10.
-Since 10 is not a single digit, repeat: 1 + 0 = 1.
+<strong>Explanation:</strong> For dice facing number 6, the opposite face will have the number 1.
 </pre>
 
-<p><strong class="example">Example 2:</strong></p>
-
+<p><strong>Example 2:</strong></p>
 <pre>
-<strong>Input:</strong> N = 9999
-<strong>Output:</strong> 9
-<strong>Explanation:</strong> 9 + 9 + 9 + 9 = 36 → 3 + 6 = 9
+<strong>Input:</strong> n = 2
+<strong>Output:</strong> 5
+<strong>Explanation:</strong> For dice facing number 2, the opposite face will have the number 5.
 </pre>
 
-<p>&nbsp;</p>
-<strong>Your Task:</strong>  
-You don't need to read input or print anything. Your task is to complete the function <code>repeatedSumOfDigits()</code> which takes an integer <code>N</code> and returns the repeated sum of digits of <code>N</code>.
-
-<p>&nbsp;</p>
-<p><strong>Expected Time Complexity:</strong> O(1)<br>
-<strong>Expected Auxiliary Space:</strong> O(1)</p>
-
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
+## Constraints
 
 <ul>
-  <li><code>1 &lt;= N &lt;= 10<sup>6</sup></code></li>
+  <li><code>1 ≤ n ≤ 6</code></li>
 </ul>
 
 <p>&nbsp;</p>
 <p><strong>Expected Time Complexity:</strong> O(1)<br>
 <strong>Expected Auxiliary Space:</strong> O(1)</p>
-<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
@@ -87,123 +70,108 @@ You don't need to read input or print anything. Your task is to complete the fun
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force (Recursive Sum of Digits)
+### 🥉 Approach 1: Brute Force (Hardcoded Mapping)
 
 #### 📝 Intuition
 
-> - Base case: if N < 10, return N.
-> - Otherwise, sum all digits of N and recursively call the function.
-> - Keep repeating until a single-digit number is obtained.
+> - A standard dice always has opposite faces that sum to 7: (1,6), (2,5), (3,4).
+> - We can hardcode a mapping between faces.
+
+🔍 Algorithm
 
 #### 🔍 Algorithm
 
 ```pseudo
-function digSum(N):
-    if N < 10:
-        return N
-    sum_digits = sum of digits of N
-    return digSum(sum_digits)
+function bruteForce(n):
+    create a dictionary {1:6, 2:5, 3:4, 4:3, 5:2, 6:1}
+    return dict[n]
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Brute force recursive solution
+// Brute force with hardcoded mapping
 
 class Solution {
 public:
-    int repeatedSumOfDigits(int N) {
-        if (N < 10) return N; // Base case: single-digit
-
-        int sum = 0;
-        int n = N;
-        while (n > 0) {
-            sum += n % 10; // Add last digit
-            n /= 10;       // Remove last digit
-        }
-
-        return repeatedSumOfDigits(sum); // Recur with sum of digits
+    int oppositeFace(int n) {
+        // Direct mapping of each face
+        if (n == 1) return 6;
+        if (n == 2) return 5;
+        if (n == 3) return 4;
+        if (n == 4) return 3;
+        if (n == 5) return 2;
+        if (n == 6) return 1;
+        return -1; // invalid input
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution (Iterative Sum of Digits)
+### 🥈 Approach 2: Optimized Solution (Array)
 
 #### 📝 Intuition
 
-> - Instead of recursion, sum the digits iteratively until a single digit remains.
-> - This avoids function call overhead.
+> - Instead of multiple if-else, store the mapping in an array.
+> - Since input is from 1 to 6, we can directly index into the array.
 
 #### 🔍 Algorithm
 
 ```pseudo
-function digSumIterative(N):
-    while N >= 10:
-        sum_digits = sum of digits of N
-        N = sum_digits
-    return N
+function optimized(n):
+    mapping = [0, 6, 5, 4, 3, 2, 1]
+    return mapping[n]
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Iterative approach
+// Optimized using array mapping
 
 class Solution {
 public:
-    int repeatedSumOfDigits(int N) {
-        while (N >= 10) {
-            int sum = 0;
-            int n = N;
-            while (n > 0) {
-                sum += n % 10; // Add last digit
-                n /= 10;       // Remove last digit
-            }
-            N = sum; // Update N with sum of digits
-        }
-        return N; // Single-digit result
+    int oppositeFace(int n) {
+        // Index 0 is unused
+        int mapping[7] = {0, 6, 5, 4, 3, 2, 1};
+        return mapping[n];
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐ - Mathematical Formula (Digital Root)
+### 🥇 Approach 3: Optimal Solution ⭐ - Mathematical Formula
 
 #### 📝 Intuition
 
-> - There is a O(1) formula for repeated sum of digits, also called digital root:
->   - If N == 0, result is 0.
->   - Otherwise, result = 1 + (N-1) % 9.
-> - This works because repeated sum of digits modulo 9 is equivalent to the number modulo 9.
+> - On a standard dice, opposite faces always add up to 7.
+> - So the opposite face of n is simply 7 - n.
+>   -This is the cleanest and most efficient approach.
 
 #### 🔍 Algorithm
 
 ```pseudo
-function digSumFormula(N):
-    if N == 0: return 0
-    else: return 1 + (N-1) % 9
+function optimal(n):
+    return 7 - n
 ```
 
 #### 💻 Implementation
 
 ```cpp
-// Most optimal solution using digital root formula
+// Most optimal using math formula
 
 class Solution {
 public:
-    int repeatedSumOfDigits(int N) {
-        if (N == 0) return 0;          // Edge case
-        return 1 + (N - 1) % 9;        // Digital root formula
+    int oppositeFace(int n) {
+        return 7 - n; // Opposite faces always sum to 7
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach           | Time Complexity | Space Complexity | Pros                                    | Cons                            |
-| ------------------ | --------------- | ---------------- | --------------------------------------- | ------------------------------- |
-| 🥉 Recursive       | O(log N)        | O(log N)         | Very intuitive                          | Recursion stack overhead        |
-| 🥈 Iterative       | O(log N)        | O(1)             | No recursion, safe for large N          | Slightly more code than formula |
-| 🥇 Digital Root ⭐ | O(1)            | O(1)             | Elegant, optimal, constant time & space | Needs formula knowledge         |
+| Approach       | Time Complexity | Space Complexity | Pros                         | Cons                               |
+| -------------- | --------------- | ---------------- | ---------------------------- | ---------------------------------- |
+| 🥉 Brute Force | O(1)            | O(1)             | Very explicit and clear      | Verbose, long                      |
+| 🥈 Optimized   | O(1)            | O(1)             | Compact, avoids many if-else | Still extra array                  |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Cleanest, single formula     | Assumes knowledge of dice property |
 
 ---
 

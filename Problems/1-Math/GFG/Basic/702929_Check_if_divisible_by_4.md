@@ -152,61 +152,12 @@ public:
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐ (Direct O(1) without Extra Conversion)
-
-#### 📝 Intuition
-
-> - We don’t even need to construct the last two-digit number fully.
-> - Instead, compute (last_digit + 10 \* second_last_digit) % 4 directly.
-> - This avoids creating any temporary integers.
-> - Works in O(1) time, O(1) space.
-
-#### 🔍 Algorithm
-
-```pseudo
-function optimal(N):
-    if length of N == 1:
-        d = last digit
-        return (d % 4 == 0)
-    else:
-        d1 = last digit
-        d2 = second last digit
-        return ((d2*10 + d1) % 4 == 0)
-```
-
-#### 💻 Implementation
-
-```cpp
-// Most optimal solution - O(1) check using only last two digits
-
-class Solution {
-public:
-    int divisibleBy4(string N) {
-        int len = N.size();
-
-        // If only one digit, just check it directly
-        if (len == 1) {
-            int d = N[0] - '0';
-            return (d % 4 == 0) ? 1 : 0;
-        }
-
-        // Otherwise, take last two digits
-        int d1 = N[len - 1] - '0';     // last digit
-        int d2 = N[len - 2] - '0';     // second last digit
-
-        int num = d2 * 10 + d1;        // form two-digit number
-        return (num % 4 == 0) ? 1 : 0;
-    }
-};
-```
-
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros                                    | Cons                                     |
-| -------------- | --------------- | ---------------- | --------------------------------------- | ---------------------------------------- |
-| 🥉 Brute Force | O(len(N))       | O(1)             | Very intuitive, simple                  | Fails for very large `N` (overflow risk) |
-| 🥈 Optimized   | O(1)            | O(1)             | Works for very large `N`                | Needs minor parsing of last digits       |
-| 🥇 Optimal ⭐  | O(1)            | O(1)             | Cleanest, fastest, no extra conversions | None                                     |
+| Approach       | Time Complexity | Space Complexity | Pros                     | Cons                                     |
+| -------------- | --------------- | ---------------- | ------------------------ | ---------------------------------------- |
+| 🥉 Brute Force | O(len(N))       | O(1)             | Very intuitive, simple   | Fails for very large `N` (overflow risk) |
+| 🥈 Optimized   | O(1)            | O(1)             | Works for very large `N` | Needs minor parsing of last digits       |
 
 ---
 

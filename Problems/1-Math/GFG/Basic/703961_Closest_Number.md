@@ -74,104 +74,83 @@ but -18 has the maximum absolute value. So, output is -18.
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force (Linear Search)
+### 🥉 Approach 1: Brute Force
 
 #### 📝 Intuition
 
-> - Start from n and check outward:
-> - Check n, then n-1, then n+1, then n-2, n+2, ... until we find a number divisible by m.
-> - If two candidates are equally close, return the one with maximum absolute value.
-> - This is simple but inefficient because in the worst case we may need up to |m| checks.
+> - The idea is to try all integers between n - |m| and n + |m| and see which one is divisible by m
+> - Then choose the number closest to n. If two numbers are equidistant, choose the one with the larger absolute value.
 
 #### 🔍 Algorithm
 
 ```pseudo
-function bruteForce(n, m):
-    for offset in range(0, |m|):
-        if (n - offset) % m == 0: return n - offset
-        if (n + offset) % m == 0: return n + offset
+function closestNumber(n, m):
+    closet ← 0
+    minDifference ← ∞
+
+    for i from (n - |m|) to (n + |m|):
+        if i % m == 0:
+            difference ← |n - i|
+            if difference < minDifference OR
+               (difference == minDifference AND |i| > |closet|):
+                closet ← i
+                minDifference ← difference
+
+    return closet
 ```
 
 #### 💻 Implementation
 
 ```cpp
 // Brute force approach using linear search
-
 class Solution {
 public:
     int closestNumber(int n, int m) {
-        for (int offset = 0; offset <= abs(m); offset++) {
-            // Check left side
-            if ((n - offset) % m == 0) return n - offset;
-            // Check right side
-            if ((n + offset) % m == 0) return n + offset;
+        int closet = 0;                  // the closet number
+        int minDifference = INT_MAX;     // save minumum distance
+
+        // Just check within range [n - |m|, n + |m|]
+        for (int i = n - abs(m); i <= n + abs(m); i++) {
+            if (i % m == 0) { // kiểm tra số chia hết cho m
+                int difference = abs(n - i);
+                //Choose the number with the smaller gap or if equal, choose the number larger in absolute value
+                if (difference < minDifference ||
+                   (difference == minDifference && abs(i) > abs(closet))) {
+                    closet = i;
+                    minDifference = difference;
+                }
+            }
         }
-        return 0; // should never reach here
+        return closet;
     }
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution (Floor and Ceil Multiples)
+### 🥇 Approach 2: Optimal Solution ⭐ (Direct Formula)
 
 #### 📝 Intuition
 
-> - Compute the nearest multiple of m to n using integer division.
-> - Formula:
->   - q = n / m (integer division)
->   - Candidate 1: m \_ q (floor multiple)
->   - Candidate 2: m \_ (q + 1) (ceil multiple)
-> - Compare which one is closer. If tie, return the one with maximum absolute value.
+> - Instead of trying each number, we can use the formula directly:
+>   - Take the quotient q = n / m.
+>   - The closest number can be n1 = m _ q or n2 = m _ (q+1) (or (q-1) if n and m have different signs).
+>   - Compare the distance to choose the result.
 
 #### 🔍 Algorithm
 
 ```pseudo
-function optimized(n, m):
-    q = n // m
-    cand1 = m * q
-    cand2 = m * (q + 1)
-    if abs(n - cand1) < abs(n - cand2): return cand1
-    else if abs(n - cand1) > abs(n - cand2): return cand2
-    else return the one with max(abs(cand1), abs(cand2))
-```
+function closestNumber(n, m):
+    q ← n // m                 # integer division
+    n1 ← m * q                 # nearest multiple below
 
-#### 💻 Implementation
+    if n * m > 0:
+        n2 ← m * (q + 1)       # same sign → take the upper multiple
+    else:
+        n2 ← m * (q - 1)       # different signs → take the multiple below
 
-```cpp
-// Optimized approach using floor and ceil multiples
-class Solution {
-public:
-    int closestNumber(int n, int m) {
-        int q = n / m;          // integer division
-        int cand1 = m * q;      // multiple just below or equal to n
-        int cand2 = m * (q + 1);// multiple just above n
-
-        // Compare distances
-        if (abs(n - cand1) < abs(n - cand2)) return cand1;
-        else if (abs(n - cand1) > abs(n - cand2)) return cand2;
-        else return (abs(cand1) > abs(cand2)) ? cand1 : cand2;
-    }
-};
-```
-
-### 🥇 Approach 3: Optimal Solution ⭐ (Direct Formula)
-
-#### 📝 Intuition
-
-> - Instead of computing two candidates, we can directly round n to nearest multiple of m:
-> - Formula:
-> - res = round(n / m) \* m
-> - But since integer division truncates toward zero, we need to carefully handle ties:
-> - If distance is equal, pick the one with larger absolute value.
-> - This is elegant and efficient.
-
-#### 🔍 Algorithm
-
-```pseudo
-function optimal(n, m):
-    q = n / m (integer division)
-    cand1 = m * q
-    cand2 = m * (q + 1)
-    return closer one (handle tie with abs value)
+    if |n - n1| < |n - n2|:
+        return n1
+    else:
+        return n2
 ```
 
 #### 💻 Implementation
@@ -181,25 +160,23 @@ function optimal(n, m):
 class Solution {
 public:
     int closestNumber(int n, int m) {
-        int q = n / m;              // quotient
-        int cand1 = m * q;          // floor multiple
-        int cand2 = m * (q + (n * m > 0 ? 1 : -1)); // nearest in correct direction
+        int q = n / m;
+        int n1 = m * q;
+        int n2 = (n * m) > 0 ? (m * (q + 1)) : (m * (q - 1));
 
-        // Compare distances
-        if (abs(n - cand1) < abs(n - cand2)) return cand1;
-        else if (abs(n - cand1) > abs(n - cand2)) return cand2;
-        else return (abs(cand1) > abs(cand2)) ? cand1 : cand2;
+        if (abs(n - n1) < abs(n - n2))
+            return n1;
+        return n2;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros                              | Cons                                |     |     |     |     |
-| -------------- | --------------- | ---------------- | --------------------------------- | ----------------------------------- | --- | --- | --- | --- |
-| 🥉 Brute Force | O(m)            | O(1)             | Very simple to implement          | Too slow for large                  |     |     |
-| 🥈 Optimized   | O(1)            | O(1)             | Uses math, only two candidates    | Slightly more code than brute force |     |     |     |     |
-| 🥇 Optimal ⭐  | O(1)            | O(1)             | Clean formula, elegant, efficient | Needs careful tie-breaking logic    |     |     |     |     |
+| Approach       | Time Complexity | Space Complexity | Pros                                       | Cons                                  |
+| -------------- | --------------- | ---------------- | ------------------------------------------ | ------------------------------------- |
+| 🥉 Brute Force | O(abs(m))       | O(1)             | Simple to understand and implement         | Linear in abs(m) — slow if m is large |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Extremely fast — only a few arithmetic ops | Must handle sign cases carefully      |
 
 ---
 

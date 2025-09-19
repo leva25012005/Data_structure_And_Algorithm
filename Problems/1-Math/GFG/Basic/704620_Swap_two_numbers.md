@@ -180,13 +180,73 @@ public:
 };
 ```
 
+### 🥈 Approach 4: Using std::pair Container
+
+#### 📝 Intuition
+
+> - C++ has a std::pair container that can store two values ​​at once.
+> - You can swap two elements in a pair using std::swap() or by re-initializing the pair.
+> - This is a neat way, taking advantage of the standard library.
+
+#### 🔍 Algorithm
+
+```pseudo
+function swap(a, b):
+    return  make_paire(b, a)
+```
+
+#### 💻 Implementation
+
+```cpp
+#include <utility> // for std::pair
+#include <algorithm> // for std::swap
+
+class Solution {
+public:
+    pair<int, int> swapNumbers(int a, int b) {
+        return make_paire(b, a);
+    }
+};
+```
+
+### 🥇 Approach 5: Using Built-in swap() Function
+
+#### 📝 Intuition
+
+> - C++ STL provides a built-in std::swap() function to swap two values.
+> - This is the simplest way, only one line of code, optimized and easy to read.
+> - No need to worry about overflow or complicated math.
+
+#### 🔍 Algorithm
+
+```pseudo
+function swap(a, b):
+    swap(a, b)
+    return a, b
+```
+
+#### 💻 Implementation
+
+```cpp
+#include <algorithm> // for std::swap
+
+class Solution {
+public:
+    void swapNumbers(int &a, int &b) {
+        std::swap(a, b); // Swap a and b in one line
+    }
+};
+```
+
 ## 📊 Comparison of Approaches
 
-| Approach      | Time Complexity | Space Complexity | Pros                                   | Cons                    |
-| ------------- | --------------- | ---------------- | -------------------------------------- | ----------------------- |
-| 🥉 Temp Var   | O(1)            | O(1)             | Simple and readable                    | Uses extra variable     |
-| 🥈 Arithmetic | O(1)            | O(1)             | No extra variable, simple math         | Risk of overflow        |
-| 🥇 XOR ⭐     | O(1)            | O(1)             | No overflow, no temp variable, elegant | Slightly less intuitive |
+| Approach         | Time Complexity | Space Complexity | Pros                                   | Cons                    |
+| ---------------- | --------------- | ---------------- | -------------------------------------- | ----------------------- |
+| 🥉 Temp Var      | O(1)            | O(1)             | Simple and readable                    | Uses extra variable     |
+| 🥈 Arithmetic    | O(1)            | O(1)             | No extra variable, simple math         | Risk of overflow        |
+| 🥇 XOR ⭐        | O(1)            | O(1)             | No overflow, no temp variable, elegant | Slightly less intuitive |
+| 🥈 Pair          | O(1)            | O(1)             | Uses STL container, readable           | Slightly verbose        |
+| 🥇 Built-in Swap | O(1)            | O(1)             | Very simple, concise, STL optimized    | None                    |
 
 ---
 

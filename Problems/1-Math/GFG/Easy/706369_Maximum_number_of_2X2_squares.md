@@ -2,7 +2,7 @@
 
 # 🧠 [Maximum number of 2X2 squares](https://www.geeksforgeeks.org/problems/maximum-number-of-22-squares/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/maximum-number-of-22-squares/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/maximum-number-of-22-squares/1)
 
 </div>
 
@@ -10,118 +10,60 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `706369` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `66.64%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/maximum-number-of-22-squares/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![Microsoft](https://img.shields.io/badge/-Microsoft-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `706369`                                                                                                                                                          |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                       |
+| **Accuracy**     | `66.64%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/maximum-number-of-22-squares/1)                                                                    |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![Microsoft](https://img.shields.io/badge/-Microsoft-orange?style=flat-square)                                                                                    |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size:18px">Given the base (in units) of a right-angled isoceles traingle, find the maximum number of 2X2 squares that can fit in the triangle with given base.</span></p>
-
-<p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
-
-<pre>
-<span style="font-size:18px"><strong>Input:</strong> 8</span>
-<span style="font-size:18px"><strong>Output:</strong> 6</span>
-<strong><span style="font-size:18px">Explanation:</span></strong>
-<span style="font-size:18px">Please refer below diagram for explanation.
-<img alt="squares-in-triangle" src="https://media.geeksforgeeks.org/wp-content/uploads/squares-in-triangle1.png" style="height:337px; width:390px" /></span>
-
-</pre>
-
-<p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
-
-<pre>
-<span style="font-size:18px"><strong>Input : </strong>7
-<strong>Output : </strong>3
-<strong>Explanation : </strong>In the base we can keep 2 squares
-and above the two squares we can only keep 1 square.  
-So the total number of squares are equal to 3.</span>
-</pre>
-
-<div> </div>
-
-<div><strong><span style="font-size:18px">Your task :</span></strong></div>
-
-<div><span style="font-size:18px">You don't need to read input or print anything. Your task is to complete the function <strong>numberOfSquares()</strong> which takes the base of the triangle as input and returns the maximum number of squares that can be fit into the triangle with given base.</span></div>
-
-<div> </div>
-
-<div><span style="font-size:18px"><strong>Expected Time Complexity: </strong>O(1)</span></div>
-
-<div><span style="font-size:18px"><strong>Expected Auxiliary Space:</strong> O(1)</span></div>
-
-<div> </div>
-
-<div><strong><span style="font-size:18px">Constraints :</span></strong></div>
-
-<div><span style="font-size:18px">1 <= N <= 10^9</span></div>
+
+<p>Given the base <strong>N</strong> (in units) of a right-angled isosceles triangle, find the maximum number of <strong>2×2</strong> squares that can fit inside the triangle.</p>
+
 <!-- description:end -->
 
 ## Examples
 
 <p><strong class="example">Example 1:</strong></p>
 <pre>
-<strong>Input:</strong> 8
-<strong>Output:</strong> 6
-Explanation:
-Please refer below diagram for explanation.
-
-
-
-
-Example 2:
+<strong>Input:</strong> N = 8
+<strong>Output:</strong> 6
+<strong>Explanation:</strong> 
+We can place 3 squares in the first row, 2 in the second row, and 1 in the third row, making a total of 6.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 <pre>
-<strong>Input:</strong> 7
+<strong>Input:</strong> N = 7
 <strong>Output:</strong> 3
-<strong>Explanation:</strong> In the base we can keep 2 squares
-and above the two squares we can only keep 1 square.  
-So the total number of squares are equal to 3.
-
-
- 
-
-Your task :
-
-You don't need to read input or print anything. Your task is to complete the function numberOfSquares() which takes the base of the triangle as input and returns the maximum number of squares that can be fit into the triangle with given base.
-
- 
-
-Expected Time Complexity: O(1)
-
-Expected Auxiliary Space: O(1)
-
- 
-
-Constraints :
-
-1 <= N <= 10^9
+<strong>Explanation:</strong> 
+In the base row we can place 2 squares, and in the row above it we can place only 1 square. 
+So the total number of squares is 3.
 </pre>
 
 ## Constraints
 
-<p><strong>Constraints:</strong></p>
-</span></strong></div>
-
-<div><span style="font-size:18px">1 <= N <= 10^9</span></div>
+<ul>
+  <li><code>1 ≤ N ≤ 10<sup>9</sup></code></li>
+</ul>
+
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -131,100 +73,120 @@ Constraints :
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Simulation)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Imagine filling the triangle row by row.
+> - Each row (starting from the base) can hold a certain number of 2×2 squares.
+> - For row i (0-based from the bottom), the row can hold floor((N/2) - i) squares.
+> - Sum over all rows until it becomes zero.
+> - This works but is inefficient for very large N (up to 10^9).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(N):
+    rows = floor(N / 2)
+    total = 0
+    for i in 0..rows-1:
+        total += (rows - i)
+    return total
 ```
 
 #### 💻 Implementation
 
 **C++:**
+
 ```cpp
+// Brute force simulation (not feasible for very large N)
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    long long maxSquaresBruteForce(long long N) {
+        long long rows = N / 2; // Number of possible square rows
+        long long total = 0;
+        for (long long i = 0; i < rows; i++) {
+            total += (rows - i); // Decreasing squares per row
+        }
+        return total;
     }
 };
-```
-
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
 ```
 
 ### 🥈 Approach 2: Optimized Solution
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - From brute force, we see that the number of squares forms a sequence:
+>   - For N = 8: 3 + 2 + 1 = 6
+>   - For N = 7: 2 + 1 = 3
+> - General case: Let k = floor(N / 2).
+> - Then result = k + (k-1) + ... + 1 = k\*(k+1)/2.
+> - This gives us O(1) solution.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(N):
+    k = floor(N / 2)
+    return k * (k + 1) / 2
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach using direct formula
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    long long maxSquaresOptimized(long long N) {
+        long long k = N / 2; // Maximum squares in base row
+        return k * (k + 1) / 2; // Arithmetic series sum
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Direct Formula)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - The optimal solution is already the formula k\*(k+1)/2.
+> - To make it elegant:
+>   - Handle both odd and even N seamlessly with integer division (N/2).
+>   - Use 64-bit integers (long long) since N can be up to 10^9 (answer can be ~10^18).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(N):
+    k = N // 2
+    return k * (k + 1) / 2
 ```
 
 #### 💻 Implementation
 
 **C++:**
+
 ```cpp
+// Most optimal and elegant solution
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    long long maxSquares(long long N) {
+        long long k = N / 2; // Number of 2x2 squares along the base
+        return (k * (k + 1)) / 2; // Use arithmetic progression formula
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                                | Cons                                |
+| -------------- | --------------- | ---------------- | ----------------------------------- | ----------------------------------- |
+| 🥉 Brute Force | O(N)            | O(1)             | Very intuitive, simulates process   | Impossible for N up to 10^9         |
+| 🥈 Optimized   | O(1)            | O(1)             | Simple formula, fast                | Requires recognizing arithmetic sum |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Cleanest, direct formula, efficient | Nothing really!                     |
 
 ---
 
@@ -232,6 +194,6 @@ public:
 
 **🎯 Problem 706369 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

@@ -2,7 +2,7 @@
 
 # 🧠 [Check for Power](https://www.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number5442/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number5442/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number5442/1)
 
 </div>
 
@@ -10,36 +10,60 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `703757` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `34.59%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number5442/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![Zoho](https://img.shields.io/badge/-Zoho-orange?style=flat-square) ![SAP Labs](https://img.shields.io/badge/-SAP%20Labs-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `703757`                                                                                                                                                          |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                      |
+| **Accuracy**     | `34.59%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number5442/1)                                                |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![Zoho](https://img.shields.io/badge/-Zoho-orange?style=flat-square) ![SAP Labs](https://img.shields.io/badge/-SAP%20Labs-orange?style=flat-square)               |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;">Given two positive integers <strong>x</strong> and<strong> y</strong>, determine if y is a power of<strong> </strong>x. If y is a power of x, return <strong>True</strong>. Otherwise, return <strong>False</strong>.</span></p>
-<p><strong><span style="font-size: 18px;">
-<!-- description:end -->
 
-## Constraints
+<p>Given two positive integers <code>x</code> and <code>y</code>, determine if <code>y</code> is a power of <code>x</code>. If <code>y</code> is a power of <code>x</code>, return <code>true</code>. Otherwise, return <code>false</code>.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> x = 2, y = 8
+<strong>Output:</strong> true
+<strong>Explanation:</strong> 2<sup>3</sup> = 8
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> x = 1, y = 8
+<strong>Output:</strong> false
+<strong>Explanation:</strong> Any power of 1 is always 1, so it cannot equal 8.
+</pre>
+
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
- </strong><br />1 <= x <= 10<sup>3</sup><br />1 <= y <= 10<sup>8</sup></span></p>
-<p> </p>
+
+<ul>
+  <li><code>1 &lt;= x &lt;= 10<sup>3</sup></code></li>
+  <li><code>1 &lt;= y &lt;= 10<sup>8</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(log y)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -49,100 +73,142 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Repeated Multiplication)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Start with value = 1.
+> - Keep multiplying by x until value ≥ y.
+> - If value == y → return true, else false.
+> - This directly simulates "is y a power of x".
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(x, y):
+    if x == 1:
+        return (y == 1)
+    value = 1
+    while value < y:
+        value = value * x
+    return (value == y)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach with repeated multiplication
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    bool isPowerOfX(int x, int y) {
+        if (x == 1) return y == 1; // Edge case
+
+        long long value = 1;
+        while (value < y) {
+            value *= x; // Keep multiplying by x
+        }
+        return value == y;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Division Check)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Instead of multiplying up, divide y down by x.
+> - If at the end we reach 1, then y is a power of x.
+> - If at some step y % x != 0, then it’s not possible.
+> - This is more efficient and avoids overflow.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function divisionCheck(x, y):
+    if x == 1:
+        return (y == 1)
+    while y % x == 0:
+        y = y / x
+    return y == 1
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Division-based approach
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    bool isPowerOfX(int x, int y) {
+        if (x == 1) return y == 1; // Special case: powers of 1 are always 1
+        while (y % x == 0) {
+            y /= x; // Keep dividing y by x
+        }
+        return y == 1;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Logarithm)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> If $y$ is a power of $x$, then:
+>
+> $$
+> \log_x(y) = k \quad \text{for some integer } k
+> $$
+>
+> We can compute:
+>
+> $$
+> k = \frac{\log(y)}{\log(x)}
+> $$
+>
+> If $k$ is an integer (within floating point tolerance), then return **true**.
+>
+> This is elegant but needs care with floating point errors.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function logCheck(x, y):
+    if x == 1:
+        return (y == 1)
+    k = log(y) / log(x)
+    return abs(k - round(k)) < epsilon
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimal logarithmic approach
+
+#include <cmath>
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    bool isPowerOfX(int x, int y) {
+        if (x == 1) return y == 1; // Edge case
+
+        double k = log(y) / log(x); // Compute log base x of y
+        double rounded = round(k);  // Closest integer
+
+        // Check if k is close enough to an integer
+        return fabs(k - rounded) < 1e-10;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach         | Time Complexity | Space Complexity | Pros                       | Cons                             |
+| ---------------- | --------------- | ---------------- | -------------------------- | -------------------------------- |
+| 🥉 Brute Force   | O(logₓ y)       | O(1)             | Simple, easy to implement  | May overflow if `x^k` grows fast |
+| 🥈 Division      | O(logₓ y)       | O(1)             | Efficient, avoids overflow | Requires integer division        |
+| 🥇 Optimal ⭐    | O(1)            | O(1)             | Elegant, fastest           | Floating-point precision issues  |
+| Requires insight |
 
 ---
 
@@ -150,6 +216,6 @@ public:
 
 **🎯 Problem 703757 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

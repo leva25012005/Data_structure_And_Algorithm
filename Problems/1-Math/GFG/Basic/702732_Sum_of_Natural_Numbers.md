@@ -2,7 +2,7 @@
 
 # 🧠 [Sum of Natural Numbers](https://www.geeksforgeeks.org/problems/sum-of-series2811/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/sum-of-series2811/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/sum-of-series2811/1)
 
 </div>
 
@@ -10,50 +10,67 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `702732` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `23.81%` |
+| Property         | Value                                                                               |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| **Problem ID**   | `702732`                                                                            |
+| **Difficulty**   | ⚪ **Basic**                                                                        |
+| **Accuracy**     | `23.81%`                                                                            |
 | **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/sum-of-series2811/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square)  |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;"><span style="color: #1e2229; font-family: Nunito; background-color: #ffffff;">Given an integer </span><span style="box-sizing: border-box; font-weight: bolder; line-height: 1.7em; color: #1e2229; background-color: #ffffff; font-family: var(--gfg-font-secondary) !important;">n</span><span style="color: #1e2229; font-family: Nunito; background-color: #ffffff;">, your task is to compute the <strong>sum</strong> of all natural numbers from 1 to n (inclusive). If n is 0, the sum should be 0.</span></span></p>
-<p><span style="font-size: 14pt;"><strong>
-<!-- description:end -->
 
-## Examples
+<p>Given an integer <code>n</code>, your task is to compute the <strong>sum</strong> of all natural numbers from <code>1</code> to <code>n</code> (inclusive). If <code>n</code> is 0, the sum should be 0.</p>
 
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 3
 <strong>Output:</strong> 6
-<strong>Explanation:</strong> For n = 3, the sum will be 6. 1 + 2 + 3 = 6.
+<strong>Explanation:</strong> For n = 3, the sum will be 6. 1 + 2 + 3 = 6
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 5
 <strong>Output:</strong> 15
-<strong>Explanation:</strong> For n = 5, the sum will be 15. 1 + 2 + 3 + 4 + 5 = 15.
+<strong>Explanation:</strong> For n = 5, the sum will be 15. 1 + 2 + 3 + 4 + 5 = 15
 </pre>
 
-## Constraints
+<p><strong class="example">Example 3:</strong></p>
 
+<pre>
+<strong>Input:</strong> n = 0
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> Since n = 0, there are no numbers to sum, so the result is 0
+</pre>
+
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-<br />1 ≤ n ≤ 10<sup>4</sup></span></p>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+
+<ul>
+  <li><code>0 &lt;= n &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `17-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `17-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -63,100 +80,110 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Iterative Loop)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> Start from 1 up to n.
+> Add all numbers into a running sum.
+> Straightforward, but takes O(n) time.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function iterativeSum(n):
+    result = 0
+    for i in range(1, n+1):
+        result += i
+    return result
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force iterative approach
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int sumOfNumbers(int n) {
+        int sum = 0;
+        // Add numbers from 1 to n
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        return sum;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Recursive Solution)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Use recursion: sum(n) = n + sum(n-1).
+> - Base case: sum(0) = 0.
+> - Simple, but recursion depth may be high (up to 10⁴).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function recursiveSum(n):
+    if n == 0: return 0
+    return n + recursiveSum(n-1)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Recursive approach
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int sumOfNumbers(int n) {
+        if (n == 0) return 0;         // Base case
+        return n + sumOfNumbers(n-1); // Recursive step
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Mathematical Formula)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - The sum of first n natural numbers is:
+>   $$
+>   S = \frac{n \times (n+1)}{2}
+>   $$
+> - This runs in $O(1)$ time with $O(1)$ space.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function formulaSum(n):
+    return (n * (n + 1)) / 2
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimal approach using math formula
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int sumOfNumbers(int n) {
+        // Direct formula: n * (n + 1) / 2
+        return (n * (n + 1)) / 2;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach      | Time Complexity | Space Complexity | Pros                        | Cons                       |
+| ------------- | --------------- | ---------------- | --------------------------- | -------------------------- |
+| 🥉 Iterative  | O(n)            | O(1)             | Very simple to understand   | Slow for large `n` (loop)  |
+| 🥈 Recursive  | O(n)            | O(n) (stack)     | Elegant, short code         | Stack overflow for big `n` |
+| 🥇 Formula ⭐ | O(1)            | O(1)             | Fastest, uses math directly | Requires math knowledge    |
 
 ---
 
@@ -164,6 +191,6 @@ public:
 
 **🎯 Problem 702732 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

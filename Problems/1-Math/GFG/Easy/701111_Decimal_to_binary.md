@@ -2,7 +2,7 @@
 
 # 🧠 [Decimal to binary](https://www.geeksforgeeks.org/problems/decimal-to-binary-1587115620/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/decimal-to-binary-1587115620/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/decimal-to-binary-1587115620/1)
 
 </div>
 
@@ -10,57 +10,60 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `701111` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `55.75%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/decimal-to-binary-1587115620/1) |
-| **Topic Tags** | ![Practice-Problems](https://img.shields.io/badge/-Practice-Problems-blue?style=flat-square) ![Bit Magic](https://img.shields.io/badge/-Bit%20Magic-blue?style=flat-square) ![Data Structures](https://img.shields.io/badge/-Data%20Structures-blue?style=flat-square) |
-| **Company Tags** | ![Adobe](https://img.shields.io/badge/-Adobe-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                                                    |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Problem ID**   | `701111`                                                                                                                                                                                                                                                                 |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                                                                                                                              |
+| **Accuracy**     | `55.75%`                                                                                                                                                                                                                                                                 |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/decimal-to-binary-1587115620/1)                                                                                                                                                                           |
+| **Topic Tags**   | ![Practice-Problems](https://img.shields.io/badge/-Practice%20Problems-blue?style=flat-square) ![Bit Magic](https://img.shields.io/badge/-Bit%20Magic-blue?style=flat-square) ![Data Structures](https://img.shields.io/badge/-Data%20Structures-blue?style=flat-square) |
+| **Company Tags** | ![Adobe](https://img.shields.io/badge/-Adobe-orange?style=flat-square)                                                                                                                                                                                                   |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;">Given a decimal number <strong>n</strong>, return its binary equivalent.</span></p>
-<p><span style="font-size: 14pt;"><strong>Examples :</strong></span></p>
-<pre><span style="font-size: 14pt;"><strong style="font-size: 14pt;">Input:</strong><span style="font-size: 14pt;"> n = 12
-</span><strong style="font-size: 14pt;">Output:</strong><span style="font-size: 14pt;"> 1100<br /></span><span style="font-size: 18.6667px;"><strong>Explanation:</strong> The binary representation of 12 is "1100", since 12 = 1×2<sup>3</sup> + 1×2<sup>2</sup> + 0×2<sup>1</sup> + 0×2<sup>0</sup></span></span></pre>
-<pre><span style="font-size: 14pt;"><strong>Input:</strong> n = 33
-<strong>Output: </strong>100001<br /><strong>Explanation:</strong> The binary representation of 33 is "100001", since 33 = 1×2<sup>5</sup> + 0×2<sup>4</sup> + 0×2<sup>3</sup> + 0×2<sup>2</sup> + 0×2<sup>1</sup> + 1×2<sup>0</sup>
-</span></pre>
-<p><span style="font-size: 14pt;"><strong>Constraints:<br /></strong>1 </span><span style="font-size: 18.6667px;">≤</span><span style="font-size: 14pt;"> n </span><span style="font-size: 18.6667px;">≤</span><span style="font-size: 14pt;"> 2</span><sup>31 </sup><span style="font-size: 14pt;">- 1</span></p>
-<!-- description:end -->
 
-## Examples
+<p>Given a decimal number <code>n</code>, return its binary equivalent as a string.</p>
 
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 12
-<strong>Output:</strong> 1100
-<strong>Explanation:</strong> The binary representation of 12 is "1100", since 12 = 1×23 + 1×22 + 0×21 + 0×20
+<strong>Output:</strong> "1100"
+<strong>Explanation:</strong> The binary representation of 12 is "1100", since 12 = 1×2<sup>3</sup> + 1×2<sup>2</sup> + 0×2<sup>1</sup> + 0×2<sup>0</sup>.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 33
-<strong>Output:</strong> 100001
-<strong>Explanation:</strong> The binary representation of 33 is "100001", since 33 = 1×25 + 0×24 + 0×23 + 0×22 + 0×21 + 1×20
+<strong>Output:</strong> "100001"
+<strong>Explanation:</strong> The binary representation of 33 is "100001", since 33 = 1×2<sup>5</sup> + 0×2<sup>4</sup> + 0×2<sup>3</sup> + 0×2<sup>2</sup> + 0×2<sup>1</sup> + 1×2<sup>0</sup>.
 </pre>
 
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-<br /></strong>1 </span><span style="font-size: 18.6667px;">≤</span><span style="font-size: 14pt;"> n </span><span style="font-size: 18.6667px;">≤</span><span style="font-size: 14pt;"> 2</span><sup>31 </sup><span style="font-size: 14pt;">- 1</span></p>
+
+<ul>
+  <li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(log(n))<br>
+<strong>Expected Auxiliary Space:</strong> O(log(n))</p>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -70,100 +73,136 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Using Division and Stack)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Continuously divide n by 2 and store the remainder.
+> - Push remainders into a stack to reverse the order since the least significant bit comes first.
+> - Pop from stack to form the binary string.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function decimalToBinary(n):
+    stack = empty
+    while n > 0:
+        push n % 2 to stack
+        n = n // 2
+    result = ""
+    while stack not empty:
+        result += pop from stack
+    return result
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force using stack
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    string decimalToBinary(int n) {
+        if (n == 0) return "0";
+
+        stack<int> st;
+        while (n > 0) {
+            st.push(n % 2); // Get remainder
+            n /= 2;         // Divide by 2
+        }
+
+        string res = "";
+        while (!st.empty()) {
+            res += to_string(st.top());
+            st.pop();
+        }
+        return res;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Prepend to String)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> Instead of using a stack, prepend each binary digit to the result string.
+> Avoids extra space for a stack but still reverses the order naturally.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function decimalToBinary(n):
+    if n == 0: return "0"
+    result = ""
+    while n > 0:
+        result = (n % 2) + result
+        n = n // 2
+    return result
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach: prepend to string
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    string decimalToBinary(int n) {
+        if (n == 0) return "0";
+
+        string res = "";
+        while (n > 0) {
+            res = to_string(n % 2) + res; // Prepend current bit
+            n /= 2;                        // Move to next bit
+        }
+        return res;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Recursive)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Use recursion to print the most significant bit first.
+> - Base case: when n == 0.
+> - Recurse with n / 2, then append the last bit n % 2.
+> - Elegant and minimal code.
 
 #### 🔍 Algorithm
+
 ```pseudo
 // Write your pseudocode here
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Recursive approach
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    string decimalToBinary(int n) {
+        if (n == 0) return "0";
+
+        return helper(n);
+    }
+
+private:
+    string helper(int n) {
+        if (n == 0) return "";
+        return helper(n / 2) + to_string(n % 2); // Recurse then append current bit
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                       | Cons                            |
+| -------------- | --------------- | ---------------- | -------------------------- | ------------------------------- |
+| 🥉 Brute Force | O(log n)        | O(log n)         | Clear logic using stack    | Uses extra stack memory         |
+| 🥈 Optimized   | O(log n)        | O(log n)         | Avoids explicit stack      | Prepending to string costly     |
+| 🥇 Optimal ⭐  | O(log n)        | O(log n)         | Elegant recursive solution | Recursion depth can be O(log n) |
 
 ---
 
@@ -171,6 +210,6 @@ public:
 
 **🎯 Problem 701111 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

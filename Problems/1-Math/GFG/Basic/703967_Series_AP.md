@@ -2,7 +2,7 @@
 
 # 🧠 [Series AP](https://www.geeksforgeeks.org/problems/series-ap5310/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/series-ap5310/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/series-ap5310/1)
 
 </div>
 
@@ -10,50 +10,60 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `703967` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `59.24%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/series-ap5310/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![series](https://img.shields.io/badge/-series-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `703967`                                                                                                                                                                                                                                 |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                                                                                             |
+| **Accuracy**     | `59.24%`                                                                                                                                                                                                                                 |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/series-ap5310/1)                                                                                                                                                          |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![series](https://img.shields.io/badge/-series-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">Given the first 2 terms <strong>a1</strong> and <strong>a2 </strong>of an Arithmetic Series. Find the <strong>n<sup>th</sup> </strong>term of the series. </span></p>
-<p><span style="font-size: 18px;"><strong>
-<!-- description:end -->
 
-## Examples
+<p>Given the first two terms <code>a1</code> and <code>a2</code> of an Arithmetic Series, find the <strong>n<sup>th</sup></strong> term of the series.</p>
 
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
 <strong>Input:</strong> a1 = 2, a2 = 3, n = 4
 <strong>Output:</strong> 5
-<strong>Explanation:</strong> The series is: 2,3,4,5,6.... Thus, the 4th term is 5.
+<strong>Explanation:</strong> The series is 2, 3, 4, 5, 6 ... Thus, the 4th term is 5.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> a1 = 1, a2 = 3, n = 10
 <strong>Output:</strong> 19
-<strong>Explanation:</strong> The series is: 1,3,5,7,9,11,13,15,17,19,21.. Thus, the 10th term is 19.
+<strong>Explanation:</strong> The series is 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 ... Thus, the 10th term is 19.
 </pre>
 
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-<br />-10<sup>4 </sup><= a1 , a2 <= 10<sup>4</sup><br />1 <= n <= 10<sup>4</sup></span></p>
+
+<ul>
+  <li><code>-10<sup>4</sup> &lt;= a1, a2 &lt;= 10<sup>4</sup></code></li>
+  <li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -65,100 +75,108 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Iterative)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Start from a1 and a2.
+> - Compute the common difference d = a2 - a1.
+> - Iteratively generate each term until reaching the nth term.
+> - This is simple but not the most efficient.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function nthTerm(a1, a2, n):
+    d = a2 - a1
+    term = a1
+    for i = 2 to n:
+        term += d
+    return term
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force: iterative computation
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int nthTerm(int a1, int a2, int n) {
+        int d = a2 - a1; // Common difference
+        int term = a1;
+        for (int i = 2; i <= n; i++) {
+            term += d; // Generate next term iteratively
+        }
+        return term;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Formula-Based)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Arithmetic series has formula: an = a1 + (n-1) \* d, where d = a2 - a1.
+> - Directly compute the nth term without iteration.
+> - Much faster for large n.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function nthTerm(a1, a2, n):
+    d = a2 - a1
+    return a1 + (n - 1) * d
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach using formula
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int nthTerm(int a1, int a2, int n) {
+        int d = a2 - a1;         // Compute common difference
+        return a1 + (n - 1) * d; // Direct formula
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (One-Liner)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> Same as approach 2, but write as a single concise return statement.
+> Minimal code, easy to read, O(1) time and space
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function nthTerm(a1, a2, n):
+    return a1 + (n - 1) * (a2 - a1)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Elegant one-liner solution
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int nthTerm(int a1, int a2, int n) {
+        return a1 + (n - 1) * (a2 - a1); // Direct computation in one line
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach        | Time Complexity | Space Complexity | Pros                       | Cons               |
+| --------------- | --------------- | ---------------- | -------------------------- | ------------------ |
+| 🥉 Brute Force  | O(n)            | O(1)             | Simple, easy to understand | Slower for large n |
+| 🥈 Formula      | O(1)            | O(1)             | Fast, optimal for large n  | None               |
+| 🥇 One-Liner ⭐ | O(1)            | O(1)             | Very concise and elegant   | None               |
 
 ---
 
@@ -166,6 +184,6 @@ public:
 
 **🎯 Problem 703967 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

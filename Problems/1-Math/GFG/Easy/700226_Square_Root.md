@@ -2,7 +2,7 @@
 
 # 🧠 [Square Root](https://www.geeksforgeeks.org/problems/square-root/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/square-root/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/square-root/1)
 
 </div>
 
@@ -10,59 +10,70 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `700226` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `54.03%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/square-root/1) |
-| **Topic Tags** | ![Searching](https://img.shields.io/badge/-Searching-blue?style=flat-square) ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Binary Search](https://img.shields.io/badge/-Binary%20Search-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Problem ID**   | `700226`                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                                                                                                                                                                                                                                                |
+| **Accuracy**     | `54.03%`                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/square-root/1)                                                                                                                                                                                                                                                                                                              |
+| **Topic Tags**   | ![Searching](https://img.shields.io/badge/-Searching-blue?style=flat-square) ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Binary Search](https://img.shields.io/badge/-Binary%20Search-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square)                                                      |
 | **Company Tags** | ![VMWare](https://img.shields.io/badge/-VMWare-orange?style=flat-square) ![Flipkart](https://img.shields.io/badge/-Flipkart-orange?style=flat-square) ![Accolite](https://img.shields.io/badge/-Accolite-orange?style=flat-square) ![Amazon](https://img.shields.io/badge/-Amazon-orange?style=flat-square) ![Microsoft](https://img.shields.io/badge/-Microsoft-orange?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;">Given a positive integer <strong>n,</strong> find the<strong> square root </strong>of n. If <strong>n</strong> is not a perfect square, then return the <strong>floor value</strong>.</span></p>
-<p><span style="font-size: 14pt;"><strong>Floor value </strong>of any number is the greatest Integer which is less than or equal to that number.</span></p>
-<p><span style="font-size: 14pt;"><strong>
-<!-- description:end -->
 
-## Examples
+<p>Given a positive integer <code>n</code>, find the <strong>square root</strong> of <code>n</code>. If <code>n</code> is not a perfect square, return the <strong>floor value</strong> of its square root.</p>
 
+<p><strong>Note:</strong> The floor value of a number is the greatest integer less than or equal to that number.</p>
+
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 4
 <strong>Output:</strong> 2
-Explanation: Since, 4 is a perfect square, so its square root is 2.
+<strong>Explanation:</strong> 4 is a perfect square, so its square root is 2.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 11
 <strong>Output:</strong> 3
-Explanation: Since, 11 is not a perfect square, floor of square root of 11 is 3.
+<strong>Explanation:</strong> 11 is not a perfect square, so floor(sqrt(11)) = 3.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 1
 <strong>Output:</strong> 1
-<strong>Explanation:</strong> 1 is a perfect sqaure, so its square root is 1.
+<strong>Explanation:</strong> 1 is a perfect square, so its square root is 1.
 </pre>
 
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-</span><br /><span style="font-size: 14pt;">1 ≤ n ≤ 3*10<sup>4</sup></span></p>
+
+<ul>
+  <li><code>1 &lt;= n &lt;= 3*10<sup>4</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -75,97 +86,126 @@ Explanation: Since, 11 is not a perfect square, floor of square root of 11 is 3.
 ### 🥉 Approach 1: Brute Force
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Try all integers i starting from 1 upwards.
+> - Stop when i\*i > n.
+> - The largest i such that i\*i ≤ n is the floor of the square root.
+> - Simple and easy to understand, but O(√n) time.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForceSqrt(n):
+    i = 1
+    while i * i <= n:
+        i += 1
+    return i - 1
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach: O(√n)
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int floorSqrt(int n) {
+        int i = 1;
+        while (i * i <= n) {
+            i++;
+        }
+        return i - 1; // Last i whose square <= n
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Binary Search)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Use binary search between 1 and n to find the floor of square root.
+> - If mid\*mid == n, return mid.
+> - If mid\*mid < n, move right (start = mid+1).
+> - Else move left (end = mid-1).
+> - This is efficient and runs in O(log n) time.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function binarySearchSqrt(n):
+    start = 1
+    end = n
+    ans = 0
+    while start <= end:
+        mid = (start + end) // 2
+        if mid*mid == n: return mid
+        if mid*mid < n: ans = mid; start = mid + 1
+        else: end = mid - 1
+    return ans
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Binary search approach: O(log n)
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int floorSqrt(int n) {
+        if (n == 0 || n == 1) return n;
+
+        int start = 1, end = n, ans = 0;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (mid <= n / mid) { // Avoid overflow
+                ans = mid;       // mid*mid <= n, possible answer
+                start = mid + 1; // Try higher
+            } else {
+                end = mid - 1;   // mid*mid > n, go lower
+            }
+        }
+        return ans;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Built-in Function)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Use the square root function sqrt(n) from <cmath> and take floor().
+> - This gives O(1) time complexity as expected by the problem.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function sqrtFloor(n):
+    return floor(sqrt(n))
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimal approach: O(1)
+
+#include <cmath>
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int floorSqrt(int n) {
+        return (int) sqrt(n); // Automatically floor the result
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach         | Time Complexity | Space Complexity | Pros                      | Cons                       |
+| ---------------- | --------------- | ---------------- | ------------------------- | -------------------------- |
+| 🥉 Brute Force   | O(√n)           | O(1)             | Simple, easy to implement | Slow for large n           |
+| 🥈 Binary Search | O(log n)        | O(1)             | Fast, no library needed   | Slightly more code         |
+| 🥇 Optimal ⭐    | O(1)            | O(1)             | Very fast, minimal code   | Relies on library function |
 
 ---
 
@@ -173,6 +213,6 @@ public:
 
 **🎯 Problem 700226 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

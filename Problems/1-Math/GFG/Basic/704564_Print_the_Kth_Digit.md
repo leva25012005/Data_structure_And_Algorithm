@@ -2,7 +2,7 @@
 
 # 🧠 [Print the Kth Digit](https://www.geeksforgeeks.org/problems/print-the-kth-digit3520/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/print-the-kth-digit3520/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/print-the-kth-digit3520/1)
 
 </div>
 
@@ -10,57 +10,57 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `704564` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `38.65%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/print-the-kth-digit3520/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![Flipkart](https://img.shields.io/badge/-Flipkart-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `704564`                                                                                                                                                          |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                      |
+| **Accuracy**     | `38.65%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/print-the-kth-digit3520/1)                                                                         |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![Flipkart](https://img.shields.io/badge/-Flipkart-orange?style=flat-square)                                                                                      |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">Given two numbers <strong>a</strong> and <strong>b</strong>, find <strong>k<sup>th</sup></strong> digit from right of <strong>a<sup>b</sup>.</strong></span></p>
-<p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
-<pre><span style="font-size: 18px;"><strong>Input: </strong>a = 3, b = 3, k = 1
-<strong>Output: </strong>7
-<strong>Explanation: </strong>3<sup>3 </sup>= 27 and 1st digit from right is 7</span></pre>
-<pre><span style="font-size: 18px;"><strong>Input: </strong>a = 5, b = 2, k = 2
-<strong>Output: </strong>2<br /><strong>Explanation: </strong>5<sup>2 </sup>= 25 and second digit from right is 2.</span></pre>
-<p><span style="font-size: 18px;"><strong>Constraints:</strong><br />1 <= a,b <= 15<br />1 <= k <= digits in a<sup>b</sup></span><br /> </p>
-<!-- description:end -->
 
-## Examples
+<p>Given two numbers <code>a</code> and <code>b</code>, find the <code>k<sup>th</sup></code> digit from the right of <code>a<sup>b</sup></code>.</p>
 
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
 <strong>Input:</strong> a = 3, b = 3, k = 1
 <strong>Output:</strong> 7
-<strong>Explanation:</strong> 33 = 27 and 1st digit from right is 7
+<strong>Explanation:</strong> 3^3 = 27 and the 1st digit from the right is 7
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> a = 5, b = 2, k = 2
 <strong>Output:</strong> 2
-<strong>Explanation:</strong> 52 = 25 and second digit from right is 2.
+<strong>Explanation:</strong> 5^2 = 25 and the 2nd digit from the right is 2
 </pre>
 
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-<br />1 <= a,b <= 15<br />1 <= k <= digits in a<sup>b</sup></span><br /> </p>
+
+<ul>
+  <li><code>1 &lt;= a, b &lt;= 15</code></li>
+  <li><code>1 &lt;= k &lt;= digits_in(a^b)</code></li>
+</ul>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -73,97 +73,120 @@
 ### 🥉 Approach 1: Brute Force
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Compute a^b directly.
+> - Convert it to a string or array of digits.
+> - Pick the kth digit from the right.
+> - This works because constraints are small (a, b ≤ 15).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(a, b, k):
+    val = a^b
+    convert val to string
+    return digit at position len(val)-k
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int kthDigitBruteForce(int a, int b, int k) {
+        long long val = 1;
+        // Compute a^b
+        for (int i = 0; i < b; i++) val *= a;
+
+        string s = to_string(val);         // Convert to string
+        int n = s.size();
+        return s[n - k] - '0';             // kth digit from right
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution Using Modular Arithmetic (Optimized)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - We only need the last k digits, not the full number.
+> - Compute a^b mod 10^k to get the last k digits.
+> - Then extract the last digit (or kth from right).
+> - This avoids unnecessary large numbers.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(a, b, k):
+    mod = 10^k
+    val = (a^b) % mod
+    return kth digit from right of val
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach using modular arithmetic
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int kthDigitOptimized(int a, int b, int k) {
+        int mod = 1;
+        for (int i = 0; i < k; i++) mod *= 10;
+
+        long long val = 1;
+        for (int i = 0; i < b; i++) val = (val * a) % mod;
+
+        string s = to_string(val);
+        int n = s.size();
+        return s[n - k] - '0';
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Direct Computation with String)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Compute a^b directly (small numbers, safe).
+> - Convert to string and index directly from the right.
+> - This is clean and avoids modulo computations if numbers are small (a^b ≤ 15^15).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(a, b, k):
+    val = a^b
+    convert val to string
+    return s[length - k]
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Elegant approach using string conversion
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int kthDigitOptimal(int a, int b, int k) {
+        long long val = 1;
+        for (int i = 0; i < b; i++) val *= a;
+
+        string s = to_string(val);
+        return s[s.size() - k] - '0';
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                        | Cons                         |
+| -------------- | --------------- | ---------------- | --------------------------- | ---------------------------- |
+| 🥉 Brute Force | O(b)            | O(d)             | Simple, easy to implement   | Large numbers for bigger a,b |
+| 🥈 Optimized   | O(b)            | O(k)             | Only computes needed digits | Slightly more complex        |
+| 🥇 Optimal ⭐  | O(b)            | O(d)             | Elegant, readable code      | Only works for small numbers |
 
 ---
 
@@ -171,6 +194,6 @@ public:
 
 **🎯 Problem 704564 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

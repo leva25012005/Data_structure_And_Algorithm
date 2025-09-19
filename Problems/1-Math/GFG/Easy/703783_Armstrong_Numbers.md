@@ -2,7 +2,7 @@
 
 # 🧠 [Armstrong Numbers](https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)
 
 </div>
 
@@ -10,59 +10,70 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `703783` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `49.88%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![VMWare](https://img.shields.io/badge/-VMWare-orange?style=flat-square) ![Oracle](https://img.shields.io/badge/-Oracle-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `703783`                                                                                                                                                          |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                       |
+| **Accuracy**     | `49.88%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)                                                                           |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![VMWare](https://img.shields.io/badge/-VMWare-orange?style=flat-square) ![Oracle](https://img.shields.io/badge/-Oracle-orange?style=flat-square)                 |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">You are given a<strong> 3-digit</strong> number <strong>n</strong>, Find whether it is an <strong><span style="color: #000000;">Armstrong </span></strong>number or not.</span></p>
-<p><span style="font-size: 18px;">An <em>Armstrong number</em> of three digits is a number such that the sum of the cubes of its digits is equal to the <em>number </em>itself. </span><span style="font-size: 18px;">371 is an </span><span style="font-size: 18px;">Armstrong number</span><span style="font-size: 18px;"> since 3</span><sup>3</sup><span style="font-size: 18px;"> + 7</span><sup>3 </sup><span style="font-size: 18px;">+ 1</span><sup>3</sup><span style="font-size: 18px;"> = 371. </span></p>
-<p><span style="font-size: 18px;"><strong>
-<!-- description:end -->
 
-## Examples
+<p>You are given a <strong>3-digit</strong> number <code>n</code>. Determine whether it is an <strong>Armstrong number</strong> or not.</p>
 
+<p>An <em>Armstrong number</em> of three digits is a number such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3³ + 7³ + 1³ = 371.</p>
+
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
-<strong>Input:</strong> : n = 153
+<strong>Input:</strong> n = 153
 <strong>Output:</strong> true
-<strong>Explanation:</strong> : 153 is an Armstrong number since 13 + 53 + 33 = 153.
+<strong>Explanation:</strong> 153 is an Armstrong number since 1³ + 5³ + 3³ = 153.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 372
 <strong>Output:</strong> false
-<strong>Explanation:</strong> : 372 is not an Armstrong number since 33 + 73 + 23 = 378.
+<strong>Explanation:</strong> 372 is not an Armstrong number since 3³ + 7³ + 2³ = 378.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 100
 <strong>Output:</strong> false
-<strong>Explanation:</strong> : 100 is not an Armstrong number since 13 + 03 + 03 = 1.
+<strong>Explanation:</strong> 100 is not an Armstrong number since 1³ + 0³ + 0³ = 1.
 </pre>
 
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-<br />100 ≤ n <1000 </span></p>
+
+<ul>
+  <li><code>100 &lt;= n &lt; 1000</code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -73,100 +84,120 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (String Conversion)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Convert the number n to a string.
+> - Extract each digit, cube it, and sum them.
+> - Compare the sum to the original number.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function isArmstrong(n):
+    convert n to string s
+    sum = 0
+    for each digit d in s:
+        sum += d^3
+    return sum == n
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force using string conversion
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    bool isArmstrong(int n) {
+        string s = to_string(n); // Convert number to string
+        int sum = 0;
+
+        // Sum the cubes of digits
+        for (char c : s) {
+            int digit = c - '0';
+            sum += digit * digit * digit;
+        }
+
+        // Check if sum equals the original number
+        return sum == n;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Digit Extraction)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Extract digits mathematically using division and modulo instead of converting to string.
+> - Cube each digit and sum.
+> - Compare the sum to the original number.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function isArmstrong(n):
+    a = n / 100           // hundreds digit
+    b = (n / 10) % 10     // tens digit
+    c = n % 10             // units digit
+    return (a^3 + b^3 + c^3) == n
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized using arithmetic
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    bool isArmstrong(int n) {
+        int a = n / 100;       // hundreds digit
+        int b = (n / 10) % 10; // tens digit
+        int c = n % 10;        // units digit
+
+        int sum = a*a*a + b*b*b + c*c*c; // sum of cubes
+        return sum == n;                 // check equality
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Direct Formula)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Since the number is always 3-digit, we can directly calculate using the formula: (hundreds digit)³ + (tens digit)³ + (units digit)³ == n
+> - This uses O(1) time and O(1) space, which is exactly what the problem expects.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function isArmstrong(n):
+    return ((n / 100)^3 + ((n / 10) % 10)^3 + (n % 10)^3) == n
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimal constant-time solution
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    bool isArmstrong(int n) {
+        return (n / 100)*(n / 100)*(n / 100) +
+               ((n / 10) % 10)*((n / 10) % 10)*((n / 10) % 10) +
+               (n % 10)*(n % 10)*(n % 10) == n;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                        | Cons                    |
+| -------------- | --------------- | ---------------- | --------------------------- | ----------------------- |
+| 🥉 Brute Force | O(1)            | O(d)             | Easy to implement, readable | Uses string conversion  |
+| 🥈 Optimized   | O(1)            | O(1)             | Pure math, no extra storage | Slightly more code      |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Elegant, direct formula     | Hard-coded for 3 digits |
 
 ---
 
@@ -174,6 +205,6 @@ public:
 
 **🎯 Problem 703783 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

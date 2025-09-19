@@ -2,7 +2,7 @@
 
 # 🧠 [Multiplication Table](https://www.geeksforgeeks.org/problems/print-table0303/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/print-table0303/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/print-table0303/1)
 
 </div>
 
@@ -10,34 +10,58 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `704112` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `44.81%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/print-table0303/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `704112`                                                                                                                                                          |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                      |
+| **Accuracy**     | `44.81%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/print-table0303/1)                                                                                 |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">Create the multiplication table </span><span style="font-size: 18px;">from 1 to 10 </span><span style="font-size: 18px;">for a given number </span><strong style="font-size: 18px;">n </strong><span style="font-size: 18px;">and return the table as an array.</span></p>
-<p><strong><span style="font-size: 18px;">
-<!-- description:end -->
 
-## Constraints
+<p>Create the multiplication table from <code>1</code> to <code>10</code> for a given number <code>n</code> and return the table as an array.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> n = 9
+<strong>Output:</strong> 9 18 27 36 45 54 63 72 81 90
+<strong>Explanation:</strong> Multiplying 9 by numbers from 1 to 10 gives the sequence.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> n = 2
+<strong>Output:</strong> 2 4 6 8 10 12 14 16 18 20
+<strong>Explanation:</strong> Multiplying 2 by numbers from 1 to 10 gives the sequence.
+</pre>
+
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
- </strong><br />1 <= N <= 10<sup>6</sup></span></p>
+
+<ul>
+  <li><code>1 &lt;= n &lt;= 10<sup>6</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -48,100 +72,117 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Simple Loop)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - The simplest idea is to iterate from 1 to 10 and multiply each number by n.
+> - Collect the results into an array.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function multiplicationTable(n):
+    result = empty array
+    for i from 1 to 10:
+        result.append(n * i)
+    return result
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    vector<int> multiplicationTable(int n) {
+        vector<int> table;
+        for (int i = 1; i <= 10; i++) {
+            table.push_back(n * i); // Multiply n with i and add to table
+        }
+        return table;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Using Preallocation)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Preallocate the array of size 10 to avoid dynamic resizing.
+> - Fill the array directly with values n\*i.
+> - This is slightly more efficient in terms of memory operations.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function multiplicationTable(n):
+    table = array of size 10
+    for i from 1 to 10:
+        table[i-1] = n * i
+    return table
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach with preallocated vector
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    vector<int> multiplicationTable(int n) {
+        vector<int> table(10); // Preallocate array of size 10
+        for (int i = 1; i <= 10; i++) {
+            table[i - 1] = n * i; // Fill directly
+        }
+        return table;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Elegant One-line)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Use range-based generation using modern C++ features like std::iota and std::transform.
+> - Avoid explicit loops if you prefer more elegant code.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function multiplicationTable(n):
+    create array [1,2,...,10]
+    multiply each element by n
+    return array
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+#include <vector>
+#include <numeric>  // for iota
+#include <algorithm> // for transform
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    vector<int> multiplicationTable(int n) {
+        vector<int> table(10);
+        iota(table.begin(), table.end(), 1); // Fill table with 1..10
+        transform(table.begin(), table.end(), table.begin(),
+                  [n](int x){ return x * n; }); // Multiply each element by n
+        return table;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                                | Cons                          |
+| -------------- | --------------- | ---------------- | ----------------------------------- | ----------------------------- |
+| 🥉 Brute Force | O(10)           | O(1) for table   | Simple and easy to read             | Vector resizes dynamically    |
+| 🥈 Preallocate | O(10)           | O(1)             | Slightly more efficient memory-wise | Minor extra syntax            |
+| 🥇 Elegant ⭐  | O(10)           | O(1)             | Concise, uses modern C++ style      | Might be harder for beginners |
 
 ---
 
@@ -149,6 +190,6 @@ public:
 
 **🎯 Problem 704112 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

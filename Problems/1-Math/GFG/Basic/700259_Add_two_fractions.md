@@ -2,7 +2,7 @@
 
 # 🧠 [Add two fractions](https://www.geeksforgeeks.org/problems/add-two-fractions/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/add-two-fractions/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/add-two-fractions/1)
 
 </div>
 
@@ -10,64 +10,68 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `700259` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `33.11%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/add-two-fractions/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `700259`                                                                                                                                                          |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                      |
+| **Accuracy**     | `33.11%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/add-two-fractions/1)                                                                               |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size:18px">You are given four numbers <strong>num1, den1, num2, and den2</strong>. You need to find<strong> (num1/den1)+(num2/den2) </strong>and output the result in the form of <strong>(numx/denx)</strong>. </span></p>
-
-<p><span style="font-size:18px"><strong>Input Format:</strong><br />
-The first line of input contains an integer <strong>T</strong> denoting the number of test cases . Then T test cases follow . Each test case contains four integers <strong>num1, den1, num2, den2 </strong>respectively .</span></p>
-
-<p><span style="font-size:18px"><strong>Output Format:</strong><br />
-For each test case, in a new line,  output will be the fraction in the form<strong> a/b</strong> where the fraction denotes the sum of the two given fractions in reduced form.</span></p>
-
-<p><strong><span style="font-size:18px">Your Task:</span></strong><br />
-<span style="font-size:18px">Since this is a function problem, you don't need to worry about the testcases. Your task is to complete the function <strong>addFraction </strong> which adds the two fractions and prints the resulting fraction. The function takes four arguments <strong>num1, den1, num2, den2 </strong>where <strong>num1, num2 </strong>denotes the <strong>numerators </strong>of two fractions and <strong>den1, den2 </strong>denotes their <strong>denominators</strong>.</span></p>
-
-<p><span style="font-size:18px"><strong>Constraints:</strong><br />
-1 <= T <= 100<br />
-1 <= den1,den2,num1,num2 <= 1000</span></p>
-
-<p><span style="font-size:18px"><strong>Example:<br />
-Input</strong><br />
-1<br />
-1 500 2 500</span><br />
-<span style="font-size:18px"><strong>Output</strong><br />
-3/500</span></p>
-
-<p><span style="font-size:18px"><strong>Explanation:</strong><br />
-In above test case 1/500+2/500=3/500</span></p>
-
-<p> </p>
-
-<p><span style="font-size:18px"><strong>Note:</strong>The <strong>Input/Ouput</strong> format and <strong>Example</strong> given are used for system's internal purpose, and should be used by a user for <strong>Expected Output</strong> only. As it is a function problem, hence a user should not read any input from stdin/console. The task is to complete the function specified, and not to write the full code.</span></p>
-<!-- description:end -->
 
-## Constraints
+<p>You are given four numbers <code>num1</code>, <code>den1</code>, <code>num2</code>, and <code>den2</code>. You need to compute <code>(num1/den1) + (num2/den2)</code> and output the result in the form of <strong>num/den</strong> in reduced form.</p>
 
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> num1 = 1, den1 = 500, num2 = 2, den2 = 500
+<strong>Output:</strong> 3/500
+<strong>Explanation:</strong> (1/500) + (2/500) = 3/500
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> num1 = 1, den1 = 2, num2 = 1, den2 = 3
+<strong>Output:</strong> 5/6
+<strong>Explanation:</strong> (1/2) + (1/3) = 5/6 after reducing the fraction.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> num1 = 2, den1 = 7, num2 = 3, den2 = 5
+<strong>Output:</strong> 31/35
+<strong>Explanation:</strong> (2/7) + (3/5) = (10/35 + 21/35) = 31/35
+</pre>
+
+<p>&nbsp;</p>
+<strong>Your Task:</strong>  
+You don't need to read input or print anything. Your task is to complete the function <code>addFraction(num1, den1, num2, den2)</code> which adds the two fractions and returns the resulting fraction in reduced form.
+
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-<br />
-1 <= T <= 100<br />
-1 <= den1,den2,num1,num2 <= 1000</span></p>
-
-<p><span style="font-size:18px">
+
+<ul>
+  <li><code>1 &lt;= T &lt;= 100</code></li>
+  <li><code>1 &lt;= den1, den2, num1, num2 &lt;= 1000</code></li>
+</ul>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `17-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `17-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -77,100 +81,160 @@ In above test case 1/500+2/500=3/500</span></p>
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Naive LCM)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Find the Least Common Denominator (LCD) by multiplying the denominators: den = den1 \* den2.
+> - Adjust numerators:
+>   - num = num1 _ den2 + num2 _ den1.
+> - Reduce the fraction by dividing numerator and denominator by their GCD.
+> - This works but uses a large denominator before reducing.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(num1, den1, num2, den2):
+    num = num1 * den2 + num2 * den1
+    den = den1 * den2
+    g = gcd(num, den)
+    return (num/g, den/g)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach using naive denominator multiplication
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    // Compute gcd using Euclidean algorithm
+    int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
+
+    string fractionAddition(int num1, int den1, int num2, int den2) {
+        // Step 1: compute numerator and denominator
+        int num = num1 * den2 + num2 * den1;
+        int den = den1 * den2;
+
+        // Step 2: reduce by gcd
+        int g = gcd(abs(num), abs(den));
+        num /= g;
+        den /= g;
+
+        // Step 3: return as string
+        return to_string(num) + "/" + to_string(den);
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Using LCM of Denominators)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Instead of multiplying denominators directly, find the LCM of den1 and den2.
+> - Convert fractions to this denominator and sum.
+> - Reduces overflow risk compared to brute force.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(num1, den1, num2, den2):
+    lcm = den1 * den2 / gcd(den1, den2)
+    num = num1 * (lcm/den1) + num2 * (lcm/den2)
+    den = lcm
+    g = gcd(num, den)
+    return (num/g, den/g)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach using LCM
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
+
+    int lcm(int a, int b) {
+        return a / gcd(a, b) * b; // prevent overflow
+    }
+
+    string fractionAddition(int num1, int den1, int num2, int den2) {
+        // Step 1: find least common denominator
+        int commonDen = lcm(den1, den2);
+
+        // Step 2: adjust numerators
+        int num = num1 * (commonDen / den1) + num2 * (commonDen / den2);
+        int den = commonDen;
+
+        // Step 3: reduce fraction
+        int g = gcd(abs(num), abs(den));
+        num /= g;
+        den /= g;
+
+        return to_string(num) + "/" + to_string(den);
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Direct Formula)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Instead of LCM or full expansion, directly compute:
+>   - (num1 _ den2 + num2 _ den1) / (den1 \* den2)
+> - Reduce immediately by GCD.
+> - Since den1, den2 ≤ 1000, no overflow issues in int.
+> - Clean and elegant.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(num1, den1, num2, den2):
+    num = num1 * den2 + num2 * den1
+    den = den1 * den2
+    g = gcd(num, den)
+    return (num/g, den/g)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Most optimal and elegant solution
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int gcd(int a, int b) {
+        return b == 0 ? a : gcd(b, a % b);
+    }
+
+    string fractionAddition(int num1, int den1, int num2, int den2) {
+        // Step 1: compute numerator and denominator directly
+        int num = num1 * den2 + num2 * den1;
+        int den = den1 * den2;
+
+        // Step 2: reduce using gcd
+        int g = gcd(abs(num), abs(den));
+        num /= g;
+        den /= g;
+
+        // Step 3: return string
+        return to_string(num) + "/" + to_string(den);
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                                | Cons                           |
+| -------------- | --------------- | ---------------- | ----------------------------------- | ------------------------------ |
+| 🥉 Brute Force | O(log(min))     | O(1)             | Very simple, easy to implement      | Large intermediate denominator |
+| 🥈 Optimized   | O(log(min))     | O(1)             | Uses LCM to avoid huge denominators | Slightly more complex          |
+| 🥇 Optimal ⭐  | O(log(min))     | O(1)             | Clean formula, elegant, efficient   | None (best choice here)        |
 
 ---
 
@@ -178,6 +242,6 @@ public:
 
 **🎯 Problem 700259 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

@@ -2,7 +2,7 @@
 
 # 🧠 [All divisors of a Number](https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1)
 
 </div>
 
@@ -10,17 +10,20 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `712172` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `46.73%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Factorization](https://img.shields.io/badge/-Factorization-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Problem ID**   | `712172`                                                                                                                                                                                                                                               |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                                                                                                            |
+| **Accuracy**     | `46.73%`                                                                                                                                                                                                                                               |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1)                                                                                                                                                             |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Factorization](https://img.shields.io/badge/-Factorization-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">Given an integer <strong>n,</strong> print all the divisors of N in the <strong>ascending </strong>order.</span><br /> <br /><span style="font-size: 18px;"><strong>
+
+<p>Given an integer <strong>n</strong>, print all the divisors of <strong>n</strong> in <strong>ascending order</strong>.</p>
+
 <!-- description:end -->
 
 ## Examples
@@ -36,23 +39,27 @@
 <pre>
 <strong>Input:</strong> n = 21191
 <strong>Output:</strong> 1 21191
-<strong>Explanation:</strong> : As 21191 is a prime number, it has only 2 factors(1 and the number itself).
+<strong>Explanation:</strong> 21191 is a prime number, so it has only 2 factors: 1 and itself.
 </pre>
 
 ## Constraints
 
-<p><strong>Constraints:</strong></p>
-<br />1 ≤ n ≤ 10<sup>9</sup></span></p>
+<ul>
+  <li><code>1 ≤ n ≤ 10<sup>9</sup></code></li>
+</ul>
+
+<p><strong>Expected Time Complexity:</strong> O(√n)<br>
+<strong>Expected Auxiliary Space:</strong> O(√n)</p>
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -65,97 +72,149 @@
 ### 🥉 Approach 1: Brute Force
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - The simplest way is to check all numbers from 1 to n.
+> - If a number divides n, it’s a divisor.
+> - Collect and print them in ascending order.
+> - This is correct but very slow (O(n)), especially since n can be as large as 10^9.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n):
+    for i in 1..n:
+        if n % i == 0:
+            print i
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach: O(n)
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    vector<int> divisorsBruteForce(int n) {
+        vector<int> result;
+        // Check all numbers from 1 to n
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                result.push_back(i);
+            }
+        }
+        return result; // Already in ascending order
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Check up to √n)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - A divisor d always pairs with n/d.
+> - So, we only need to check divisors up to √n.
+> - For every i where n % i == 0:
+>   - Add i
+>   - Add n/i (if different)
+> - Finally, sort the divisors.
+> - This reduces complexity to O(√n).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(n):
+    divisors = []
+    for i in 1..sqrt(n):
+        if n % i == 0:
+            divisors.append(i)
+            if i != n/i:
+                divisors.append(n/i)
+    sort(divisors)
+    return divisors
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach: O(√n)
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    vector<int> divisorsOptimized(int n) {
+        vector<int> result;
+        // Loop only up to sqrt(n)
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                result.push_back(i);        // divisor i
+                if (i != n / i) {
+                    result.push_back(n / i); // paired divisor
+                }
+            }
+        }
+        sort(result.begin(), result.end()); // Ensure ascending order
+        return result;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Sorted Without Extra Sort)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - To avoid sorting at the end:
+>   - Store small divisors (i values) directly in one vector.
+>   - Store large divisors (n/i values) in another vector.
+> - After finishing the loop up to √n, append the reversed list of large divisors.
+> - This gives a naturally sorted list without needing sort()
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(n):
+    small = []
+    large = []
+    for i in 1..sqrt(n):
+        if n % i == 0:
+            small.append(i)
+            if i != n/i:
+                large.append(n/i)
+    result = small + reverse(large)
+    return result
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimal approach: O(√n), no sorting needed
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    vector<int> divisorsOptimal(int n) {
+        vector<int> small, large;
+        // Collect divisors
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                small.push_back(i);        // Small divisor
+                if (i != n / i) {
+                    large.push_back(n / i); // Paired large divisor
+                }
+            }
+        }
+        // Append reversed large divisors for ascending order
+        reverse(large.begin(), large.end());
+        small.insert(small.end(), large.begin(), large.end());
+        return small;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                                 | Cons                 |
+| -------------- | --------------- | ---------------- | ------------------------------------ | -------------------- |
+| 🥉 Brute Force | O(n)            | O(1)             | Very easy to implement               | Too slow for `n=1e9` |
+| 🥈 Optimized   | O(√n + log n)   | O(√n)            | Efficient, works within constraints  | Needs sorting step   |
+| 🥇 Optimal ⭐  | O(√n)           | O(√n)            | No sorting required, directly sorted | Slightly more logic  |
 
 ---
 
@@ -163,6 +222,6 @@ public:
 
 **🎯 Problem 712172 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

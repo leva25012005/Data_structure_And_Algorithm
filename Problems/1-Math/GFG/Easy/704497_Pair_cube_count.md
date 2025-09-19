@@ -2,7 +2,7 @@
 
 # 🧠 [Pair cube count](https://www.geeksforgeeks.org/problems/pair-cube-count4132/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/pair-cube-count4132/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/pair-cube-count4132/1)
 
 </div>
 
@@ -10,42 +10,62 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `704497` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `30.87%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/pair-cube-count4132/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![Adobe](https://img.shields.io/badge/-Adobe-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `704497`                                                                                                                                                          |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                       |
+| **Accuracy**     | `30.87%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/pair-cube-count4132/1)                                                                             |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![Adobe](https://img.shields.io/badge/-Adobe-orange?style=flat-square)                                                                                            |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">Given a positive integer <strong>n</strong>, count all pairs of <strong>‘a’</strong>(>=1) and <strong>‘b’</strong>(>=0) that satisfy the condition <strong>a<sup>3</sup> + b<sup>3 </sup>= n</strong>.</span></p>
-<p><span style="font-size: 18px;"><strong>Example :</strong></span></p>
-<pre><span style="font-size: 18px;"><strong style="font-size: 18px;">Input:</strong> </span><strong><span style="font-size: 18px;">n = </span></strong><span style="font-size: 18px;">9 </span>
-<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Output:</span> </strong></span><span style="font-size: 18px;">2</span>
-<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Explanation:</span> </strong></span><span style="font-size: 18px;">There are two solutions: (a=1, b=2) and (a=2, b=1).</span></pre>
-<pre><span style="font-size: 18px;"><strong style="font-size: 18px;">Input:</strong> </span><strong><span style="font-size: 18px;">n = </span></strong><span style="font-size: 18px;">27</span>
-<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Output:</span> </strong></span><span style="font-size: 18px;">1</span>
-<span style="font-size: 18px;"><strong>Explanation: </strong></span><span style="font-size: 18px;">Thereis only one solution: (a=3, b=0). </span></pre>
-<p><span style="font-size: 18px;"><strong>Constraints:</strong></span><br /><span style="font-size: 18px;">1 <= n <= 10<sup>5</sup></span></p>
-<!-- description:end -->
 
-## Constraints
+<p>Given a positive integer <strong>n</strong>, count all pairs of integers <strong>a</strong> (≥1) and <strong>b</strong> (≥0) such that:</p>
 
+<p><strong>a<sup>3</sup> + b<sup>3</sup> = n</strong></p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> n = 9
+<strong>Output:</strong> 2
+<strong>Explanation:</strong> There are two solutions: (a=1, b=2) and (a=2, b=1)
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> n = 27
+<strong>Output:</strong> 1
+<strong>Explanation:</strong> There is only one solution: (a=3, b=0)
+</pre>
+
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-</span><br /><span style="font-size: 18px;">1 <= n <= 10<sup>5</sup></span></p>
+
+<ul>
+  <li><code>1 ≤ n ≤ 10<sup>5</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(cbrt(n))<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -55,100 +75,158 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Try all a, b)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - We need pairs (a, b) such that a^3 + b^3 = n.
+> - Brute force: Try all a from 1 to n and all b from 0 to n, check if a^3 + b^3 = n.
+> - Correct but very slow for large n.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n):
+    count = 0
+    for a in 1..n:
+        for b in 0..n:
+            if a^3 + b^3 == n:
+                count += 1
+    return count
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force solution: O(n^2)
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int countPairs(int n) {
+        int count = 0;
+        for (int a = 1; a <= n; a++) {
+            for (int b = 0; b <= n; b++) {
+                if (a*a*a + b*b*b == n) {
+                    count++; // valid pair found
+                }
+            }
+        }
+        return count;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Limit by cube root)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - The cube of a cannot exceed n, so a ≤ cbrt(n).
+> - Similarly, b ≤ cbrt(n).
+> - Only iterate a from 1 to floor(cbrt(n)) and compute b = cbrt(n - a^3).
+> - Check if b^3 matches n - a^3.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(n):
+    count = 0
+    for a in 1..cbrt(n):
+        remainder = n - a^3
+        b = floor(cbrt(remainder))
+        if b^3 == remainder:
+            count += 1
+    return count
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach: O(cbrt(n))
+#include <cmath>
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int countPairs(int n) {
+        int count = 0;
+        int limit = cbrt(n); // maximum possible value for a
+        for (int a = 1; a <= limit; a++) {
+            int remainder = n - a*a*a;
+            if (remainder < 0) break; // no solution possible
+            int b = round(cbrt(remainder)); // candidate b
+            if (b*b*b == remainder && b >= 0) {
+                count++; // valid pair found
+            }
+        }
+        return count;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Two-Pointer)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Use two pointers: a = 1 and b = floor(cbrt(n)).
+> - If a^3 + b^3 < n, increment a.
+> - If a^3 + b^3 > n, decrement b.
+> - If a^3 + b^3 == n, count the pair and increment a, decrement b.
+> - Very fast, O(cbrt(n)), no floating point rounding issues.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function twoPointer(n):
+    count = 0
+    a = 1
+    b = floor(cbrt(n))
+    while a <= b:
+        sum = a^3 + b^3
+        if sum == n:
+            count += 1
+            a += 1
+            b -= 1
+        else if sum < n:
+            a += 1
+        else:
+            b -= 1
+    return count
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Two-pointer solution: O(cbrt(n))
+#include <cmath>
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int countPairs(int n) {
+        int count = 0;
+        int a = 1;
+        int b = cbrt(n); // start with largest possible b
+        while (a <= b) {
+            long long sum = (long long)a*a*a + (long long)b*b*b;
+            if (sum == n) {
+                count++;  // valid pair found
+                a++;
+                b--;
+            } else if (sum < n) {
+                a++; // need bigger sum
+            } else {
+                b--; // need smaller sum
+            }
+        }
+        return count;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach          | Time Complexity | Space Complexity | Pros                            | Cons                     |
+| ----------------- | --------------- | ---------------- | ------------------------------- | ------------------------ |
+| 🥉 Brute Force    | O(n^2)          | O(1)             | Very simple to understand       | Too slow for n > 100     |
+| 🥈 Optimized      | O(cbrt(n))      | O(1)             | Fast enough, simple             | Needs cube root rounding |
+| 🥇 Two-Pointer ⭐ | O(cbrt(n))      | O(1)             | Elegant, avoids rounding issues | Slightly more logic      |
 
 ---
 
@@ -156,6 +234,6 @@ public:
 
 **🎯 Problem 704497 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

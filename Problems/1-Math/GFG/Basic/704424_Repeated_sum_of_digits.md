@@ -2,7 +2,7 @@
 
 # 🧠 [Repeated sum of digits](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1)
 
 </div>
 
@@ -10,90 +10,75 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `704424` |
-| **Difficulty** | ⚪ **Basic** |
-| **Accuracy** | `53.83%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1) |
-| **Topic Tags** | ![number-theory](https://img.shields.io/badge/-number-theory-blue?style=flat-square) ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Problem ID**   | `704424`                                                                                                                                                                                                                                               |
+| **Difficulty**   | ⚪ **Basic**                                                                                                                                                                                                                                           |
+| **Accuracy**     | `53.83%`                                                                                                                                                                                                                                               |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/repeated-sum-of-digits3955/1)                                                                                                                                                           |
+| **Topic Tags**   | ![number-theory](https://img.shields.io/badge/-number-theory-blue?style=flat-square) ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size:18px">Given an integer N, recursively sum digits of N until we get a single digit.  The process can be described below</span></p>
+
+<p>Given an integer <code>N</code>, recursively sum the digits of <code>N</code> until we get a single digit. The process can be described as follows:</p>
 
 <pre>
-<span style="font-size:18px">If N < 10    
+If N &lt; 10    
     digSum(N) = N
 Else         
-    digSum(N) = Sum(digSum(N))
-</span>
+    digSum(N) = digSum(Sum of digits of N)
 </pre>
 
-<p> </p>
-
-<p><strong><span style="font-size:18px">Example 1:</span></strong></p>
-
-<pre>
-<strong><span style="font-size:18px">Input:</span></strong>
-<span style="font-size:18px">N = 1234</span>
-<strong><span style="font-size:18px">Output:</span></strong>
-<span style="font-size:18px">1</span>
-<strong><span style="font-size:18px">Explanation:</span></strong>
-<span style="font-size:18px">The sum of 1+2+3+4 = 10, 
-digSum(x) == 10 Hence 
-ans will be 1+0 = 1</span></pre>
-
-<p> </p>
-
-<p> </p>
-
-<p><strong><span style="font-size:18px">Example 2:</span></strong></p>
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
 
 <pre>
-<strong><span style="font-size:18px">Input:</span></strong>
-<span style="font-size:18px">N = 9999</span>
-<strong><span style="font-size:18px">Output:</span></strong>
-<span style="font-size:18px">9</span>
-<strong><span style="font-size:18px">Explanation:</span></strong>
-<span style="font-size:18px">Check it yourself.</span></pre>
+<strong>Input:</strong> N = 1234
+<strong>Output:</strong> 1
+<strong>Explanation:</strong> The sum of digits is 1+2+3+4 = 10.
+Since 10 has more than one digit, we sum again: 1+0 = 1.
+</pre>
 
-<p> </p>
+<p><strong class="example">Example 2:</strong></p>
 
-<p><strong><span style="font-size:18px">Your Task:</span></strong></p>
+<pre>
+<strong>Input:</strong> N = 9999
+<strong>Output:</strong> 9
+<strong>Explanation:</strong> The sum of digits is 9+9+9+9 = 36.
+Then 3+6 = 9, which is a single digit.
+</pre>
 
-<p><span style="font-size:18px">You don't need to read input or print anything. Your task is to complete the function repeatedSumOfDigits() which takes an integer N and returns the repeated sum of digits of N.</span></p>
+<p>&nbsp;</p>
+<strong>Your Task:</strong>  
+You don't need to read input or print anything. Your task is to complete the function <code>repeatedSumOfDigits()</code> which takes an integer <code>N</code> and returns the repeated sum of digits of <code>N</code>.
 
-<p> </p>
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
 
-<p><span style="font-size:18px"><strong>Expected Time Complexity:</strong> O(1)<br />
-<strong>Expected Auxiliary Space:</strong> O(1)</span></p>
-
-<p> </p>
-
-<p> </p>
-
-<p><span style="font-size:18px"><strong>Constraints: </strong></span></p>
-
-<p><span style="font-size:18px">1 ≤ N ≤ 1000000</span></p>
-<!-- description:end -->
-
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-</span></p>
 
-<p><span style="font-size:18px">1 ≤ N ≤ 1000000</span></p>
+<ul>
+  <li><code>1 &lt;= N &lt;= 10<sup>6</sup></code></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
+<!-- description:end -->
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -104,100 +89,126 @@ ans will be 1+0 = 1</span></pre>
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Recursive Sum)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Repeatedly sum the digits of N using recursion until a single-digit number remains.
+> - Straightforward recursive approach.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function digSum(N):
+    if N < 10:
+        return N
+    sum = sum of digits of N
+    return digSum(sum)
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force recursive approach
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int repeatedSumOfDigits(int N) {
+        if (N < 10) return N; // Base case: single digit
+        int sum = 0;
+        int n = N;
+        // Sum all digits
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        // Recurse with the sum
+        return repeatedSumOfDigits(sum);
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Iterative Sum)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Instead of recursion, repeatedly sum digits in a loop until the number has only one digit.
+> - Avoids function call overhead.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function digSumIterative(N):
+    while N >= 10:
+        sum = 0
+        while N > 0:
+            sum += N % 10
+            N /= 10
+        N = sum
+    return N
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Iterative approach
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int repeatedSumOfDigits(int N) {
+        while (N >= 10) { // Repeat until N is a single digit
+            int sum = 0;
+            int n = N;
+            while (n > 0) {
+                sum += n % 10; // Add last digit
+                n /= 10;       // Remove last digit
+            }
+            N = sum; // Update N to the new sum
+        }
+        return N;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Digital Root Formula)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - There’s a mathematical shortcut known as digital root:
+>   - For any N > 0, the repeated sum of digits is 1 + (N-1) % 9.
+> - This gives O(1) time and space solution without loops or recursion.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function digitalRoot(N):
+    if N == 0: return 0
+    return 1 + (N-1) % 9
 ```
 
 #### 💻 Implementation
 
 **C++:**
+
 ```cpp
+// Optimal O(1) solution using digital root formula
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int repeatedSumOfDigits(int N) {
+        if (N == 0) return 0;
+        return 1 + (N - 1) % 9; // Digital root formula
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach      | Time Complexity | Space Complexity | Pros                               | Cons                            |
+| ------------- | --------------- | ---------------- | ---------------------------------- | ------------------------------- |
+| 🥉 Recursive  | O(d)            | O(d)             | Very intuitive, easy to understand | Uses recursion stack            |
+| 🥈 Iterative  | O(d)            | O(1)             | No recursion, safe for large N     | Slightly more code              |
+| 🥇 Optimal ⭐ | O(1)            | O(1)             | Fastest, elegant formula           | Needs knowledge of digital root |
 
 ---
 
@@ -205,6 +216,6 @@ public:
 
 **🎯 Problem 704424 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

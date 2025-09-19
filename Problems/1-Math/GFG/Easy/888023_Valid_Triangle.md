@@ -2,7 +2,7 @@
 
 # 🧠 [Valid Triangle](https://www.geeksforgeeks.org/problems/valid-triangle--121441/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/valid-triangle--121441/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/valid-triangle--121441/1)
 
 </div>
 
@@ -10,17 +10,20 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `888023` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `45.57%` |
+| Property         | Value                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| **Problem ID**   | `888023`                                                                                 |
+| **Difficulty**   | 🟢 **Easy**                                                                              |
+| **Accuracy**     | `45.57%`                                                                                 |
 | **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/valid-triangle--121441/1) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;">Given the three sides of a triangle <strong>a</strong>, <strong>b,</strong> and <strong>c</strong>. Check whether the triangle is valid or not.</span></p>
-<p><span style="font-size: 14pt;"><strong>
+
+<p>Given the three sides of a triangle <strong>a</strong>, <strong>b</strong>, and <strong>c</strong>, check whether the triangle is valid or not.</p>
+<p>A triangle is valid if the sum of any two sides is strictly greater than the third side.</p>
+
 <!-- description:end -->
 
 ## Examples
@@ -29,28 +32,34 @@
 <pre>
 <strong>Input:</strong> a = 8, b = 15, c = 17
 <strong>Output:</strong> Valid
+<strong>Explanation:</strong> 8 + 15 > 17, 8 + 17 > 15, and 15 + 17 > 8.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 <pre>
 <strong>Input:</strong> a = 3, b = 6, c = 9
 <strong>Output:</strong> Invalid
+<strong>Explanation:</strong> 3 + 6 is not greater than 9, so the triangle is not valid.
 </pre>
 
 ## Constraints
 
-<p><strong>Constraints:</strong></p>
-<br />1 <= a,b,c <= 10<sup>6</sup></span></p>
+<ul>
+  <li><code>1 ≤ a, b, c ≤ 10⁶</code></li>
+</ul>
+
+<p><strong>Expected Time Complexity:</strong> O(1)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -60,100 +69,132 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Direct Condition Checking)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - A triangle is valid if it satisfies the Triangle Inequality Theorem:
+>   - a + b > c
+>   - a + c > b
+>   - b + c > a
+> - Simply check all three conditions.
+> - This is the most direct and simple solution.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(a, b, c):
+    if (a + b > c) and (a + c > b) and (b + c > a):
+        return "Valid"
+    else:
+        return "Invalid"
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force approach: direct condition checks
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    string checkTriangle(int a, int b, int c) {
+        // Check triangle inequality theorem
+        if (a + b > c && a + c > b && b + c > a) {
+            return "Valid";
+        }
+        return "Invalid";
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Sorting)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Instead of checking all three inequalities, sort the sides: x ≤ y ≤ z.
+> - Then we only need to check x + y > z.
+> - If true → valid triangle; otherwise invalid.
+> - Because the largest side z will always be the strictest inequality.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(a, b, c):
+    sides = sort([a, b, c])
+    if sides[0] + sides[1] > sides[2]:
+        return "Valid"
+    else:
+        return "Invalid"
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized solution using sorting
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    string checkTriangle(int a, int b, int c) {
+        vector<int> sides = {a, b, c};
+        sort(sides.begin(), sides.end()); // Sort sides in ascending order
+
+        // Only need to check the largest side
+        if (sides[0] + sides[1] > sides[2]) {
+            return "Valid";
+        }
+        return "Invalid";
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Mathematical Insight)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - The largest side must be strictly less than the sum of the other two sides.
+> - Without sorting, we can find the max side maxSide and compare with (sum - maxSide).
+> - If maxSide < sum - maxSide → Valid.
+> - This avoids sorting (O(1)) and is the most elegant.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(a, b, c):
+    sum = a + b + c
+    maxSide = max(a, b, c)
+    if maxSide < sum - maxSide:
+        return "Valid"
+    else:
+        return "Invalid"
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Most optimal approach: O(1) check with max side
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    string checkTriangle(int a, int b, int c) {
+        int sum = a + b + c;
+        int maxSide = max({a, b, c});
+
+        // Valid if largest side < sum of other two
+        if (maxSide < sum - maxSide) {
+            return "Valid";
+        }
+        return "Invalid";
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                                    | Cons                           |
+| -------------- | --------------- | ---------------- | --------------------------------------- | ------------------------------ |
+| 🥉 Brute Force | O(1)            | O(1)             | Very simple, directly checks conditions | Slightly repetitive conditions |
+| 🥈 Optimized   | O(log 3) ≈ O(1) | O(1)             | Cleaner (only one check needed)         | Requires sorting step          |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Most elegant, uses math insight         | Needs careful handling of max  |
 
 ---
 
@@ -161,6 +202,6 @@ public:
 
 **🎯 Problem 888023 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

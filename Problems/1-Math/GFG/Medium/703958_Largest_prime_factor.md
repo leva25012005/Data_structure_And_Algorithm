@@ -2,7 +2,7 @@
 
 # 🧠 [Largest prime factor](https://www.geeksforgeeks.org/problems/largest-prime-factor2601/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/largest-prime-factor2601/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/largest-prime-factor2601/1)
 
 </div>
 
@@ -10,19 +10,19 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `703958` |
-| **Difficulty** | 🟡 **Medium** |
-| **Accuracy** | `27.25%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/largest-prime-factor2601/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Prime Number](https://img.shields.io/badge/-Prime%20Number-blue?style=flat-square) ![sieve](https://img.shields.io/badge/-sieve-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![Yahoo](https://img.shields.io/badge/-Yahoo-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `703958`                                                                                                                                                                                                                                                                                                                    |
+| **Difficulty**   | 🟡 **Medium**                                                                                                                                                                                                                                                                                                               |
+| **Accuracy**     | `27.25%`                                                                                                                                                                                                                                                                                                                    |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/largest-prime-factor2601/1)                                                                                                                                                                                                                                  |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Prime Number](https://img.shields.io/badge/-Prime%20Number-blue?style=flat-square) ![sieve](https://img.shields.io/badge/-sieve-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![Yahoo](https://img.shields.io/badge/-Yahoo-orange?style=flat-square)                                                                                                                                                                                                                                                      |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;">Given a number <strong><code>n</code></strong>, your task is to find the largest prime factor of <code>n</code>.</span></p>
-<p><span style="font-size: 14pt;"><strong>
+<p>Given an integer <strong><code>n</code></strong>, the task is to find the <strong>largest prime factor</strong> of <code>n</code>.</p>
 <!-- description:end -->
 
 ## Examples
@@ -38,30 +38,40 @@
 <pre>
 <strong>Input:</strong> n = 24
 <strong>Output:</strong> 3
-<strong>Explanation:</strong> The prime factorization of 24 is 23×3. Among the prime factors (2, 3), the largest is 3.
+<strong>Explanation:</strong> The prime factorization of 24 is 2 × 2 × 2 × 3.
+Among the prime factors (2, 3), the largest is 3.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 <pre>
 <strong>Input:</strong> n = 13195
 <strong>Output:</strong> 29
-<strong>Explanation:</strong> The prime factorization of 13195 is 5×7×13×29. The largest prime factor is 29.
+<strong>Explanation:</strong> The prime factorization of 13195 is 5 × 7 × 13 × 29.
+The largest prime factor is 29.
 </pre>
 
 ## Constraints
 
-<p><strong>Constraints:</strong></p>
-</span><br /><span style="font-size: 14pt;">2 <= n <= 10<sup>9</sup></span></p>
+<ul>
+  <li><code>2 ≤ n ≤ 10<sup>9</sup></code></li>
+</ul>
+
+## Expected Complexity
+
+<ul>
+  <li><strong>Time Complexity:</strong> O(√n)</li>
+  <li><strong>Auxiliary Space:</strong> O(1)</li>
+</ul>
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -72,100 +82,176 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Check divisibility)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - For each number i from 2 to n, check if it divides n.
+> - If yes, check if i is prime.
+> - Keep track of the largest prime factor.
+> - This is correct but very slow (O(n√n)).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n):
+    maxPrime = 1
+    for i = 2 to n:
+        if n % i == 0 and isPrime(i):
+            maxPrime = i
+    return maxPrime
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force solution (very slow for large n)
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    bool isPrime(long long x) {
+        if (x < 2) return false;
+        for (long long i = 2; i * i <= x; i++) {
+            if (x % i == 0) return false;
+        }
+        return true;
+    }
+
+    long long largestPrimeFactor(long long n) {
+        long long maxPrime = 1;
+        for (long long i = 2; i <= n; i++) {
+            if (n % i == 0 && isPrime(i)) {
+                maxPrime = i; // update max prime factor
+            }
+        }
+        return maxPrime;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution with Trial Division
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - A composite number must have a factor ≤ √n.
+> - We divide n by each prime factor we find until n becomes 1.
+> - The last divisor we use (or remaining n) is the largest prime factor.
+> - This is much faster: O(√n).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(n):
+    maxPrime = -1
+    while n % 2 == 0:
+        maxPrime = 2
+        n /= 2
+    for i = 3 to sqrt(n) step 2:
+        while n % i == 0:
+            maxPrime = i
+            n /= i
+    if n > 2:
+        maxPrime = n
+    return maxPrime
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach using trial division up to sqrt(n)
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    long long largestPrimeFactor(long long n) {
+        long long maxPrime = -1;
+
+        // Step 1: Divide out all factors of 2
+        while (n % 2 == 0) {
+            maxPrime = 2;
+            n /= 2;
+        }
+
+        // Step 2: Divide out odd factors
+        for (long long i = 3; i * i <= n; i += 2) {
+            while (n % i == 0) {
+                maxPrime = i;
+                n /= i;
+            }
+        }
+
+        // Step 3: If n > 2, then n is prime
+        if (n > 2) maxPrime = n;
+
+        return maxPrime;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Efficient Factorization)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Same as Approach 2 but slightly optimized:
+>   - Stop immediately once n becomes 1.
+>   - No need to check even numbers after handling 2.
+>   - Works in O(√n) with minimal operations.
+> - This is the standard efficient solution.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(n):
+    if n is divisible by 2:
+        divide out all 2s
+        maxPrime = 2
+    for odd i = 3 to sqrt(n):
+        while n % i == 0:
+            maxPrime = i
+            n /= i
+    if n > 1:
+        maxPrime = n
+    return maxPrime
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Most optimal solution for largest prime factor
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    long long largestPrimeFactor(long long n) {
+        long long maxPrime = -1;
+
+        // Handle factor 2
+        if (n % 2 == 0) {
+            maxPrime = 2;
+            while (n % 2 == 0) n /= 2;
+        }
+
+        // Handle odd factors
+        for (long long i = 3; i * i <= n; i += 2) {
+            while (n % i == 0) {
+                maxPrime = i;
+                n /= i;
+            }
+        }
+
+        // If remaining n is prime and > 2
+        if (n > 2) maxPrime = n;
+
+        return maxPrime;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                             | Cons                          |
+| -------------- | --------------- | ---------------- | -------------------------------- | ----------------------------- |
+| 🥉 Brute Force | O(n√n)          | O(1)             | Very simple, easy to understand  | Extremely slow for large n    |
+| 🥈 Optimized   | O(√n)           | O(1)             | Much faster, practical solution  | Still checks all odd numbers  |
+| 🥇 Optimal ⭐  | O(√n)           | O(1)             | Standard efficient factorization | Slightly more complex to code |
 
 ---
 
@@ -173,6 +259,6 @@ public:
 
 **🎯 Problem 703958 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

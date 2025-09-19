@@ -2,7 +2,7 @@
 
 # 🧠 [Perfect Numbers](https://www.geeksforgeeks.org/problems/perfect-numbers3207/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/perfect-numbers3207/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/perfect-numbers3207/1)
 
 </div>
 
@@ -10,58 +10,67 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `704477` |
-| **Difficulty** | 🟢 **Easy** |
-| **Accuracy** | `17.21%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/perfect-numbers3207/1) |
-| **Topic Tags** | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
-| **Company Tags** | ![Wipro](https://img.shields.io/badge/-Wipro-orange?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `704477`                                                                                                                                                          |
+| **Difficulty**   | 🟢 **Easy**                                                                                                                                                       |
+| **Accuracy**     | `17.21%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/perfect-numbers3207/1)                                                                             |
+| **Topic Tags**   | ![Mathematical](https://img.shields.io/badge/-Mathematical-blue?style=flat-square) ![Algorithms](https://img.shields.io/badge/-Algorithms-blue?style=flat-square) |
+| **Company Tags** | ![Wipro](https://img.shields.io/badge/-Wipro-orange?style=flat-square)                                                                                            |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 14pt;">Given a number <strong>n,</strong> check if the number is <strong>perfect</strong> or not. A number is said to be perfect if <strong>sum</strong> of all its factors excluding the number itself is equal to the <strong>number</strong>.</span></p>
-<p><span style="font-size: 14pt;"><strong>
-<!-- description:end -->
 
-## Examples
+<p>Given a number <strong>n</strong>, check if it is a <strong>perfect number</strong>.</p>
 
+<p>A number is called <strong>perfect</strong> if the <strong>sum</strong> of all its factors excluding the number itself is equal to the number.</p>
+
+<p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 6
 <strong>Output:</strong> true
-<strong>Explanation:</strong> Factors of 6 are 1, 2, 3 and 6. Excluding 6 their sum is 6 which is equal to n itself. So, it's a Perfect Number.
+<strong>Explanation:</strong> Factors of 6 are 1, 2, 3, 6. Excluding 6, their sum is 1 + 2 + 3 = 6, which equals n. So, it is a Perfect Number.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 10
 <strong>Output:</strong> false
-<strong>Explanation:</strong> Factors of 10 are 1, 2, 5 and 10. Excluding 10 their sum is 8 which is not equal to n itself. So, it's not a Perfect Number.
+<strong>Explanation:</strong> Factors of 10 are 1, 2, 5, 10. Excluding 10, their sum is 1 + 2 + 5 = 8 ≠ n. So, it is not a Perfect Number.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
+
 <pre>
 <strong>Input:</strong> n = 15
 <strong>Output:</strong> false
-<strong>Explanation:</strong> Factors of 15 are 1, 3, 5, 15. Excluding 15 their sum is 9 which is not equal to n itself. So, it's not a Perfect Number.
+<strong>Explanation:</strong> Factors of 15 are 1, 3, 5, 15. Excluding 15, their sum is 1 + 3 + 5 = 9 ≠ n. So, it is not a Perfect Number.
 </pre>
 
-## Constraints
-
+<p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
-</span><br /><span style="font-size: 14pt;">1 ≤ n ≤ 10<sup>9</sup></span></p>
+<ul>
+  <li><code>1 ≤ n ≤ 10<sup>9</sup></code></li>
+</ul>
 
-## ⏰ Progress Tracking
+<p>&nbsp;</p>
+<p><strong>Expected Time Complexity:</strong> O(sqrt(n))<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</p>
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+<!-- description:end -->
+
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -71,100 +80,133 @@
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Sum All Factors)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> - Iterate through all numbers from 1 to n-1.
+> - Sum all divisors that divide n.
+> - Check if the sum equals n.
+> - This is simple but slow for large n.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function bruteForce(n):
+    sum = 0
+    for i in 1..n-1:
+        if n % i == 0:
+            sum += i
+    return sum == n
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force: O(n) time
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    bool checkPerfectNumber(int n) {
+        int sum = 0;
+        // Iterate over all numbers less than n
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum += i; // Add factor
+            }
+        }
+        return sum == n; // Check if sum equals n
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Using sqrt(n))
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - A factor i of n less than sqrt(n) has a corresponding factor n / i.
+> - Iterate from 1 to sqrt(n), sum both i and n/i if i divides n.
+> - Exclude n itself from the sum.
+> - This reduces time complexity from O(n) to O(sqrt(n)).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimized(n):
+    if n <= 1: return false
+    sum = 1
+    for i in 2..sqrt(n):
+        if n % i == 0:
+            sum += i
+            if i != n / i:
+                sum += n / i
+    return sum == n
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized: O(sqrt(n)) time
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    bool checkPerfectNumber(int n) {
+        if (n <= 1) return false; // 1 is not perfect
+        int sum = 1; // 1 is always a factor
+
+        // Iterate up to sqrt(n)
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                sum += i; // Add factor i
+                if (i != n / i) sum += n / i; // Add corresponding factor n/i
+            }
+        }
+        return sum == n; // Check if sum equals n
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Using Known Perfect Numbers)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - There are only a few known perfect numbers under 10^9: 6, 28, 496, 8128, 33550336.
+> - Instead of computation, just check if n is in this set.
+> - O(1) time and O(1) space.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function optimal(n):
+    known_perfect_numbers = [6, 28, 496, 8128, 33550336]
+    return n in known_perfect_numbers
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Most optimal: O(1) time and space
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    bool checkPerfectNumber(int n) {
+        // List of all perfect numbers <= 10^9
+        int perfectNumbers[] = {6, 28, 496, 8128, 33550336};
+        for (int x : perfectNumbers) {
+            if (n == x) return true;
+        }
+        return false;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                            | Cons                        |
+| -------------- | --------------- | ---------------- | ------------------------------- | --------------------------- |
+| 🥉 Brute Force | O(n)            | O(1)             | Very simple, easy to understand | Too slow for large n        |
+| 🥈 Optimized   | O(sqrt(n))      | O(1)             | Fast enough, works for n ≤ 10^9 | Slightly more complex logic |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Instant result, elegant         | Only works for n ≤ 10^9     |
 
 ---
 
@@ -172,6 +214,6 @@ public:
 
 **🎯 Problem 704477 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

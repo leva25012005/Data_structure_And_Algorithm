@@ -2,7 +2,7 @@
 
 # 🧠 [Determinant of a Matrix](https://www.geeksforgeeks.org/problems/determinant-of-a-matrix-1587115620/1)
 
-[![GeeksforGeeks](<https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white>)](https://www.geeksforgeeks.org/problems/determinant-of-a-matrix-1587115620/1)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-Problem-0F9D58?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/problems/determinant-of-a-matrix-1587115620/1)
 
 </div>
 
@@ -10,87 +10,82 @@
 
 ## 📋 Problem Overview
 
-| Property | Value |
-|----------|-------|
-| **Problem ID** | `701269` |
-| **Difficulty** | 🟡 **Medium** |
-| **Accuracy** | `56.66%` |
-| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/determinant-of-a-matrix-1587115620/1) |
-| **Topic Tags** | ![Matrix](https://img.shields.io/badge/-Matrix-blue?style=flat-square) ![Data Structures](https://img.shields.io/badge/-Data%20Structures-blue?style=flat-square) |
+| Property         | Value                                                                                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Problem ID**   | `701269`                                                                                                                                                          |
+| **Difficulty**   | 🟡 **Medium**                                                                                                                                                     |
+| **Accuracy**     | `56.66%`                                                                                                                                                          |
+| **Problem Link** | [Open in GeeksforGeeks](https://www.geeksforgeeks.org/problems/determinant-of-a-matrix-1587115620/1)                                                              |
+| **Topic Tags**   | ![Matrix](https://img.shields.io/badge/-Matrix-blue?style=flat-square) ![Data Structures](https://img.shields.io/badge/-Data%20Structures-blue?style=flat-square) |
 
 ## Description
+
 <!-- description:start -->
-<p><span style="font-size: 18px;">Given a square matrix of size <strong>n*n</strong>. The task is to find the <a href="https://en.wikipedia.org/wiki/Determinant"><strong>determinant</strong></a> of this matrix.</span></p>
-<p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
-<pre><span style="font-size: 18px;"><strong>Input</strong>:
-n = 4
-matrix[][] = {{1, 0, 2, -1},
-              {3, 0, 0, 5},
-              {2, 1, 4, -3},
-              {1, 0, 5, 0}}
-<strong>Output</strong>: 30
-<strong>Explanation</strong>:
-Determinant of the given matrix is 30.</span>
-</pre>
-<p><span style="font-size: 18px;"><strong>Example 2:</strong></span></p>
-<pre><span style="font-size: 18px;"><strong>Input</strong>:
-n = 3
-matrix[][] = {{1, 2, 3},
-              {4, 5, 6},
-              {7, 10, 9}}
-<strong>Output</strong>: 12
-<strong>Explanation</strong>:
-Determinant of the given matrix is 12.</span>
-</pre>
-<p><span style="font-size: 18px;"><strong>Your Task:</strong><br />You don't need to read input or print anything. Complete the function <strong>determinantOfMatrix() </strong>that takes<strong> </strong>matrix<strong> </strong>and its size <strong>n</strong> as input parameters<strong> </strong>and returns the determinant of the matrix.<br /></span></p>
-<p><span style="font-size: 18px;"><strong>Expected Time Complexity:</strong> O(N<sup>4</sup>)<br /><strong>Expected Auxiliary Space:</strong> O(N<sup>2</sup>)</span><br /><br /><span style="font-size: 18px;"><strong>Constraints:</strong><br />1 <= N <= 10<br />-10 <= mat[i][j] <= 10</span></p>
+
+<p>Given a square matrix of size <strong>n × n</strong>, the task is to find the <a href="https://en.wikipedia.org/wiki/Determinant"><strong>determinant</strong></a> of this matrix.</p>
+
 <!-- description:end -->
 
 ## Examples
 
 <p><strong class="example">Example 1:</strong></p>
 <pre>
-<strong>Input:</strong> :
+<strong>Input:</strong> 
 n = 4
-matrix[][] = {{1, 0, 2, -1},
-              {3, 0, 0, 5},
-              {2, 1, 4, -3},
-              {1, 0, 5, 0}}
-<strong>Output:</strong> : 30
-<strong>Explanation:</strong> :
+matrix = {{1, 0, 2, -1},
+          {3, 0, 0, 5},
+          {2, 1, 4, -3},
+          {1, 0, 5, 0}}
+
+<strong>Output:</strong> 30
+
+<strong>Explanation:</strong>
 Determinant of the given matrix is 30.
 
-Example 2:
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 <pre>
-<strong>Input:</strong> :
+<strong>Input:</strong> 
 n = 3
-matrix[][] = {{1, 2, 3},
-              {4, 5, 6},
-              {7, 10, 9}}
-<strong>Output:</strong> : 12
-<strong>Explanation:</strong> :
+matrix = {{1, 2, 3},
+          {4, 5, 6},
+          {7, 10, 9}}
+
+<strong>Output:</strong> 12
+
+<strong>Explanation:</strong>
 Determinant of the given matrix is 12.
 
-Your Task:You don't need to read input or print anything. Complete the function determinantOfMatrix() that takes matrix and its size n as input parameters and returns the determinant of the matrix.
 </pre>
+
+## Your Task
+
+<p>You don’t need to read input or print anything. Complete the function <code>determinantOfMatrix()</code> that takes a 2D array <code>matrix</code> and its size <code>n</code> as input parameters and returns the determinant of the matrix.</p>
 
 ## Constraints
 
-<p><strong>Constraints:</strong></p>
-<br />1 <= N <= 10<br />-10 <= mat[i][j] <= 10</span></p>
+<ul>
+  <li><code>1 ≤ n ≤ 10</code></li>
+  <li><code>-10 ≤ matrix[i][j] ≤ 10</code></li>
+</code></ul>
+
+## Expected Complexity
+
+<ul>
+  <li><strong>Time Complexity:</strong> O(N<sup>4</sup>)</li>
+  <li><strong>Auxiliary Space:</strong> O(N<sup>2</sup>)</li>
+</ul>
 
 ## ⏰ Progress Tracking
 
-| Status | Date | Notes |
-|--------|------|-------|
-| 🎯 **Attempted** | `DD-MM-YYYY` | First attempt, understanding the problem |
-| ✅ **Solved** | `DD-MM-YYYY` | Successfully implemented solution |
-| 🔄 **Review 1** | `DD-MM-YYYY` | First review, optimization |
-| 🔄 **Review 2** | `DD-MM-YYYY` | Second review, different approaches |
-| 🔄 **Review 3** | `DD-MM-YYYY` | Final review, mastery |
+| Status           | Date         | Notes                                    |
+| ---------------- | ------------ | ---------------------------------------- |
+| 🎯 **Attempted** | `18-09-2025` | First attempt, understanding the problem |
+| ✅ **Solved**    | `18-09-2025` | Successfully implemented solution        |
+| 🔄 **Review 1**  | `DD-MM-YYYY` | First review, optimization               |
+| 🔄 **Review 2**  | `DD-MM-YYYY` | Second review, different approaches      |
+| 🔄 **Review 3**  | `DD-MM-YYYY` | Final review, mastery                    |
 
 ## 📚 Related Articles
 
@@ -102,100 +97,212 @@ Your Task:You don't need to read input or print anything. Complete the function 
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force
+### 🥉 Approach 1: Brute Force (Recursive Expansion)
 
 #### 📝 Intuition
-> Mô tả ý tưởng đơn giản nhất để giải quyết bài toán
+
+> MThe determinant can be computed recursively using Laplace expansion (cofactor expansion).
+>
+> For an $n \times n$ matrix:
+>
+> $$
+> \det(A) = \sum_{j=0}^{n-1} (-1)^j \cdot A[0][j] \cdot \det(\text{minor of } A[0][j])
+> $$
+>
+> **Base cases:**
+>
+> - If $n = 1$, return the single element.
+> - If $n = 2$, use formula $\det \begin{bmatrix} a & b \\ c & d \end{bmatrix} = ad - bc$.
+>
+> This works but is exponential in time: $O(n!)$.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function determinant(matrix, n):
+    if n == 1: return matrix[0][0]
+    if n == 2: return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
+
+    det = 0
+    for j in 0..n-1:
+        submatrix = remove row 0 and column j
+        det += ((-1)^j) * matrix[0][j] * determinant(submatrix, n-1)
+    return det
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Brute force: recursive Laplace expansion
+
 class Solution {
 public:
-    int solutionBruteForce() {
-        // Implementation here
-        return 0;
+    int determinantOfMatrix(vector<vector<int>> mat, int n) {
+        // Base cases
+        if (n == 1) return mat[0][0];
+        if (n == 2) return mat[0][0]*mat[1][1] - mat[0][1]*mat[1][0];
+
+        int det = 0;
+        for (int col = 0; col < n; col++) {
+            // Create minor matrix
+            vector<vector<int>> submat(n-1, vector<int>(n-1));
+            for (int i = 1; i < n; i++) {
+                int subcol = 0;
+                for (int j = 0; j < n; j++) {
+                    if (j == col) continue;
+                    submat[i-1][subcol++] = mat[i][j];
+                }
+            }
+            // Cofactor expansion
+            int sign = (col % 2 == 0) ? 1 : -1;
+            det += sign * mat[0][col] * determinantOfMatrix(submat, n-1);
+        }
+        return det;
     }
 };
 ```
 
-**Python:**
-```python
-class Solution:
-    def solutionBruteForce(self):
-        # Implementation here
-        return 0
-```
-
-**Java:**
-```java
-class Solution {
-    public int solutionBruteForce() {
-        // Implementation here
-        return 0;
-    }
-}
-```
-
-### 🥈 Approach 2: Optimized Solution
+### 🥈 Approach 2: Optimized Solution (Row Reduction / Gaussian Elimination)
 
 #### 📝 Intuition
-> Mô tả cách tối ưu hóa từ approach đầu tiên
+
+> - Determinant can also be computed using row operations to convert the matrix into upper triangular form.
+> - The determinant is the product of diagonal elements.
+> - Swap rows when needed (each swap changes sign of determinant).
+> - Time complexity: O(n^3).
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function determinant(matrix, n):
+    det = 1
+    for col in 0..n-1:
+        find pivot row
+        if pivot == 0: return 0
+        if row swapped: det = -det
+        normalize matrix
+    det *= product of diagonal
+    return det
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Optimized approach using Gaussian elimination
+
 class Solution {
 public:
-    int solutionOptimized() {
-        // Optimized implementation here
-        return 0;
+    int determinantOfMatrix(vector<vector<int>> mat, int n) {
+        long long det = 1;
+
+        for (int i = 0; i < n; i++) {
+            // Find pivot row
+            int pivot = i;
+            for (int j = i+1; j < n; j++) {
+                if (abs(mat[j][i]) > abs(mat[pivot][i])) {
+                    pivot = j;
+                }
+            }
+
+            // If pivot is zero -> determinant = 0
+            if (mat[pivot][i] == 0) return 0;
+
+            // Swap rows if needed
+            if (i != pivot) {
+                swap(mat[i], mat[pivot]);
+                det = -det; // Swapping rows changes sign
+            }
+
+            det *= mat[i][i];
+
+            // Eliminate below
+            for (int j = i+1; j < n; j++) {
+                if (mat[j][i] == 0) continue;
+                double ratio = (double)mat[j][i] / mat[i][i];
+                for (int k = i; k < n; k++) {
+                    mat[j][k] -= ratio * mat[i][k];
+                }
+            }
+        }
+        return (int)det;
     }
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 3: Optimal Solution ⭐ (Gaussian Elimination with Modular Safety)
 
 #### 📝 Intuition
-> Mô tả giải pháp tốt nhất, elegant nhất
+
+> - Same as Approach 2 but done carefully using integer arithmetic to avoid floating-point precision issues.
+> - Since constraints are small (n ≤ 10 and values ≤ 10), we can keep everything in integers safely.
+> - This is the most stable, elegant solution for competitive programming.
 
 #### 🔍 Algorithm
+
 ```pseudo
-// Write your pseudocode here
+function determinant(matrix, n):
+    det = 1
+    for i in 0..n-1:
+        find pivot row
+        if pivot element == 0: return 0
+        if swapped: det = -det
+        for each row below: eliminate using integer operations
+    det = product of diagonal
+    return det
 ```
 
 #### 💻 Implementation
 
-**C++:**
 ```cpp
+// Most optimal approach: integer-safe Gaussian elimination
+
 class Solution {
 public:
-    int solutionOptimal() {
-        // Optimal implementation here
-        return 0;
+    int determinantOfMatrix(vector<vector<int>> mat, int n) {
+        long long det = 1;
+
+        for (int i = 0; i < n; i++) {
+            // Find pivot
+            int pivot = i;
+            for (int j = i+1; j < n; j++) {
+                if (abs(mat[j][i]) > abs(mat[pivot][i]))
+                    pivot = j;
+            }
+
+            if (mat[pivot][i] == 0) return 0;
+
+            // Swap rows if necessary
+            if (i != pivot) {
+                swap(mat[i], mat[pivot]);
+                det = -det;
+            }
+
+            det *= mat[i][i];
+
+            // Eliminate below using integer arithmetic
+            for (int j = i+1; j < n; j++) {
+                while (mat[j][i] != 0) {
+                    int t = mat[i][i] / mat[j][i];
+                    for (int k = i; k < n; k++) {
+                        mat[i][k] -= t * mat[j][k];
+                        swap(mat[i][k], mat[j][k]);
+                    }
+                    det = -det; // Each row swap changes sign
+                }
+            }
+        }
+        return (int)det;
     }
 };
 ```
 
 ## 📊 Comparison of Approaches
 
-| Approach | Time Complexity | Space Complexity | Pros | Cons |
-|----------|-----------------|------------------|------|------|
-| 🥉 Brute Force | O(?) | O(?) | Simple to implement | High complexity |
-| 🥈 Optimized   | O(?) | O(?) | Better performance | More complex |
-| 🥇 Optimal ⭐  | O(?) | O(?) | Best performance | Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                                 | Cons                                 |
+| -------------- | --------------- | ---------------- | ------------------------------------ | ------------------------------------ |
+| 🥉 Brute Force | O(n!)           | O(n²)            | Very intuitive, recursive definition | Extremely slow for n > 6             |
+| 🥈 Optimized   | O(n³)           | O(1)             | Faster with Gaussian elimination     | Uses floating-point (precision risk) |
+| 🥇 Optimal ⭐  | O(n³)           | O(1)             | Stable, integer-safe, competitive CP | Code more complex                    |
 
 ---
 
@@ -203,6 +310,6 @@ public:
 
 **🎯 Problem 701269 Completed!**
 
-*Happy Coding! 🚀*
+_Happy Coding! 🚀_
 
 </div>

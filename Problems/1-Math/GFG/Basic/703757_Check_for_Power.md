@@ -203,12 +203,11 @@ public:
 
 ## 📊 Comparison of Approaches
 
-| Approach         | Time Complexity | Space Complexity | Pros                       | Cons                             |
-| ---------------- | --------------- | ---------------- | -------------------------- | -------------------------------- |
-| 🥉 Brute Force   | O(logₓ y)       | O(1)             | Simple, easy to implement  | May overflow if `x^k` grows fast |
-| 🥈 Division      | O(logₓ y)       | O(1)             | Efficient, avoids overflow | Requires integer division        |
-| 🥇 Optimal ⭐    | O(1)            | O(1)             | Elegant, fastest           | Floating-point precision issues  |
-| Requires insight |
+| Approach       | Time Complexity | Space Complexity | Pros                       | Cons                             |
+| -------------- | --------------- | ---------------- | -------------------------- | -------------------------------- |
+| 🥉 Brute Force | O(logₓ y)       | O(1)             | Simple, easy to implement  | May overflow if `x^k` grows fast |
+| 🥈 Division    | O(logₓ y)       | O(1)             | Efficient, avoids overflow | Requires integer division        |
+| 🥇 Optimal ⭐  | O(1)            | O(1)             | Elegant, fastest           | Floating-point precision issues  |
 
 ---
 

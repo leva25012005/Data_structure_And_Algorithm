@@ -81,55 +81,7 @@ You don't need to read input or print anything. Your task is to complete the fun
 
 ## 💡 Solutions
 
-### 🥉 Approach 1: Brute Force (Naive LCM)
-
-#### 📝 Intuition
-
-> - Find the Least Common Denominator (LCD) by multiplying the denominators: den = den1 \* den2.
-> - Adjust numerators:
->   - num = num1 _ den2 + num2 _ den1.
-> - Reduce the fraction by dividing numerator and denominator by their GCD.
-> - This works but uses a large denominator before reducing.
-
-#### 🔍 Algorithm
-
-```pseudo
-function bruteForce(num1, den1, num2, den2):
-    num = num1 * den2 + num2 * den1
-    den = den1 * den2
-    g = gcd(num, den)
-    return (num/g, den/g)
-```
-
-#### 💻 Implementation
-
-```cpp
-// Brute force approach using naive denominator multiplication
-
-class Solution {
-public:
-    // Compute gcd using Euclidean algorithm
-    int gcd(int a, int b) {
-        return b == 0 ? a : gcd(b, a % b);
-    }
-
-    string fractionAddition(int num1, int den1, int num2, int den2) {
-        // Step 1: compute numerator and denominator
-        int num = num1 * den2 + num2 * den1;
-        int den = den1 * den2;
-
-        // Step 2: reduce by gcd
-        int g = gcd(abs(num), abs(den));
-        num /= g;
-        den /= g;
-
-        // Step 3: return as string
-        return to_string(num) + "/" + to_string(den);
-    }
-};
-```
-
-### 🥈 Approach 2: Optimized Solution (Using LCM of Denominators)
+### 🥈 Approach 1: Optimized Solution (Using LCM of Denominators)
 
 #### 📝 Intuition
 
@@ -181,7 +133,7 @@ public:
 };
 ```
 
-### 🥇 Approach 3: Optimal Solution ⭐ (Direct Formula)
+### 🥇 Approach 2: Optimal Solution ⭐ (Direct Formula)
 
 #### 📝 Intuition
 
@@ -230,11 +182,10 @@ public:
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity | Space Complexity | Pros                                | Cons                           |
-| -------------- | --------------- | ---------------- | ----------------------------------- | ------------------------------ |
-| 🥉 Brute Force | O(log(min))     | O(1)             | Very simple, easy to implement      | Large intermediate denominator |
-| 🥈 Optimized   | O(log(min))     | O(1)             | Uses LCM to avoid huge denominators | Slightly more complex          |
-| 🥇 Optimal ⭐  | O(log(min))     | O(1)             | Clean formula, elegant, efficient   | None (best choice here)        |
+| Approach      | Time Complexity | Space Complexity | Pros                                | Cons                    |
+| ------------- | --------------- | ---------------- | ----------------------------------- | ----------------------- |
+| 🥈 Optimized  | O(log(min))     | O(1)             | Uses LCM to avoid huge denominators | Slightly more complex   |
+| 🥇 Optimal ⭐ | O(log(min))     | O(1)             | Clean formula, elegant, efficient   | None (best choice here) |
 
 ---
 

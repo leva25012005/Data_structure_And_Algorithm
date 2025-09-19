@@ -97,7 +97,7 @@ function multiplicationTable(n):
 class Solution {
 public:
     vector<int> multiplicationTable(int n) {
-        vector<int> table;
+        vector<int> table(10);
         for (int i = 1; i <= 10; i++) {
             table.push_back(n * i); // Multiply n with i and add to table
         }
@@ -106,22 +106,17 @@ public:
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution (Using Preallocation)
+### 🥈 Approach 2: Optimized Solution (Multiply Directly)
 
 #### 📝 Intuition
 
-> - Preallocate the array of size 10 to avoid dynamic resizing.
-> - Fill the array directly with values n\*i.
-> - This is slightly more efficient in terms of memory operations.
+> - Returns values ​​from 1 to 10
 
 #### 🔍 Algorithm
 
 ```pseudo
 function multiplicationTable(n):
-    table = array of size 10
-    for i from 1 to 10:
-        table[i-1] = n * i
-    return table
+  return {n*1, n*2, n*3, n*4, n*5, n*6, n*7, n*8, n*9, n*10};
 ```
 
 #### 💻 Implementation
@@ -132,11 +127,7 @@ function multiplicationTable(n):
 class Solution {
 public:
     vector<int> multiplicationTable(int n) {
-        vector<int> table(10); // Preallocate array of size 10
-        for (int i = 1; i <= 10; i++) {
-            table[i - 1] = n * i; // Fill directly
-        }
-        return table;
+        return {n*1, n*2, n*3, n*4, n*5, n*6, n*7, n*8, n*9, n*10};
     }
 };
 ```

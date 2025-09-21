@@ -131,62 +131,7 @@ public:
 };
 ```
 
-### 🥈 Approach 2: Optimized Solution
-
-#### 📝 Intuition
-
-> - Notice that if W is a divisor of area, then L = area / W.
-> - Instead of checking all numbers up to area, we only need to check divisors up to sqrt(area).
-> - Start from small divisors and update the best pair.
-> - This reduces the complexity from O(area) to O(√area).
-
-🔍 Algorithm
-
-#### 🔍 Algorithm
-
-```pseudo
-function optimized(area):
-    bestL = area
-    bestW = 1
-    for w in 1..sqrt(area):
-        if area % w == 0:
-            l = area / w
-            if l >= w:
-                if (l - w) < (bestL - bestW):
-                    bestL = l
-                    bestW = w
-    return [bestL, bestW]
-```
-
-#### 💻 Implementation
-
-```cpp
-// Optimized approach with better complexity
-
-class Solution {
-public:
-    vector<int> constructRectangleOptimized(int area) {
-        int bestL = area;
-        int bestW = 1;
-
-        // Only check up to sqrt(area)
-        for (int w = 1; w * w <= area; w++) {
-            if (area % w == 0) {
-                int l = area / w;
-                if (l >= w) {
-                    if ((l - w) < (bestL - bestW)) {
-                        bestL = l;
-                        bestW = w;
-                    }
-                }
-            }
-        }
-        return {bestL, bestW};
-    }
-};
-```
-
-### 🥇 Approach 3: Optimal Solution ⭐
+### 🥇 Approach 2: Optimal Solution ⭐
 
 #### 📝 Intuition
 
@@ -208,7 +153,7 @@ function optimal(area):
 
 #### 💻 Implementation
 
-````cpp
+```cpp
 // Most optimal and elegant solution
 
 class Solution {
@@ -224,16 +169,15 @@ public:
         int l = area / w;  // compute corresponding length
         return {l, w};     // L >= W is guaranteed
     }
-};```
+};
+```
 
 ## 📊 Comparison of Approaches
 
-| Approach       | Time Complexity       | Space Complexity | Pros                              | Cons                           |
-| -------------- | --------------------- | ---------------- | --------------------------------- | ------------------------------ |
-| 🥉 Brute Force | O(area)               | O(1)             | Very simple, follows definition   | Too slow for large area (10^7) |
-| 🥈 Optimized   | O(√area)              | O(1)             | Much faster, checks only divisors | Slightly more code             |
-| 🥇 Optimal ⭐   | O(√area) (early stop) | O(1)             | Fastest, elegant, minimal loops   | Requires math insight          |
-
+| Approach       | Time Complexity       | Space Complexity | Pros                            | Cons                           |
+| -------------- | --------------------- | ---------------- | ------------------------------- | ------------------------------ |
+| 🥉 Brute Force | O(area)               | O(1)             | Very simple, follows definition | Too slow for large area (10^7) |
+| 🥇 Optimal ⭐  | O(√area) (early stop) | O(1)             | Fastest, elegant, minimal loops | Requires math insight          |
 
 ---
 
